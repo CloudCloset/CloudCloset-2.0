@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cJE-1g-0zD">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFDisplay-Medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+        <array key="SFText-Light.otf">
+            <string>SFUIText-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--About View Controller-->
+        <scene sceneID="inB-NB-R1T">
+            <objects>
+                <viewController id="who-0f-CTJ" customClass="AboutViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="emx-1o-QRF"/>
+                        <viewControllerLayoutGuide type="bottom" id="PwR-ID-BVy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PkG-pC-aGD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="about" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYG-He-Z4P">
+                                <rect key="frame" x="132" y="50.000000000000007" width="150" height="71.666666666666686"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pOz-QP-drQ">
+                                <rect key="frame" x="30" y="221.66666666666663" width="354" height="258"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temperatures in F˚" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="5o0-1J-dsv">
+                                        <rect key="frame" x="90.333333333333343" y="0.0" width="173.66666666666666" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️ weather from openweathermap.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-g5-bH4">
+                                        <rect key="frame" x="73" y="54.000000000000028" width="208" height="48"/>
+                                        <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="looks from forever21.com, hm.com &amp; topshop.com 💃" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="y7Z-QU-xbx">
+                                        <rect key="frame" x="4" y="132.00000000000003" width="346.33333333333331" height="48"/>
+                                        <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="made with 💘 by Lily Li &amp; Kristie Huang © 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="9x2-Ec-xFQ">
+                                        <rect key="frame" x="27.333333333333343" y="210.00000000000003" width="299.66666666666663" height="47.999999999999972"/>
+                                        <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFX-81-0xr">
+                                <rect key="frame" x="50" y="50" width="32" height="72"/>
+                                <accessibility key="accessibilityConfiguration" identifier="backButton"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="50"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="1" green="0.51042813062667847" blue="0.51261007785797119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="who-0f-CTJ" eventType="touchUpInside" id="bwr-rG-th6"/>
+                                    <segue destination="SkW-LH-Drb" kind="unwind" identifier="backSegue" unwindAction="unwindToViewController:" id="yyc-D8-cWe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pOz-QP-drQ" firstAttribute="leading" secondItem="PkG-pC-aGD" secondAttribute="leading" constant="30" id="19H-ht-cj1"/>
+                            <constraint firstItem="pOz-QP-drQ" firstAttribute="top" secondItem="uYG-He-Z4P" secondAttribute="bottom" constant="100" id="EeA-3G-PKU"/>
+                            <constraint firstItem="uYG-He-Z4P" firstAttribute="centerX" secondItem="PkG-pC-aGD" secondAttribute="centerX" id="Tdz-Gt-tcH"/>
+                            <constraint firstAttribute="trailing" secondItem="pOz-QP-drQ" secondAttribute="trailing" constant="30" id="Zn5-Jc-oTI"/>
+                            <constraint firstItem="uYG-He-Z4P" firstAttribute="top" secondItem="emx-1o-QRF" secondAttribute="bottom" constant="30" id="c5L-9Y-ezr"/>
+                            <constraint firstItem="pOz-QP-drQ" firstAttribute="centerX" secondItem="PkG-pC-aGD" secondAttribute="centerX" id="isk-CN-G60"/>
+                            <constraint firstItem="DFX-81-0xr" firstAttribute="top" secondItem="emx-1o-QRF" secondAttribute="bottom" constant="30" id="lz5-9v-8Ra"/>
+                            <constraint firstItem="DFX-81-0xr" firstAttribute="leading" secondItem="PkG-pC-aGD" secondAttribute="leading" constant="50" id="veh-XF-TrL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcf-TQ-rho" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="SkW-LH-Drb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="-119"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2Bm-RY-BXe">
+            <objects>
+                <tabBarController id="cJE-1g-0zD" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="YRL-NO-Erj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X11-Gs-wQt" kind="relationship" relationship="viewControllers" id="vT3-bk-ypC"/>
+                        <segue destination="BcT-EI-QjQ" kind="relationship" relationship="viewControllers" id="0nf-xj-O0P"/>
+                        <segue destination="x4s-f4-QLu" kind="relationship" relationship="viewControllers" id="r0g-Td-KrV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1J-vr-Uv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="-896"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="yNM-k2-rPq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Weather" id="BcT-EI-QjQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="aAP-Bo-TEp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZT-t2-0jd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="-301"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="s9a-5h-3ao">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="x4s-f4-QLu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3jy-Ht-aYf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ai5-tr-cse" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166.6666666666667" y="-688.04347826086962"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="FE0-of-whN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorites" id="X11-Gs-wQt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Swp-pS-jze"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qS-cr-wi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166.6666666666667" y="-1337.771739130435"/>
+        </scene>
+    </scenes>
+</document>

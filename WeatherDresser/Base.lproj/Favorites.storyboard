@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ce7-ZM-SYG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--favorite outfits-->
+        <scene sceneID="Jb6-Fx-hy1">
+            <objects>
+                <viewController id="aSN-bj-67c" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DFI-Pf-9c9"/>
+                        <viewControllerLayoutGuide type="bottom" id="240-pi-tpf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M7V-Kz-5Ky">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T2j-bh-2HO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nLe-Dk-6Oq">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JyO-ag-bPW">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="240-pi-tpf" firstAttribute="top" secondItem="T2j-bh-2HO" secondAttribute="bottom" id="440-da-G1K"/>
+                            <constraint firstItem="T2j-bh-2HO" firstAttribute="leading" secondItem="M7V-Kz-5Ky" secondAttribute="leading" id="Sud-OB-oyW"/>
+                            <constraint firstAttribute="trailing" secondItem="T2j-bh-2HO" secondAttribute="trailing" id="ZUx-Ys-anY"/>
+                            <constraint firstItem="T2j-bh-2HO" firstAttribute="top" secondItem="DFI-Pf-9c9" secondAttribute="bottom" id="qKn-Gz-MUA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="favorite outfits" id="UlW-0B-zwx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6p-Cr-giu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2073.913043478261" y="-1337.771739130435"/>
+        </scene>
+        <!--fav-->
+        <scene sceneID="ssg-QJ-LaZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ce7-ZM-SYG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="fav" id="T4A-BH-lwo"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yZ2-d3-Ni0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aSN-bj-67c" kind="relationship" relationship="rootViewController" id="t3G-b0-k2p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPY-JD-pYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166.6666666666667" y="-1337.771739130435"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tvy-Sq-8dO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFDisplay-Medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="UW6-cU-3Se">
+            <objects>
+                <viewController id="tvy-Sq-8dO" customClass="LoginViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E2M-6q-lLS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qof-9j-0ed"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lNG-av-m9N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-TF-iK9">
+                                <rect key="frame" x="63" y="258" width="249" height="96"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudcloset" translatesAutoresizingMaskIntoConstraints="NO" id="OjX-Y0-huK">
+                                        <rect key="frame" x="0.0" y="0.0" width="249" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OjX-Y0-huK" secondAttribute="height" multiplier="249:37" id="9Zp-d5-bVI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="outfit recommendations based on the weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-qU-L9Q">
+                                        <rect key="frame" x="19.5" y="48" width="210" height="48"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
+                                        <color key="textColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OjX-Y0-huK" firstAttribute="width" secondItem="fkI-TF-iK9" secondAttribute="width" id="kHN-SJ-b1Z"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaN-oQ-iV2">
+                                <rect key="frame" x="46" y="438" width="283" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.51372549019607838" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BWy-8y-ZoI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="30"/>
+                                <state key="normal" title="register &amp; log in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="tvy-Sq-8dO" eventType="touchUpInside" id="PdQ-ME-dxc"/>
+                                    <segue destination="1OM-1W-1J8" kind="show" identifier="toCreateNewUser" id="kcx-Yy-NfH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YaN-oQ-iV2" firstAttribute="centerX" secondItem="lNG-av-m9N" secondAttribute="centerX" id="4zc-uY-HHB"/>
+                            <constraint firstItem="fkI-TF-iK9" firstAttribute="leading" secondItem="lNG-av-m9N" secondAttribute="leading" constant="63" id="Fqi-TK-csW"/>
+                            <constraint firstAttribute="trailing" secondItem="YaN-oQ-iV2" secondAttribute="trailing" constant="46" id="Wvw-db-Not"/>
+                            <constraint firstItem="fkI-TF-iK9" firstAttribute="top" secondItem="E2M-6q-lLS" secondAttribute="bottom" constant="238" id="d4a-Df-h9J"/>
+                            <constraint firstItem="Qof-9j-0ed" firstAttribute="top" secondItem="YaN-oQ-iV2" secondAttribute="bottom" constant="169" id="jXj-ua-bSz"/>
+                            <constraint firstAttribute="trailing" secondItem="fkI-TF-iK9" secondAttribute="trailing" constant="63" id="xzF-iR-X2D"/>
+                            <constraint firstItem="YaN-oQ-iV2" firstAttribute="leading" secondItem="lNG-av-m9N" secondAttribute="leading" constant="46" id="y1Q-zK-aFW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="YaN-oQ-iV2" id="EM0-sJ-8t2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgI-Um-GnG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.79999999999995" y="558.17091454272872"/>
+        </scene>
+        <!--Create User View Controller-->
+        <scene sceneID="hyV-HJ-nuQ">
+            <objects>
+                <viewController id="1OM-1W-1J8" customClass="CreateUserViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NRA-n0-GOC"/>
+                        <viewControllerLayoutGuide type="bottom" id="X8m-Q6-eY7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I7L-HW-dSV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxx-iZ-qJ4">
+                                <rect key="frame" x="46" y="538" width="283" height="60"/>
+                                <color key="backgroundColor" red="0.69019607843137254" green="0.85098039215686272" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bJe-DY-Yb8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="30"/>
+                                <state key="normal" title="next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="1OM-1W-1J8" eventType="touchUpInside" id="TXi-kg-4mc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudcloset" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-bu-kfF">
+                                <rect key="frame" x="63" y="83" width="249" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fbb-bu-kfF" secondAttribute="height" multiplier="249:37" id="mHz-4r-x8q"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="0GW-zr-aF8">
+                                <rect key="frame" x="50" y="164" width="275" height="184"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-28-wUK">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zip code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omY-OG-o4X">
+                                                <rect key="frame" x="101.5" y="0.0" width="72.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
+                                                <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 94087" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qoB-fG-Bgf" userLabel="zipcode text field">
+                                                <rect key="frame" x="0.0" y="34" width="275" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="pQ6-vw-cJN"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qoB-fG-Bgf" firstAttribute="width" secondItem="dSD-28-wUK" secondAttribute="width" id="U7a-YN-Ian"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1oz-J0-i7B">
+                                        <rect key="frame" x="0.0" y="120" width="275" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="outfit style preference" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeh-9x-QfS">
+                                                <rect key="frame" x="44" y="0.0" width="187.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
+                                                <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pj2-k0-bcD">
+                                                <rect key="frame" x="0.0" y="34" width="275" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="yf8-dX-9mT"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="female"/>
+                                                    <segment title="male"/>
+                                                    <segment title="both"/>
+                                                </segments>
+                                                <color key="tintColor" red="1" green="0.51372549020000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="genderChanged:" destination="1OM-1W-1J8" eventType="valueChanged" id="xEn-DW-UfT"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pj2-k0-bcD" firstAttribute="width" secondItem="1oz-J0-i7B" secondAttribute="width" id="qYs-qR-ySr"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0GW-zr-aF8" firstAttribute="leading" secondItem="I7L-HW-dSV" secondAttribute="leading" constant="50" id="0lu-cV-Ljo"/>
+                            <constraint firstItem="Fbb-bu-kfF" firstAttribute="top" secondItem="I7L-HW-dSV" secondAttribute="top" constant="83" id="3oY-NM-aHL"/>
+                            <constraint firstItem="Oxx-iZ-qJ4" firstAttribute="leading" secondItem="I7L-HW-dSV" secondAttribute="leading" constant="46" id="5hP-Lo-ugM"/>
+                            <constraint firstAttribute="trailing" secondItem="Oxx-iZ-qJ4" secondAttribute="trailing" constant="46" id="Dvn-Ou-6jQ"/>
+                            <constraint firstItem="Fbb-bu-kfF" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="PEb-gZ-a8w"/>
+                            <constraint firstItem="0GW-zr-aF8" firstAttribute="top" secondItem="Fbb-bu-kfF" secondAttribute="bottom" constant="44" id="RVn-Y0-aWs"/>
+                            <constraint firstItem="Oxx-iZ-qJ4" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="ibP-xT-Q4T"/>
+                            <constraint firstItem="0GW-zr-aF8" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="jgo-Kk-zM2"/>
+                            <constraint firstItem="X8m-Q6-eY7" firstAttribute="top" secondItem="Oxx-iZ-qJ4" secondAttribute="bottom" constant="69" id="nLH-OJ-dj3"/>
+                            <constraint firstAttribute="trailing" secondItem="0GW-zr-aF8" secondAttribute="trailing" constant="50" id="qS2-EP-10n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="genderControl" destination="pj2-k0-bcD" id="U3l-Tp-73e"/>
+                        <outlet property="nameTextField" destination="qoB-fG-Bgf" id="1FN-6o-72m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5X5-bn-GQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888.8" y="557.27136431784118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloudcloset" width="249" height="37"/>
+    </resources>
+</document>
