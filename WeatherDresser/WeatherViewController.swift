@@ -103,8 +103,25 @@ class WeatherViewController: UIViewController {
         dayFiveLabel.text = Weather.getDayOfWeek(4).lowercased()
         currentDay = 1
         
-        let isLiked = LikeService.isLiked(picString: picString)
-        likeButton.isSelected = isLiked
+        var bool = false
+        
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(picString)
+        print(ref)
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? Bool
+            if let value = value {
+                bool = true
+            }
+            else {
+                bool = false
+            }
+            dispatchGroup.leave()
+        })
+        dispatchGroup.notify(queue: .main, execute: {
+            self.likeButton.isSelected = bool
+        })
         
     }
     
