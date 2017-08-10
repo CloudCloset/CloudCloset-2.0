@@ -170,6 +170,7 @@
 		82ABD1221F0D47110056A74F /* WeatherDresser */ = {
 			isa = PBXGroup;
 			children = (
+				822655491F3CC39B007BA949 /* GoogleService-Info.plist */,
 				82ABD1231F0D47110056A74F /* AppDelegate.swift */,
 				82ABD12A1F0D47110056A74F /* Assets.xcassets */,
 				822655211F3B9377007BA949 /* Controllers */,
@@ -209,7 +210,6 @@
 		9E758A1E1F1181E800D2745C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				822655491F3CC39B007BA949 /* GoogleService-Info.plist */,
 				9E758A0E1F1181E000D2745C /* SFDisplay-Light.otf */,
 				9E758A0F1F1181E000D2745C /* SFDisplay-Medium.otf */,
 				9E758A101F1181E000D2745C /* SFDisplay-Regular.otf */,
