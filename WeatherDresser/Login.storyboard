@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-TF-iK9">
-                                <rect key="frame" x="63" y="258" width="249" height="96"/>
+                                <rect key="frame" x="63" y="258" width="249" height="155"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudcloset" translatesAutoresizingMaskIntoConstraints="NO" id="OjX-Y0-huK">
                                         <rect key="frame" x="0.0" y="0.0" width="249" height="37"/>
@@ -39,10 +39,16 @@
                                             <constraint firstAttribute="width" secondItem="OjX-Y0-huK" secondAttribute="height" multiplier="249:37" id="9Zp-d5-bVI"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="outfit recommendations based on the weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-qU-L9Q">
-                                        <rect key="frame" x="19.5" y="48" width="210" height="48"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a new way to dress." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-qU-L9Q">
+                                        <rect key="frame" x="40.5" y="48" width="168" height="24"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
                                         <color key="textColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30% of profits donated to providing homeless women with menstrual supplies." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSl-bA-alW">
+                                        <rect key="frame" x="5" y="83" width="239.5" height="72"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
+                                        <color key="textColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -70,10 +76,19 @@
                                     <segue destination="1OM-1W-1J8" kind="show" identifier="toCreateNewUser" id="kcx-Yy-NfH"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="WHD-Dy-zC1">
+                                <rect key="frame" x="95" y="114" width="185" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="Kxy-oa-SHd"/>
+                                    <constraint firstAttribute="width" secondItem="WHD-Dy-zC1" secondAttribute="height" multiplier="383:298" id="y5S-82-6fb"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fkI-TF-iK9" firstAttribute="top" secondItem="WHD-Dy-zC1" secondAttribute="bottom" id="200-wr-Tra"/>
                             <constraint firstItem="YaN-oQ-iV2" firstAttribute="centerX" secondItem="lNG-av-m9N" secondAttribute="centerX" id="4zc-uY-HHB"/>
+                            <constraint firstItem="WHD-Dy-zC1" firstAttribute="centerX" secondItem="lNG-av-m9N" secondAttribute="centerX" id="FlT-l7-Wdx"/>
                             <constraint firstItem="fkI-TF-iK9" firstAttribute="leading" secondItem="lNG-av-m9N" secondAttribute="leading" constant="63" id="Fqi-TK-csW"/>
                             <constraint firstAttribute="trailing" secondItem="YaN-oQ-iV2" secondAttribute="trailing" constant="46" id="Wvw-db-Not"/>
                             <constraint firstItem="fkI-TF-iK9" firstAttribute="top" secondItem="E2M-6q-lLS" secondAttribute="bottom" constant="238" id="d4a-Df-h9J"/>
@@ -127,8 +142,8 @@
                                     <constraint firstAttribute="width" secondItem="Fbb-bu-kfF" secondAttribute="height" multiplier="249:37" id="mHz-4r-x8q"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="this is for initial setup only; you can always change this later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-x5-xD8">
-                                <rect key="frame" x="82" y="128" width="210" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is for initial setup only; you can always change this later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-x5-xD8">
+                                <rect key="frame" x="30" y="128" width="315" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="upt-Ge-zGu"/>
                                 </constraints>
@@ -220,12 +235,15 @@
                             <constraint firstItem="0GW-zr-aF8" firstAttribute="leading" secondItem="I7L-HW-dSV" secondAttribute="leading" constant="50" id="0lu-cV-Ljo"/>
                             <constraint firstItem="Fbb-bu-kfF" firstAttribute="top" secondItem="I7L-HW-dSV" secondAttribute="top" constant="83" id="3oY-NM-aHL"/>
                             <constraint firstItem="Oxx-iZ-qJ4" firstAttribute="leading" secondItem="I7L-HW-dSV" secondAttribute="leading" constant="46" id="5hP-Lo-ugM"/>
+                            <constraint firstAttribute="trailing" secondItem="MAe-x5-xD8" secondAttribute="trailing" constant="30" id="A5p-Vi-uD3"/>
                             <constraint firstAttribute="trailing" secondItem="Oxx-iZ-qJ4" secondAttribute="trailing" constant="46" id="Dvn-Ou-6jQ"/>
                             <constraint firstItem="Fbb-bu-kfF" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="PEb-gZ-a8w"/>
                             <constraint firstItem="MAe-x5-xD8" firstAttribute="top" secondItem="Fbb-bu-kfF" secondAttribute="bottom" constant="8" id="Xt3-CW-V10"/>
                             <constraint firstItem="0GW-zr-aF8" firstAttribute="top" secondItem="MAe-x5-xD8" secondAttribute="bottom" constant="20" id="dew-De-UPh"/>
+                            <constraint firstItem="MAe-x5-xD8" firstAttribute="leading" secondItem="I7L-HW-dSV" secondAttribute="leading" constant="30" id="f2d-gu-jCY"/>
                             <constraint firstItem="Oxx-iZ-qJ4" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="ibP-xT-Q4T"/>
                             <constraint firstItem="0GW-zr-aF8" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="jgo-Kk-zM2"/>
+                            <constraint firstItem="MAe-x5-xD8" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="nLE-m9-F04"/>
                             <constraint firstItem="X8m-Q6-eY7" firstAttribute="top" secondItem="Oxx-iZ-qJ4" secondAttribute="bottom" constant="69" id="nLH-OJ-dj3"/>
                             <constraint firstAttribute="trailing" secondItem="0GW-zr-aF8" secondAttribute="trailing" constant="50" id="qS2-EP-10n"/>
                         </constraints>
@@ -241,6 +259,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cloud" width="16" height="16"/>
         <image name="cloudcloset" width="249" height="37"/>
     </resources>
 </document>
