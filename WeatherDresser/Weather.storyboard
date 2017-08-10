@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="showing weather for: Santa Clara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Elf-do-asj">
-                                <rect key="frame" x="91" y="75" width="208" height="40"/>
+                                <rect key="frame" x="91" y="76" width="208" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mU3-Vz-n76"/>
                                 </constraints>
@@ -43,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="41X-We-lYI" userLabel="Temps Stack View">
-                                <rect key="frame" x="20" y="125" width="335" height="0.0"/>
+                                <rect key="frame" x="20" y="126" width="335" height="0.0"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4k8-lX-AiL">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="0.0"/>
@@ -173,7 +174,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-Rz-aqX" userLabel="Current Stack View">
-                                <rect key="frame" x="71.5" y="140" width="232.5" height="50"/>
+                                <rect key="frame" x="72" y="141" width="232.5" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun Behind Rain Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-Xp-OtY">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -222,7 +223,7 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hot10" translatesAutoresizingMaskIntoConstraints="NO" id="9I1-X7-2KB">
-                                <rect key="frame" x="40" y="205" width="295" height="362"/>
+                                <rect key="frame" x="40" y="206" width="295" height="361"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhI-K3-zvc">
                                 <rect key="frame" x="40" y="567" width="295" height="36"/>
@@ -240,11 +241,15 @@
                                     <constraint firstAttribute="height" constant="25" id="Sjs-VP-IhN"/>
                                     <constraint firstAttribute="width" constant="30" id="ved-ra-tUf"/>
                                 </constraints>
-                                <state key="normal" image="red-heart"/>
+                                <state key="normal" image="un-heart"/>
+                                <state key="selected" image="red-heart"/>
                                 <connections>
                                     <action selector="likeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEN-Rm-2lQ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudcloset" translatesAutoresizingMaskIntoConstraints="NO" id="J9Y-ho-R8J">
+                                <rect key="frame" x="63" y="34" width="249" height="37"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -254,20 +259,24 @@
                             <constraint firstItem="NhI-K3-zvc" firstAttribute="top" secondItem="asD-rH-cjU" secondAttribute="bottom" constant="10" id="1gr-nN-Mhz"/>
                             <constraint firstItem="LiV-Rz-aqX" firstAttribute="top" secondItem="41X-We-lYI" secondAttribute="bottom" constant="15" id="7qi-um-YBE"/>
                             <constraint firstItem="NhI-K3-zvc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="8xt-cF-Gth"/>
+                            <constraint firstItem="J9Y-ho-R8J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9i0-GT-s0h"/>
                             <constraint firstItem="Elf-do-asj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="A9D-dp-mE9"/>
+                            <constraint firstItem="Elf-do-asj" firstAttribute="top" secondItem="J9Y-ho-R8J" secondAttribute="bottom" constant="5" id="Csy-pf-og6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Elf-do-asj" secondAttribute="trailing" constant="60" id="GYc-l0-DD8"/>
-                            <constraint firstItem="Elf-do-asj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="75" id="L0d-rW-cco"/>
+                            <constraint firstItem="J9Y-ho-R8J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="34" id="PED-ua-JHo"/>
                             <constraint firstAttribute="trailing" secondItem="9I1-X7-2KB" secondAttribute="trailing" constant="40" id="TgS-Y8-0MT"/>
                             <constraint firstItem="41X-We-lYI" firstAttribute="top" secondItem="Elf-do-asj" secondAttribute="bottom" constant="10" id="Uln-fg-kQ0"/>
                             <constraint firstItem="41X-We-lYI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="UyH-h1-AOH"/>
                             <constraint firstItem="LiV-Rz-aqX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VcF-TI-Jvl"/>
                             <constraint firstAttribute="trailing" secondItem="NhI-K3-zvc" secondAttribute="trailing" constant="40" id="hdz-L6-Q7f"/>
                             <constraint firstAttribute="bottom" secondItem="9I1-X7-2KB" secondAttribute="bottom" constant="100" id="jfO-sJ-PDW"/>
+                            <constraint firstItem="J9Y-ho-R8J" firstAttribute="width" secondItem="J9Y-ho-R8J" secondAttribute="height" multiplier="249:37" id="qK2-ka-35h"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NhI-K3-zvc" secondAttribute="bottom" constant="15" id="qWs-de-74f"/>
                             <constraint firstAttribute="trailing" secondItem="41X-We-lYI" secondAttribute="trailing" constant="20" id="qey-j0-rgU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cloud Closet" id="hef-Ev-4FA"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="currentCityLabel" destination="Elf-do-asj" id="iac-NQ-tcN"/>
@@ -287,7 +296,6 @@
                         <outlet property="likeButton" destination="asD-rH-cjU" id="IaI-R7-fVM"/>
                         <outlet property="monthLabel" destination="9NQ-te-Z7N" id="HTr-18-Qw4"/>
                         <outlet property="outfitImage" destination="9I1-X7-2KB" id="AKe-Gx-5K4"/>
-                        <outlet property="topMarginConstraint" destination="L0d-rW-cco" id="GX2-vl-1c4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -297,10 +305,9 @@
         <!--weather-->
         <scene sceneID="DrQ-27-MRt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c4p-3X-KT8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="c4p-3X-KT8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="weather" id="GF6-lh-xrQ"/>
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0M8-15-3g5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -319,6 +326,8 @@
     <resources>
         <image name="Hot10" width="1020" height="1530"/>
         <image name="Sun Behind Rain Clouds" width="53" height="53"/>
+        <image name="cloudcloset" width="249" height="37"/>
         <image name="red-heart" width="16" height="16"/>
+        <image name="un-heart" width="16" height="16"/>
     </resources>
 </document>

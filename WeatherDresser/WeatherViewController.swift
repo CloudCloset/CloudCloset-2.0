@@ -69,7 +69,7 @@ class WeatherViewController: UIViewController {
         dayFour = Weather.weatherArr[3]
         dayFive = Weather.weatherArr[4]
         
-        originalTopMargin = topMarginConstraint.constant
+//        originalTopMargin = topMarginConstraint.constant
         
         currentCityLabel.text = "showing weather for: SUNNYVALE"
         

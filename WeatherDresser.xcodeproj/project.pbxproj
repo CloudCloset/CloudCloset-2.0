@@ -212,8 +212,8 @@
 				8226552F1F3BB5B7007BA949 /* Login.storyboard */,
 				82ABD1271F0D47110056A74F /* Main.storyboard */,
 				822655461F3C050B007BA949 /* Favorites.storyboard */,
-				8226552D1F3BB48D007BA949 /* Settings.storyboard */,
 				8226552B1F3BB1B1007BA949 /* Weather.storyboard */,
+				8226552D1F3BB48D007BA949 /* Settings.storyboard */,
 				8226553F1F3BC455007BA949 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
