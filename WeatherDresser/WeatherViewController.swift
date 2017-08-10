@@ -106,6 +106,11 @@ class WeatherViewController: UIViewController {
 
     }
     
+    @IBAction func likeButtonPressed(_ sender: Any) {
+        LikeService.create(for: "hello") { (true) in
+            return
+        }
+    }
     @IBAction func optionsButton(_ sender: Any) {
         performSegue(withIdentifier: "showOptions", sender: nil)
     }
@@ -290,40 +295,45 @@ class WeatherViewController: UIViewController {
     }
     
     private func update(){
-        if(dayOne == 0 || dayTwo == 0 || dayThree == 0 || dayFour == 0 || dayFive == 0){
-            showError(bigErrorMsg: "invalid zipcode", smallErrorMsg: "please try again")
-            return
-        }
-        else {
-            dayOneButton.setTitle("\(dayOne!)", for: .normal)
-            dayTwoButton.setTitle("\(dayTwo!)", for: .normal)
-            dayThreeButton.setTitle("\(dayThree!)", for: .normal)
-            dayFourButton.setTitle("\(dayFour!)", for: .normal)
-            dayFiveButton.setTitle("\(dayFive!)", for: .normal)
-            print("the temperatures/pictures have updated!!!")
-            
-            currentCityLabel.text = "showing weather for: SUNNYVALE"
-            
+//        if(dayOne == 0 || dayTwo == 0 || dayThree == 0 || dayFour == 0 || dayFive == 0){
+//            showError(bigErrorMsg: "invalid zipcode", smallErrorMsg: "please try again")
+//            return
+//        }
+//        else {
+//            dayOneButton.setTitle("\(dayOne!)", for: .normal)
+//            dayTwoButton.setTitle("\(dayTwo!)", for: .normal)
+//            dayThreeButton.setTitle("\(dayThree!)", for: .normal)
+//            dayFourButton.setTitle("\(dayFour!)", for: .normal)
+//            dayFiveButton.setTitle("\(dayFive!)", for: .normal)
+//            print("the temperatures/pictures have updated!!!")
+//            
+//            currentCityLabel.text = "showing weather for: SUNNYVALE"
+//            
             if(currentDay == 1){
-                outfitImage.image = UIImage(named: "\(Weather.getPicture(0))")
+                let pic = Weather.getPicture(0)
+                outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[0])
             }
             else if(currentDay == 2){
-                outfitImage.image = UIImage(named: "\(Weather.getPicture(1))")
+                let pic = Weather.getPicture(1)
+                outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[1])
             }
             else if(currentDay == 3){
-                outfitImage.image = UIImage(named: "\(Weather.getPicture(2))")
+                let pic = Weather.getPicture(2)
+                outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[2])
             }
             else if(currentDay == 4){
-                outfitImage.image = UIImage(named: "\(Weather.getPicture(3))")
+                let pic = Weather.getPicture(3)
+                outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[3])
             }
             else if(currentDay == 5){
-                outfitImage.image = UIImage(named: "\(Weather.getPicture(4))")
+                let pic = Weather.getPicture(4)
+                outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[4])
-            }
+//            }
         }
     }
     

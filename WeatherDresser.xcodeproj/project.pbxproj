@@ -21,6 +21,7 @@
 		822655451F3BFC3A007BA949 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822655441F3BFC3A007BA949 /* Constants.swift */; };
 		822655481F3C050B007BA949 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822655461F3C050B007BA949 /* Favorites.storyboard */; };
 		8226554A1F3CC39B007BA949 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 822655491F3CC39B007BA949 /* GoogleService-Info.plist */; };
+		8226554C1F3CCC63007BA949 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8226554B1F3CCC63007BA949 /* LikeService.swift */; };
 		82ABD1241F0D47110056A74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD1231F0D47110056A74F /* AppDelegate.swift */; };
 		82ABD1261F0D47110056A74F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD1251F0D47110056A74F /* WeatherViewController.swift */; };
 		82ABD1291F0D47110056A74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ABD1271F0D47110056A74F /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		822655441F3BFC3A007BA949 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		822655471F3C050B007BA949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Favorites.storyboard; sourceTree = "<group>"; };
 		822655491F3CC39B007BA949 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8226554B1F3CCC63007BA949 /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		82ABD1201F0D47110056A74F /* WeatherDresser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDresser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ABD1231F0D47110056A74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ABD1251F0D47110056A74F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				8226553D1F3BC101007BA949 /* UserService.swift */,
+				8226554B1F3CCC63007BA949 /* LikeService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				82FF52CA1F0EFC2000DFBCF9 /* AboutViewController.swift in Sources */,
 				822655391F3BBB5F007BA949 /* User.swift in Sources */,
 				8226553B1F3BBD51007BA949 /* CreateUserViewController.swift in Sources */,
+				8226554C1F3CCC63007BA949 /* LikeService.swift in Sources */,
 				8226553E1F3BC101007BA949 /* UserService.swift in Sources */,
 				82ABD13C1F0E99250056A74F /* Day.swift in Sources */,
 				822655371F3BB7F2007BA949 /* Storyboard+Utility.swift in Sources */,
