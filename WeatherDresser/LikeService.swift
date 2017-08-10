@@ -39,4 +39,29 @@ struct LikeService {
             return success(true)
         }
     }
+    
+    
+    static func isLiked(picString: String) -> Bool{
+        
+        var bool = false
+        let currentUID = User.current.uid
+        let likesRef = Database.database().reference().child("users").child(currentUID).child("likePic")
+        
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                return
+            }
+            print(snapshot)
+            
+            likesRef.queryEqual(toValue: nil, childKey: picString).observeSingleEvent(of: .value, with: { (snapshot) in
+                if let _  = snapshot.value as? Bool {
+                    bool = true
+                }
+                else{
+                    bool = false
+                }
+            })
+        })
+        return bool
+    }
 }

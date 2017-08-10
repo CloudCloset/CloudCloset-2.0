@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import FirebaseDatabase
 
 
 class WeatherViewController: UIViewController {
@@ -45,6 +46,8 @@ class WeatherViewController: UIViewController {
     var currentDay: Int!
     
     var picString: String!
+    
+    var likePicsArray = [String]()
     
     override func viewDidLoad() {
         
@@ -109,9 +112,26 @@ class WeatherViewController: UIViewController {
     }
     
     @IBAction func likeButtonPressed(_ sender: Any) {
-        LikeService.create(for: picString) { (true) in
-            return
+        
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(picString)
+        print(ref)
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let pic = String(snapshot.key) {
+            self.likePicsArray.append(pic)
+            }
+        })
+        
+        if likePicsArray.contains(picString) {
+            LikeService.delete(for: picString, success: { (nil) in
+                return
+            })
         }
+        else {
+            LikeService.create(for: picString) { (true) in
+                return
+            }
+        }
+//        LikeService.isLiked(picString: picString)
     }
 //    @IBAction func optionsButton(_ sender: Any) {
 //        performSegue(withIdentifier: "showOptions", sender: nil)
@@ -164,7 +184,10 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(0).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(0).lowercased()
         
-        outfitImage.image = UIImage(named: "\(Weather.getPicture(0))")
+        let pic = Weather.getPicture(0)
+        picString = pic
+
+        outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 1
         iconImage.image = UIImage(named: Weather.iconArr[0])
     }
@@ -181,7 +204,10 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(1).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(1).lowercased()
         
-        outfitImage.image = UIImage(named: "\(Weather.getPicture(1))")
+        let pic = Weather.getPicture(1)
+        picString = pic
+
+        outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 2
         iconImage.image = UIImage(named: Weather.iconArr[1])
     }
@@ -198,7 +224,10 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(2).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(2).lowercased()
         
-        outfitImage.image = UIImage(named: "\(Weather.getPicture(2))")
+        let pic = Weather.getPicture(2)
+        picString = pic
+
+        outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 3
         iconImage.image = UIImage(named: Weather.iconArr[2])    }
     
@@ -214,7 +243,10 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(3).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(3).lowercased()
         
-        outfitImage.image = UIImage(named: "\(Weather.getPicture(3))")
+        let pic = Weather.getPicture(3)
+        picString = pic
+
+        outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 4
         iconImage.image = UIImage(named: Weather.iconArr[3])
     }
@@ -230,7 +262,10 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(4).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(4).lowercased()
         
-        outfitImage.image = UIImage(named: "\(Weather.getPicture(4))")
+        let pic = Weather.getPicture(4)
+        picString = pic
+
+        outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 5
         iconImage.image = UIImage(named: Weather.iconArr[4])
     }

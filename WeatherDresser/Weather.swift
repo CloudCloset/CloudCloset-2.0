@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FirebaseDatabase
+
 
 class Weather {
     
@@ -59,7 +61,7 @@ class Weather {
                     else{
                         todayIcon = "Partly Cloudy"
                     }
-
+                    
                     iconArr.append(todayIcon)
                     dateArr.append(date)
                     weatherArr.append(avgTemp)
@@ -128,7 +130,6 @@ class Weather {
         return dateArr[2]
     }
     
-    static func isLiked(picString: String) {
-        
-    }
+
+
 }
