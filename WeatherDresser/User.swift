@@ -35,6 +35,7 @@ class User: NSObject {
     init(uid: String, gender: String) {
         self.uid = uid
         self.gender = gender
+        super.init()
     }
     
     init?(snapshot: DataSnapshot) {
@@ -44,6 +45,7 @@ class User: NSObject {
         
         self.uid = snapshot.key
         self.gender = gender
+        super.init()
     }
     
     required init?(coder aDecoder: NSCoder) {

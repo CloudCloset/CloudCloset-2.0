@@ -22,6 +22,9 @@
 		822655481F3C050B007BA949 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822655461F3C050B007BA949 /* Favorites.storyboard */; };
 		8226554A1F3CC39B007BA949 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 822655491F3CC39B007BA949 /* GoogleService-Info.plist */; };
 		8226554C1F3CCC63007BA949 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8226554B1F3CCC63007BA949 /* LikeService.swift */; };
+		8226554E1F3CEE5D007BA949 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8226554D1F3CEE5D007BA949 /* FavoritesViewController.swift */; };
+		822655501F3CF167007BA949 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8226554F1F3CF167007BA949 /* FavoriteCollectionViewCell.swift */; };
+		822655541F3D010D007BA949 /* FavHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822655531F3D010D007BA949 /* FavHeaderCollectionReusableView.swift */; };
 		82ABD1241F0D47110056A74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD1231F0D47110056A74F /* AppDelegate.swift */; };
 		82ABD1261F0D47110056A74F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD1251F0D47110056A74F /* WeatherViewController.swift */; };
 		82ABD1291F0D47110056A74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ABD1271F0D47110056A74F /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 		822655471F3C050B007BA949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Favorites.storyboard; sourceTree = "<group>"; };
 		822655491F3CC39B007BA949 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8226554B1F3CCC63007BA949 /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
+		8226554D1F3CEE5D007BA949 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		8226554F1F3CF167007BA949 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		822655531F3D010D007BA949 /* FavHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		82ABD1201F0D47110056A74F /* WeatherDresser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDresser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ABD1231F0D47110056A74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ABD1251F0D47110056A74F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,8 @@
 		822655201F3B936A007BA949 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8226554F1F3CF167007BA949 /* FavoriteCollectionViewCell.swift */,
+				822655531F3D010D007BA949 /* FavHeaderCollectionReusableView.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -113,6 +121,7 @@
 				822655331F3BB6F6007BA949 /* LoginViewController.swift */,
 				8226553A1F3BBD51007BA949 /* CreateUserViewController.swift */,
 				822655411F3BD1CA007BA949 /* OptionsViewController.swift */,
+				8226554D1F3CEE5D007BA949 /* FavoritesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -362,9 +371,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822655541F3D010D007BA949 /* FavHeaderCollectionReusableView.swift in Sources */,
 				822655341F3BB6F6007BA949 /* LoginViewController.swift in Sources */,
 				822655421F3BD1CA007BA949 /* OptionsViewController.swift in Sources */,
+				8226554E1F3CEE5D007BA949 /* FavoritesViewController.swift in Sources */,
 				82ABD1261F0D47110056A74F /* WeatherViewController.swift in Sources */,
+				822655501F3CF167007BA949 /* FavoriteCollectionViewCell.swift in Sources */,
 				82ABD1241F0D47110056A74F /* AppDelegate.swift in Sources */,
 				82FF52CA1F0EFC2000DFBCF9 /* AboutViewController.swift in Sources */,
 				822655391F3BBB5F007BA949 /* User.swift in Sources */,

@@ -12,7 +12,7 @@
         <!--favorite outfits-->
         <scene sceneID="Jb6-Fx-hy1">
             <objects>
-                <viewController id="aSN-bj-67c" sceneMemberID="viewController">
+                <viewController id="aSN-bj-67c" customClass="FavoritesViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DFI-Pf-9c9"/>
                         <viewControllerLayoutGuide type="bottom" id="240-pi-tpf"/>
@@ -22,39 +22,92 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T2j-bh-2HO">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nLe-Dk-6Oq">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="itemSize" width="124" height="100"/>
+                                    <size key="headerReferenceSize" width="50" height="100"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JyO-ag-bPW">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="bZO-99-Bos" customClass="FavoriteCollectionViewCell" customModule="WeatherDresser" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="100" width="150" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQr-QF-p9q">
+                                                    <rect key="frame" x="0.0" y="20" width="150" height="200"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="AQr-QF-p9q" secondAttribute="bottom" id="Iti-un-GJe"/>
+                                            <constraint firstAttribute="trailing" secondItem="AQr-QF-p9q" secondAttribute="trailing" id="Nx4-AP-ors"/>
+                                            <constraint firstItem="AQr-QF-p9q" firstAttribute="top" secondItem="bZO-99-Bos" secondAttribute="top" id="Xxc-71-rjo"/>
+                                            <constraint firstItem="AQr-QF-p9q" firstAttribute="leading" secondItem="bZO-99-Bos" secondAttribute="leading" id="qen-EE-yhW"/>
+                                        </constraints>
+                                        <size key="customSize" width="150" height="200"/>
+                                        <connections>
+                                            <outlet property="thumbNailImage" destination="AQr-QF-p9q" id="Zbi-Df-eYw"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="favHeaderView" id="HOM-xT-fFT" customClass="FavHeaderCollectionReusableView" customModule="WeatherDresser" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c32-HJ-N7R">
+                                            <rect key="frame" x="40" y="10" width="295" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# of favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owA-53-AKc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="253" height="80"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ9-E9-gd0">
+                                                    <rect key="frame" x="253" y="0.0" width="42" height="80"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="c32-HJ-N7R" secondAttribute="bottom" constant="10" id="4Ll-pw-fHB"/>
+                                        <constraint firstItem="c32-HJ-N7R" firstAttribute="leading" secondItem="HOM-xT-fFT" secondAttribute="leading" constant="40" id="6a3-gv-uVe"/>
+                                        <constraint firstItem="c32-HJ-N7R" firstAttribute="top" secondItem="HOM-xT-fFT" secondAttribute="top" constant="10" id="6yG-9d-hcN"/>
+                                        <constraint firstAttribute="trailing" secondItem="c32-HJ-N7R" secondAttribute="trailing" constant="40" id="m75-ts-PIt"/>
+                                    </constraints>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="aSN-bj-67c" id="P8t-Gx-lrc"/>
+                                    <outlet property="delegate" destination="aSN-bj-67c" id="rlh-Mh-UGz"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="240-pi-tpf" firstAttribute="top" secondItem="T2j-bh-2HO" secondAttribute="bottom" id="440-da-G1K"/>
-                            <constraint firstItem="T2j-bh-2HO" firstAttribute="leading" secondItem="M7V-Kz-5Ky" secondAttribute="leading" id="Sud-OB-oyW"/>
-                            <constraint firstAttribute="trailing" secondItem="T2j-bh-2HO" secondAttribute="trailing" id="ZUx-Ys-anY"/>
-                            <constraint firstItem="T2j-bh-2HO" firstAttribute="top" secondItem="DFI-Pf-9c9" secondAttribute="bottom" id="qKn-Gz-MUA"/>
+                            <constraint firstItem="T2j-bh-2HO" firstAttribute="top" secondItem="M7V-Kz-5Ky" secondAttribute="top" id="Rpx-0o-wnl"/>
+                            <constraint firstItem="T2j-bh-2HO" firstAttribute="leading" secondItem="M7V-Kz-5Ky" secondAttribute="leading" id="WoR-hP-j85"/>
+                            <constraint firstAttribute="trailing" secondItem="T2j-bh-2HO" secondAttribute="trailing" id="cOW-Y7-iMq"/>
+                            <constraint firstAttribute="bottom" secondItem="T2j-bh-2HO" secondAttribute="bottom" id="mf8-rg-agp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="favorite outfits" id="UlW-0B-zwx"/>
+                    <connections>
+                        <outlet property="collectionView" destination="T2j-bh-2HO" id="gCc-uK-L1P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6p-Cr-giu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2073.913043478261" y="-1337.771739130435"/>
+            <point key="canvasLocation" x="2072.8000000000002" y="-1338.08095952024"/>
         </scene>
         <!--fav-->
         <scene sceneID="ssg-QJ-LaZ">
@@ -63,7 +116,7 @@
                     <tabBarItem key="tabBarItem" title="fav" id="T4A-BH-lwo"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yZ2-d3-Ni0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yZ2-d3-Ni0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

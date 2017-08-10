@@ -21,7 +21,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Weather View Controller-->
+        <!--Cloud Closet-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="showing weather for: Santa Clara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Elf-do-asj">
-                                <rect key="frame" x="91" y="20" width="208" height="40"/>
+                                <rect key="frame" x="91" y="75" width="208" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mU3-Vz-n76"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="41X-We-lYI" userLabel="Temps Stack View">
-                                <rect key="frame" x="20" y="70" width="335" height="0.0"/>
+                                <rect key="frame" x="20" y="125" width="335" height="0.0"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4k8-lX-AiL">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="0.0"/>
@@ -173,7 +173,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-Rz-aqX" userLabel="Current Stack View">
-                                <rect key="frame" x="71.5" y="85" width="232.5" height="50"/>
+                                <rect key="frame" x="71.5" y="140" width="232.5" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun Behind Rain Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-Xp-OtY">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -222,7 +222,7 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hot10" translatesAutoresizingMaskIntoConstraints="NO" id="9I1-X7-2KB">
-                                <rect key="frame" x="40" y="150" width="295" height="417"/>
+                                <rect key="frame" x="40" y="205" width="295" height="362"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhI-K3-zvc">
                                 <rect key="frame" x="40" y="567" width="295" height="36"/>
@@ -256,7 +256,7 @@
                             <constraint firstItem="NhI-K3-zvc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="8xt-cF-Gth"/>
                             <constraint firstItem="Elf-do-asj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="A9D-dp-mE9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Elf-do-asj" secondAttribute="trailing" constant="60" id="GYc-l0-DD8"/>
-                            <constraint firstItem="Elf-do-asj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="L0d-rW-cco"/>
+                            <constraint firstItem="Elf-do-asj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="75" id="L0d-rW-cco"/>
                             <constraint firstAttribute="trailing" secondItem="9I1-X7-2KB" secondAttribute="trailing" constant="40" id="TgS-Y8-0MT"/>
                             <constraint firstItem="41X-We-lYI" firstAttribute="top" secondItem="Elf-do-asj" secondAttribute="bottom" constant="10" id="Uln-fg-kQ0"/>
                             <constraint firstItem="41X-We-lYI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="UyH-h1-AOH"/>
@@ -267,7 +267,7 @@
                             <constraint firstAttribute="trailing" secondItem="41X-We-lYI" secondAttribute="trailing" constant="20" id="qey-j0-rgU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hef-Ev-4FA"/>
+                    <navigationItem key="navigationItem" title="Cloud Closet" id="hef-Ev-4FA"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="currentCityLabel" destination="Elf-do-asj" id="iac-NQ-tcN"/>
@@ -284,6 +284,7 @@
                         <outlet property="dayTwoButton" destination="vLu-TW-zRr" id="voE-Db-qS1"/>
                         <outlet property="dayTwoLabel" destination="6f0-S6-Wse" id="YUM-Ad-aFD"/>
                         <outlet property="iconImage" destination="t5m-Xp-OtY" id="shK-d4-vBk"/>
+                        <outlet property="likeButton" destination="asD-rH-cjU" id="IaI-R7-fVM"/>
                         <outlet property="monthLabel" destination="9NQ-te-Z7N" id="HTr-18-Qw4"/>
                         <outlet property="outfitImage" destination="9I1-X7-2KB" id="AKe-Gx-5K4"/>
                         <outlet property="topMarginConstraint" destination="L0d-rW-cco" id="GX2-vl-1c4"/>
@@ -296,12 +297,12 @@
         <!--weather-->
         <scene sceneID="DrQ-27-MRt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="c4p-3X-KT8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c4p-3X-KT8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="weather" id="GF6-lh-xrQ"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0M8-15-3g5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0M8-15-3g5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

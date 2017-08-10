@@ -13,6 +13,8 @@ import FirebaseDatabase
 
 class WeatherViewController: UIViewController {
     
+    @IBOutlet weak var likeButton: UIButton!
+    
     @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
     @IBOutlet weak var dayOneButton: UIButton!
     @IBOutlet weak var dayTwoButton: UIButton!
@@ -90,7 +92,7 @@ class WeatherViewController: UIViewController {
         dayFiveButton.setTitle("\(dayFive!)", for: .normal)
         dayFiveButton.titleLabel?.minimumScaleFactor = 0.5
         dayFiveButton.titleLabel?.adjustsFontSizeToFitWidth = true
-                
+        
         let dayOnePicture: String = Weather.getPicture(0)
         picString = dayOnePicture
         
@@ -108,34 +110,48 @@ class WeatherViewController: UIViewController {
         dayFourLabel.text = Weather.getDayOfWeek(3).lowercased()
         dayFiveLabel.text = Weather.getDayOfWeek(4).lowercased()
         currentDay = 1
-
     }
     
     @IBAction func likeButtonPressed(_ sender: Any) {
         
+        var bool = false
+        
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(picString)
         print(ref)
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            if let pic = String(snapshot.key) {
-            self.likePicsArray.append(pic)
+            let value = snapshot.value as? Bool
+            if let value = value {
+                bool = true
+            }
+            else {
+                bool = false
+            }
+            dispatchGroup.leave()
+        })
+        dispatchGroup.notify(queue: .main, execute: {
+            if bool == true {
+                LikeService.delete(for: self.picString, success: { (nil) in
+                    let image: UIImage = UIImage(named: "un-heart")!
+                    self.likeButton.setImage(image, for: UIControlState.normal)
+                    return
+                })
+            }
+            else {
+                LikeService.create(for: self.picString) { (true) in
+                    let image: UIImage = UIImage(named: "red-heart")!
+                    self.likeButton.setImage(image, for: UIControlState.normal)
+                    return
+                }
             }
         })
-        
-        if likePicsArray.contains(picString) {
-            LikeService.delete(for: picString, success: { (nil) in
-                return
-            })
-        }
-        else {
-            LikeService.create(for: picString) { (true) in
-                return
-            }
-        }
-//        LikeService.isLiked(picString: picString)
+
+        //        LikeService.isLiked(picString: picString)
     }
-//    @IBAction func optionsButton(_ sender: Any) {
-//        performSegue(withIdentifier: "showOptions", sender: nil)
-//    }
+    //    @IBAction func optionsButton(_ sender: Any) {
+    //        performSegue(withIdentifier: "showOptions", sender: nil)
+    //    }
     
     @IBAction func chooseAgainButton(_ sender: Any) {
         
@@ -186,7 +202,7 @@ class WeatherViewController: UIViewController {
         
         let pic = Weather.getPicture(0)
         picString = pic
-
+        
         outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 1
         iconImage.image = UIImage(named: Weather.iconArr[0])
@@ -206,7 +222,7 @@ class WeatherViewController: UIViewController {
         
         let pic = Weather.getPicture(1)
         picString = pic
-
+        
         outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 2
         iconImage.image = UIImage(named: Weather.iconArr[1])
@@ -226,7 +242,7 @@ class WeatherViewController: UIViewController {
         
         let pic = Weather.getPicture(2)
         picString = pic
-
+        
         outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 3
         iconImage.image = UIImage(named: Weather.iconArr[2])    }
@@ -245,7 +261,7 @@ class WeatherViewController: UIViewController {
         
         let pic = Weather.getPicture(3)
         picString = pic
-
+        
         outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 4
         iconImage.image = UIImage(named: Weather.iconArr[3])
@@ -264,41 +280,41 @@ class WeatherViewController: UIViewController {
         
         let pic = Weather.getPicture(4)
         picString = pic
-
+        
         outfitImage.image = UIImage(named: "\(pic)")
         currentDay = 5
         iconImage.image = UIImage(named: Weather.iconArr[4])
     }
     
     
-//    @IBAction func goButtonTapped(_ sender: Any) {
-//        if let txt = locationTextField.text{
-//            if(txt.characters.count == 5 ){
-//                let zip: Int = Int(locationTextField.text!)!
-//                Day.setZip(zipCode: zip)
-//                locationTextField.text = "\(zip)"
-//                if(Day.getCity().contains("no such city")){
-//                showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
-//                    return
-//                }
-//                else{
-//                    update()
-//                }
-//            }
-//            else{
-//                showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
-//                return
-//                
-//            }
-//        }
-//        else{
-//            showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
-//            return
-//        }
-//        
-//        view.endEditing(true)
-//        moveViewDown()
-//    }
+    //    @IBAction func goButtonTapped(_ sender: Any) {
+    //        if let txt = locationTextField.text{
+    //            if(txt.characters.count == 5 ){
+    //                let zip: Int = Int(locationTextField.text!)!
+    //                Day.setZip(zipCode: zip)
+    //                locationTextField.text = "\(zip)"
+    //                if(Day.getCity().contains("no such city")){
+    //                showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
+    //                    return
+    //                }
+    //                else{
+    //                    update()
+    //                }
+    //            }
+    //            else{
+    //                showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
+    //                return
+    //
+    //            }
+    //        }
+    //        else{
+    //            showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
+    //            return
+    //        }
+    //
+    //        view.endEditing(true)
+    //        moveViewDown()
+    //    }
     func moveViewUp() {
         if topMarginConstraint.constant != originalTopMargin {
             return
@@ -332,50 +348,50 @@ class WeatherViewController: UIViewController {
     }
     
     private func update(){
-//        if(dayOne == 0 || dayTwo == 0 || dayThree == 0 || dayFour == 0 || dayFive == 0){
-//            showError(bigErrorMsg: "invalid zipcode", smallErrorMsg: "please try again")
-//            return
-//        }
-//        else {
-//            dayOneButton.setTitle("\(dayOne!)", for: .normal)
-//            dayTwoButton.setTitle("\(dayTwo!)", for: .normal)
-//            dayThreeButton.setTitle("\(dayThree!)", for: .normal)
-//            dayFourButton.setTitle("\(dayFour!)", for: .normal)
-//            dayFiveButton.setTitle("\(dayFive!)", for: .normal)
-//            print("the temperatures/pictures have updated!!!")
-//            
-//            currentCityLabel.text = "showing weather for: SUNNYVALE"
-//            
-            if(currentDay == 1){
-                let pic = Weather.getPicture(0)
-                picString = pic
-                outfitImage.image = UIImage(named: "\(pic)")
-                iconImage.image = UIImage(named: Weather.iconArr[0])
-            }
-            else if(currentDay == 2){
-                let pic = Weather.getPicture(1)
-                picString = pic
-                outfitImage.image = UIImage(named: "\(pic)")
-                iconImage.image = UIImage(named: Weather.iconArr[1])
-            }
-            else if(currentDay == 3){
-                let pic = Weather.getPicture(2)
-                picString = pic
-                outfitImage.image = UIImage(named: "\(pic)")
-                iconImage.image = UIImage(named: Weather.iconArr[2])
-            }
-            else if(currentDay == 4){
-                let pic = Weather.getPicture(3)
-                picString = pic
-                outfitImage.image = UIImage(named: "\(pic)")
-                iconImage.image = UIImage(named: Weather.iconArr[3])
-            }
-            else if(currentDay == 5){
-                let pic = Weather.getPicture(4)
-                picString = pic
-                outfitImage.image = UIImage(named: "\(pic)")
-                iconImage.image = UIImage(named: Weather.iconArr[4])
-//            }
+        //        if(dayOne == 0 || dayTwo == 0 || dayThree == 0 || dayFour == 0 || dayFive == 0){
+        //            showError(bigErrorMsg: "invalid zipcode", smallErrorMsg: "please try again")
+        //            return
+        //        }
+        //        else {
+        //            dayOneButton.setTitle("\(dayOne!)", for: .normal)
+        //            dayTwoButton.setTitle("\(dayTwo!)", for: .normal)
+        //            dayThreeButton.setTitle("\(dayThree!)", for: .normal)
+        //            dayFourButton.setTitle("\(dayFour!)", for: .normal)
+        //            dayFiveButton.setTitle("\(dayFive!)", for: .normal)
+        //            print("the temperatures/pictures have updated!!!")
+        //
+        //            currentCityLabel.text = "showing weather for: SUNNYVALE"
+        //
+        if(currentDay == 1){
+            let pic = Weather.getPicture(0)
+            picString = pic
+            outfitImage.image = UIImage(named: "\(pic)")
+            iconImage.image = UIImage(named: Weather.iconArr[0])
+        }
+        else if(currentDay == 2){
+            let pic = Weather.getPicture(1)
+            picString = pic
+            outfitImage.image = UIImage(named: "\(pic)")
+            iconImage.image = UIImage(named: Weather.iconArr[1])
+        }
+        else if(currentDay == 3){
+            let pic = Weather.getPicture(2)
+            picString = pic
+            outfitImage.image = UIImage(named: "\(pic)")
+            iconImage.image = UIImage(named: Weather.iconArr[2])
+        }
+        else if(currentDay == 4){
+            let pic = Weather.getPicture(3)
+            picString = pic
+            outfitImage.image = UIImage(named: "\(pic)")
+            iconImage.image = UIImage(named: Weather.iconArr[3])
+        }
+        else if(currentDay == 5){
+            let pic = Weather.getPicture(4)
+            picString = pic
+            outfitImage.image = UIImage(named: "\(pic)")
+            iconImage.image = UIImage(named: Weather.iconArr[4])
+            //            }
         }
     }
     
