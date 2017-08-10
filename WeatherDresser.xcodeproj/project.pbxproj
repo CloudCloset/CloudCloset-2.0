@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		822655261F3B93E0007BA949 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 822655251F3B93E0007BA949 /* GoogleService-Info.plist */; };
 		8226552A1F3B94A5007BA949 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822655291F3B94A5007BA949 /* Weather.swift */; };
 		8226552C1F3BB1B1007BA949 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8226552B1F3BB1B1007BA949 /* Weather.storyboard */; };
 		8226552E1F3BB48D007BA949 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8226552D1F3BB48D007BA949 /* Settings.storyboard */; };
@@ -21,6 +20,7 @@
 		822655421F3BD1CA007BA949 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822655411F3BD1CA007BA949 /* OptionsViewController.swift */; };
 		822655451F3BFC3A007BA949 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822655441F3BFC3A007BA949 /* Constants.swift */; };
 		822655481F3C050B007BA949 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822655461F3C050B007BA949 /* Favorites.storyboard */; };
+		8226554A1F3CC39B007BA949 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 822655491F3CC39B007BA949 /* GoogleService-Info.plist */; };
 		82ABD1241F0D47110056A74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD1231F0D47110056A74F /* AppDelegate.swift */; };
 		82ABD1261F0D47110056A74F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD1251F0D47110056A74F /* WeatherViewController.swift */; };
 		82ABD1291F0D47110056A74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ABD1271F0D47110056A74F /* Main.storyboard */; };
@@ -40,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		4F060DECBCB671C6624048F8 /* Pods-WeatherDresser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherDresser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherDresser/Pods-WeatherDresser.debug.xcconfig"; sourceTree = "<group>"; };
-		822655251F3B93E0007BA949 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		822655291F3B94A5007BA949 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		8226552B1F3BB1B1007BA949 /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		8226552D1F3BB48D007BA949 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		822655411F3BD1CA007BA949 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		822655441F3BFC3A007BA949 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		822655471F3C050B007BA949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Favorites.storyboard; sourceTree = "<group>"; };
+		822655491F3CC39B007BA949 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82ABD1201F0D47110056A74F /* WeatherDresser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDresser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ABD1231F0D47110056A74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ABD1251F0D47110056A74F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -175,7 +175,6 @@
 				822655211F3B9377007BA949 /* Controllers */,
 				822655351F3BB7BA007BA949 /* Extension */,
 				9E758A1E1F1181E800D2745C /* Fonts */,
-				822655251F3B93E0007BA949 /* GoogleService-Info.plist */,
 				82ABD12F1F0D47110056A74F /* Info.plist */,
 				822655221F3B937E007BA949 /* Models */,
 				8226553C1F3BC0F4007BA949 /* Services */,
@@ -210,6 +209,7 @@
 		9E758A1E1F1181E800D2745C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				822655491F3CC39B007BA949 /* GoogleService-Info.plist */,
 				9E758A0E1F1181E000D2745C /* SFDisplay-Light.otf */,
 				9E758A0F1F1181E000D2745C /* SFDisplay-Medium.otf */,
 				9E758A101F1181E000D2745C /* SFDisplay-Regular.otf */,
@@ -296,7 +296,7 @@
 				9E758A181F1181E000D2745C /* SFDisplay-Regular.otf in Resources */,
 				9E758A161F1181E000D2745C /* SFDisplay-Light.otf in Resources */,
 				9E758A1D1F1181E000D2745C /* SFText-Semibold.otf in Resources */,
-				822655261F3B93E0007BA949 /* GoogleService-Info.plist in Resources */,
+				8226554A1F3CC39B007BA949 /* GoogleService-Info.plist in Resources */,
 				9E758A1B1F1181E000D2745C /* SFText-Medium.otf in Resources */,
 				8226552E1F3BB48D007BA949 /* Settings.storyboard in Resources */,
 				822655481F3C050B007BA949 /* Favorites.storyboard in Resources */,
