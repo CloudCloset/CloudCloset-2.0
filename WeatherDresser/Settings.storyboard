@@ -71,7 +71,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ffC-qH-tgj">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ffC-qH-tgj">
                                         <rect key="frame" x="0.0" y="74" width="285" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="preferred style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHy-2C-U8b">
@@ -95,7 +95,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdk-Ez-2DZ">
                                         <rect key="frame" x="0.0" y="0.0" width="285" height="60"/>
-                                        <color key="backgroundColor" red="0.69019607839999997" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="mQV-Ho-T8A"/>
                                         </constraints>
@@ -342,8 +342,8 @@
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1en-aJ-fyq">
-                                <rect key="frame" x="39" y="41.5" width="32" height="72"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1en-aJ-fyq">
+                                <rect key="frame" x="23" y="41.5" width="32" height="72"/>
                                 <accessibility key="accessibilityConfiguration" identifier="backButton"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="50"/>
                                 <state key="normal" title="&lt;">
@@ -380,6 +380,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1en-aJ-fyq" firstAttribute="centerY" secondItem="irw-Mj-aDv" secondAttribute="centerY" id="0L6-59-iN7"/>
+                            <constraint firstItem="1en-aJ-fyq" firstAttribute="leading" secondItem="PKp-1r-LqC" secondAttribute="leading" constant="23" id="1gZ-60-WeW"/>
                             <constraint firstItem="irw-Mj-aDv" firstAttribute="centerX" secondItem="PKp-1r-LqC" secondAttribute="centerX" id="1oy-Ko-dGz"/>
                             <constraint firstItem="kyb-UU-pl7" firstAttribute="leading" secondItem="PKp-1r-LqC" secondAttribute="leading" constant="20" id="1wj-MO-wAb"/>
                             <constraint firstItem="kyb-UU-pl7" firstAttribute="top" secondItem="1en-aJ-fyq" secondAttribute="bottom" constant="50" id="X0x-g3-Ua8"/>

@@ -13,6 +13,9 @@
         <array key="SFDisplay-Medium.otf">
             <string>SFUIDisplay-Medium</string>
         </array>
+        <array key="SFText-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Login View Controller-->
@@ -124,14 +127,23 @@
                                     <constraint firstAttribute="width" secondItem="Fbb-bu-kfF" secondAttribute="height" multiplier="249:37" id="mHz-4r-x8q"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="this is for initial setup only; you can always change this later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-x5-xD8">
+                                <rect key="frame" x="82" y="128" width="210" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="upt-Ge-zGu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="0GW-zr-aF8">
-                                <rect key="frame" x="50" y="164" width="275" height="284"/>
+                                <rect key="frame" x="50" y="193" width="275" height="284"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-28-wUK">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-28-wUK">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="82"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zip code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omY-OG-o4X">
-                                                <rect key="frame" x="101.5" y="0.0" width="72.5" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="24"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
                                                 <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -151,15 +163,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="qoB-fG-Bgf" firstAttribute="width" secondItem="dSD-28-wUK" secondAttribute="width" id="U7a-YN-Ian"/>
-                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1oz-J0-i7B">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1oz-J0-i7B">
                                         <rect key="frame" x="0.0" y="120" width="275" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="outfit style preference" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeh-9x-QfS">
-                                                <rect key="frame" x="44" y="0.0" width="187.5" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="24"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
                                                 <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -213,7 +222,8 @@
                             <constraint firstItem="Oxx-iZ-qJ4" firstAttribute="leading" secondItem="I7L-HW-dSV" secondAttribute="leading" constant="46" id="5hP-Lo-ugM"/>
                             <constraint firstAttribute="trailing" secondItem="Oxx-iZ-qJ4" secondAttribute="trailing" constant="46" id="Dvn-Ou-6jQ"/>
                             <constraint firstItem="Fbb-bu-kfF" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="PEb-gZ-a8w"/>
-                            <constraint firstItem="0GW-zr-aF8" firstAttribute="top" secondItem="Fbb-bu-kfF" secondAttribute="bottom" constant="44" id="RVn-Y0-aWs"/>
+                            <constraint firstItem="MAe-x5-xD8" firstAttribute="top" secondItem="Fbb-bu-kfF" secondAttribute="bottom" constant="8" id="Xt3-CW-V10"/>
+                            <constraint firstItem="0GW-zr-aF8" firstAttribute="top" secondItem="MAe-x5-xD8" secondAttribute="bottom" constant="20" id="dew-De-UPh"/>
                             <constraint firstItem="Oxx-iZ-qJ4" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="ibP-xT-Q4T"/>
                             <constraint firstItem="0GW-zr-aF8" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="jgo-Kk-zM2"/>
                             <constraint firstItem="X8m-Q6-eY7" firstAttribute="top" secondItem="Oxx-iZ-qJ4" secondAttribute="bottom" constant="69" id="nLH-OJ-dj3"/>
