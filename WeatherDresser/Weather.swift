@@ -127,4 +127,8 @@ class Weather {
         var dateArr = str.components(separatedBy: "-")
         return dateArr[2]
     }
+    
+    static func isLiked(picString: String) {
+        
+    }
 }

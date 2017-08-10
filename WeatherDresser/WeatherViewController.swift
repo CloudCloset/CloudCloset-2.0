@@ -44,6 +44,7 @@ class WeatherViewController: UIViewController {
     
     var currentDay: Int!
     
+    var picString: String!
     
     override func viewDidLoad() {
         
@@ -88,6 +89,7 @@ class WeatherViewController: UIViewController {
         dayFiveButton.titleLabel?.adjustsFontSizeToFitWidth = true
                 
         let dayOnePicture: String = Weather.getPicture(0)
+        picString = dayOnePicture
         
         dateLabel.text = Weather.getDate(0)
         monthLabel.text = Weather.getMonth(0).lowercased()
@@ -107,13 +109,13 @@ class WeatherViewController: UIViewController {
     }
     
     @IBAction func likeButtonPressed(_ sender: Any) {
-        LikeService.create(for: "hello") { (true) in
+        LikeService.create(for: picString) { (true) in
             return
         }
     }
-    @IBAction func optionsButton(_ sender: Any) {
-        performSegue(withIdentifier: "showOptions", sender: nil)
-    }
+//    @IBAction func optionsButton(_ sender: Any) {
+//        performSegue(withIdentifier: "showOptions", sender: nil)
+//    }
     
     @IBAction func chooseAgainButton(_ sender: Any) {
         
@@ -311,26 +313,31 @@ class WeatherViewController: UIViewController {
 //            
             if(currentDay == 1){
                 let pic = Weather.getPicture(0)
+                picString = pic
                 outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[0])
             }
             else if(currentDay == 2){
                 let pic = Weather.getPicture(1)
+                picString = pic
                 outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[1])
             }
             else if(currentDay == 3){
                 let pic = Weather.getPicture(2)
+                picString = pic
                 outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[2])
             }
             else if(currentDay == 4){
                 let pic = Weather.getPicture(3)
+                picString = pic
                 outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[3])
             }
             else if(currentDay == 5){
                 let pic = Weather.getPicture(4)
+                picString = pic
                 outfitImage.image = UIImage(named: "\(pic)")
                 iconImage.image = UIImage(named: Weather.iconArr[4])
 //            }
