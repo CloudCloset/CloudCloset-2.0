@@ -26,7 +26,7 @@
                   moduleName = "WeatherDresser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Huttens/Desktop/Make%20School%20Projects/CloudCloset-2.0/WeatherDresser/FavoritesViewController.swift"
-                  timestampString = "524097125.378563"
+                  timestampString = "524099891.515975"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -41,7 +41,7 @@
                   moduleName = "WeatherDresser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Huttens/Desktop/Make%20School%20Projects/CloudCloset-2.0/WeatherDresser/FavoritesViewController.swift"
-                  timestampString = "524097125.380208"
+                  timestampString = "524099891.517408"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "56"
@@ -90,7 +90,7 @@
                   moduleName = "WeatherDresser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Huttens/Desktop/Make%20School%20Projects/CloudCloset-2.0/WeatherDresser/CreateUserViewController.swift"
-                  timestampString = "524097125.430555"
+                  timestampString = "524099891.523873"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
@@ -105,7 +105,7 @@
                   moduleName = "WeatherDresser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Huttens/Desktop/Make%20School%20Projects/CloudCloset-2.0/WeatherDresser/CreateUserViewController.swift"
-                  timestampString = "524097125.433695"
+                  timestampString = "524099891.525252"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "48"
@@ -138,7 +138,7 @@
                   moduleName = "WeatherDresser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Huttens/Desktop/Make%20School%20Projects/CloudCloset-2.0/WeatherDresser/FavoritesViewController.swift"
-                  timestampString = "524097125.445522"
+                  timestampString = "524099891.529153"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -153,7 +153,7 @@
                   moduleName = "WeatherDresser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Huttens/Desktop/Make%20School%20Projects/CloudCloset-2.0/WeatherDresser/FavoritesViewController.swift"
-                  timestampString = "524097125.447687"
+                  timestampString = "524099891.530625"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -161,6 +161,102 @@
                   offsetFromSymbolStart = "579">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherDresser/WeatherViewController.swift"
+            timestampString = "524099956.753686"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "likeButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherDresser/WeatherViewController.swift"
+            timestampString = "524099977.442238"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "likeButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherDresser/WeatherViewController.swift"
+            timestampString = "524099978.826669"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "likeButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherDresser/FavoritesViewController.swift"
+            timestampString = "524100012.271343"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "getPics()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherDresser/FavoritesViewController.swift"
+            timestampString = "524100029.207733"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "getPics()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherDresser/FavoritesViewController.swift"
+            timestampString = "524100034.455132"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "getPics()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

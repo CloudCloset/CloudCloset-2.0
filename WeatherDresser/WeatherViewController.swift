@@ -57,19 +57,11 @@ class WeatherViewController: UIViewController {
         
         Weather.reload()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        Weather.reload()
-        
         dayOne = Weather.weatherArr[0]
         dayTwo = Weather.weatherArr[1]
         dayThree = Weather.weatherArr[2]
         dayFour = Weather.weatherArr[3]
         dayFive = Weather.weatherArr[4]
-        
-//        originalTopMargin = topMarginConstraint.constant
         
         currentCityLabel.text = "showing weather for: SUNNYVALE"
         
@@ -110,6 +102,17 @@ class WeatherViewController: UIViewController {
         dayFourLabel.text = Weather.getDayOfWeek(3).lowercased()
         dayFiveLabel.text = Weather.getDayOfWeek(4).lowercased()
         currentDay = 1
+        
+        let isLiked = LikeService.isLiked(picString: picString)
+        likeButton.isSelected = isLiked
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+//        Weather.reload()
+        
+
     }
     
     @IBAction func likeButtonPressed(_ sender: Any) {
@@ -133,15 +136,13 @@ class WeatherViewController: UIViewController {
         dispatchGroup.notify(queue: .main, execute: {
             if bool == true {
                 LikeService.delete(for: self.picString, success: { (nil) in
-                    let image: UIImage = UIImage(named: "un-heart")!
-                    self.likeButton.setImage(image, for: UIControlState.normal)
+                    self.likeButton.isSelected = false
                     return
                 })
             }
             else {
                 LikeService.create(for: self.picString) { (true) in
-                    let image: UIImage = UIImage(named: "red-heart")!
-                    self.likeButton.setImage(image, for: UIControlState.normal)
+                    self.likeButton.isSelected = true
                     return
                 }
             }
