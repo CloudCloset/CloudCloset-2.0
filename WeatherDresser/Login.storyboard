@@ -125,7 +125,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="0GW-zr-aF8">
-                                <rect key="frame" x="50" y="164" width="275" height="184"/>
+                                <rect key="frame" x="50" y="164" width="275" height="284"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-28-wUK">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="82"/>
@@ -183,6 +183,25 @@
                                         <constraints>
                                             <constraint firstItem="pj2-k0-bcD" firstAttribute="width" secondItem="1oz-J0-i7B" secondAttribute="width" id="qYs-qR-ySr"/>
                                         </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ieb-6w-Ofs">
+                                        <rect key="frame" x="0.0" y="222" width="275" height="62"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb5-E0-xyL">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="24"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
+                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Ux-qF-dfk">
+                                                <rect key="frame" x="0.0" y="34" width="275" height="29"/>
+                                                <segments>
+                                                    <segment title="f˚"/>
+                                                    <segment title="c˚"/>
+                                                </segments>
+                                                <color key="tintColor" red="1" green="0.51372549020000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </segmentedControl>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
