@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUc-GY-MzL">
-                                <rect key="frame" x="115" y="30" width="145" height="54"/>
+                                <rect key="frame" x="115.5" y="30" width="145" height="54"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="45"/>
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -117,14 +117,12 @@
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMs-iM-z1T">
-                                <rect key="frame" x="286" y="117" width="73" height="48"/>
-                                <color key="backgroundColor" red="0.69019607839999997" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMs-iM-z1T">
+                                <rect key="frame" x="267" y="124" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Jah-cQ-xIt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="30"/>
-                                <state key="normal" title="edit">
+                                <state key="normal" image="edit button2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -320,13 +318,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="more info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irw-Mj-aDv">
-                                <rect key="frame" x="97" y="50" width="181" height="54"/>
+                                <rect key="frame" x="97.5" y="50" width="181" height="54"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="45"/>
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1en-aJ-fyq">
-                                <rect key="frame" x="39" y="41" width="32" height="72"/>
+                                <rect key="frame" x="39" y="41.5" width="32" height="72"/>
                                 <accessibility key="accessibilityConfiguration" identifier="backButton"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="50"/>
                                 <state key="normal" title="&lt;">
@@ -337,7 +335,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kyb-UU-pl7">
-                                <rect key="frame" x="20" y="163" width="335" height="204"/>
+                                <rect key="frame" x="20" y="163.5" width="335" height="204"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️ weather from openweathermap.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="DcZ-yP-rRz">
                                         <rect key="frame" x="63.5" y="0.0" width="208" height="48"/>
@@ -383,7 +381,7 @@
                     <tabBarItem key="tabBarItem" title="user" id="nP5-xr-KEO"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PZY-Wn-3Kc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PZY-Wn-3Kc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -397,4 +395,7 @@
             <point key="canvasLocation" x="1166.6666666666667" y="-688.04347826086962"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="edit button2" width="198" height="198"/>
+    </resources>
 </document>
