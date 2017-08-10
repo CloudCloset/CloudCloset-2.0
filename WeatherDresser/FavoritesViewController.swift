@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 
 class FavoritesViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var picCount: Int = 0
@@ -20,27 +20,27 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         getPics()
         reloadNumPics()
-
+        
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         getPics()
         reloadNumPics()
-
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     func reloadNumPics() {
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic")
-
+        
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
         var count = 0
-
+        
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             count = Int(snapshot.childrenCount)
             
@@ -51,20 +51,24 @@ class FavoritesViewController: UIViewController {
             self.collectionView.reloadData()
         })
     }
+    
     func getPics() {
-        var arr = [String]()
+        var arr = [String: Bool]()
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic")
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            for str in snapshot.value {
-                arr.append(str as! String)
+            if let item = snapshot.value as? [String : Bool] {
+                for key in item.keys {
+                    arr.updateValue(true, forKey: key)
+                }
             }
+
             dispatchGroup.leave()
         })
         dispatchGroup.notify(queue: .main, execute: {
             for str in arr {
-                let img = UIImage(named: "\(str)") as! UIImage
+                let img = UIImage(named: str.key)!
                 self.arrPics.append(img)
             }
             self.collectionView.reloadData()
@@ -89,10 +93,10 @@ extension FavoritesViewController: UICollectionViewDataSource {
         }
         
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "favHeaderView", for: indexPath) as! FavHeaderCollectionReusableView
-            
+        
         return headerView
     }
-
+    
 }
 
 extension FavoritesViewController: UICollectionViewDelegateFlowLayout {

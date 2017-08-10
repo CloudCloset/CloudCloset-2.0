@@ -14,7 +14,7 @@ class CreateUserViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var genderControl: UISegmentedControl!
-    var gender: String?
+    var gender: String? = "f"
     override func viewDidLoad() {
         super.viewDidLoad()
     }
