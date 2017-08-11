@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cJE-1g-0zD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B4L-55-ZgT">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--About View Controller-->
+        <!--Item-->
         <scene sceneID="inB-NB-R1T">
             <objects>
                 <viewController id="who-0f-CTJ" customClass="AboutViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,30 +89,12 @@
                             <constraint firstItem="DFX-81-0xr" firstAttribute="leading" secondItem="PkG-pC-aGD" secondAttribute="leading" constant="50" id="veh-XF-TrL"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="QLj-iZ-xPy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcf-TQ-rho" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="SkW-LH-Drb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="873" y="-119"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="2Bm-RY-BXe">
-            <objects>
-                <tabBarController id="cJE-1g-0zD" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="YRL-NO-Erj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="X11-Gs-wQt" kind="relationship" relationship="viewControllers" id="vT3-bk-ypC"/>
-                        <segue destination="BcT-EI-QjQ" kind="relationship" relationship="viewControllers" id="0nf-xj-O0P"/>
-                        <segue destination="x4s-f4-QLu" kind="relationship" relationship="viewControllers" id="r0g-Td-KrV"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d1J-vr-Uv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="22" y="-896"/>
         </scene>
         <!--Weather-->
         <scene sceneID="yNM-k2-rPq">
@@ -122,7 +104,26 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZT-t2-0jd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="-301"/>
+            <point key="canvasLocation" x="1218" y="-1000"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4Rt-UW-zPi">
+            <objects>
+                <tabBarController id="B4L-55-ZgT" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Bit-b7-Vp0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X11-Gs-wQt" kind="relationship" relationship="viewControllers" id="D2A-gL-6Cm"/>
+                        <segue destination="BcT-EI-QjQ" kind="relationship" relationship="viewControllers" id="H6v-sZ-gke"/>
+                        <segue destination="x4s-f4-QLu" kind="relationship" relationship="viewControllers" id="Nyg-Zd-fUk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOX-EW-0b3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="-1140"/>
         </scene>
         <!--Settings-->
         <scene sceneID="s9a-5h-3ao">

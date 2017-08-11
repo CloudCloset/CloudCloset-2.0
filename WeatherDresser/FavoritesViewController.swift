@@ -37,49 +37,54 @@ class FavoritesViewController: UIViewController {
     func reloadNumPics() {
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic")
         
-        let dispatchGroup = DispatchGroup()
-        dispatchGroup.enter()
+        //let dispatchGroup = DispatchGroup()
+        //dispatchGroup.enter()
         var count = 0
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             count = Int(snapshot.childrenCount)
-            
-            dispatchGroup.leave()
-        })
-        dispatchGroup.notify(queue: .main, execute: {
             self.picCount = count
             self.collectionView.reloadData()
+            //dispatchGroup.leave()
         })
+        //dispatchGroup.notify(queue: .main, execute: {
+
+        //})
     }
     
     func getPics() {
         arrPics = []
         var arr = [String: Bool]()
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic")
-        let dispatchGroup = DispatchGroup()
-        dispatchGroup.enter()
+        //let dispatchGroup = DispatchGroup()
+        //dispatchGroup.enter()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             if let item = snapshot.value as? [String : Bool] {
                 for key in item.keys {
                     arr.updateValue(true, forKey: key)
                 }
+                for str in arr {
+                    let img = UIImage(named: str.key)!
+                    self.arrPics.append(img)
+                }
+                self.collectionView.reloadData()
             }
-
-            dispatchGroup.leave()
+            //dispatchGroup.leave()
         })
-        dispatchGroup.notify(queue: .main, execute: {
-            for str in arr {
-                let img = UIImage(named: str.key)!
-                self.arrPics.append(img)
-            }
-            self.collectionView.reloadData()
-        })
+        //dispatchGroup.wait()
+        //dispatchGroup.notify(queue: .main, execute: {
+//            for str in arr {
+//                let img = UIImage(named: str.key)!
+//                self.arrPics.append(img)
+//            }
+//            self.collectionView.reloadData()
+        //})
     }
 }
 
 extension FavoritesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        reloadNumPics()
+        //reloadNumPics()
         return self.picCount
     }
     

@@ -174,7 +174,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-Rz-aqX" userLabel="Current Stack View">
-                                <rect key="frame" x="72" y="141" width="232.5" height="50"/>
+                                <rect key="frame" x="71.5" y="141" width="232.5" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun Behind Rain Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-Xp-OtY">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>

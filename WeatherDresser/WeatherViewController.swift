@@ -45,8 +45,6 @@ class WeatherViewController: UIViewController {
     var dayFour: Int?
     var dayFive: Int?
     
-    var currentDay: Int!
-    
     var picString: String!
     
     var likePicsArray = [String]()
@@ -85,15 +83,11 @@ class WeatherViewController: UIViewController {
         dayFiveButton.titleLabel?.minimumScaleFactor = 0.5
         dayFiveButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
-        let dayOnePicture: String = Weather.getPicture(0)
-        picString = dayOnePicture
-        
         dateLabel.text = Weather.getDate(0)
         monthLabel.text = Weather.getMonth(0).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(0).lowercased()
         
-        outfitImage.image = UIImage(named:dayOnePicture)
-        iconImage.image = UIImage(named: Weather.iconArr[0])
+        update(0)
         dayOneButton.isSelected = true
         
         dayOneLabel.text = Weather.getDayOfWeek(0).lowercased()
@@ -101,8 +95,7 @@ class WeatherViewController: UIViewController {
         dayThreeLabel.text = Weather.getDayOfWeek(2).lowercased()
         dayFourLabel.text = Weather.getDayOfWeek(3).lowercased()
         dayFiveLabel.text = Weather.getDayOfWeek(4).lowercased()
-        currentDay = 1
-        
+
         var bool = false
         
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(picString)
@@ -176,8 +169,22 @@ class WeatherViewController: UIViewController {
         let spinnerActivity = MBProgressHUD.showAdded(to: self.view, animated: true)
         spinnerActivity.label.text = "Loading"
         spinnerActivity.isUserInteractionEnabled = false
-        
-        update()
+        if dayOneButton.isSelected {
+            update(0)
+        }
+        else if dayTwoButton.isSelected {
+            update(1)
+        }
+        else if dayThreeButton.isSelected {
+            update(2)
+        }
+        else if dayFourButton.isSelected {
+            update(3)
+        }
+        else if dayFiveButton.isSelected {
+            update(4)
+        }
+    
         spinnerActivity.hide(animated: true)
     }
     
@@ -218,12 +225,7 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(0).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(0).lowercased()
         
-        let pic = Weather.getPicture(0)
-        picString = pic
-        
-        outfitImage.image = UIImage(named: "\(pic)")
-        currentDay = 1
-        iconImage.image = UIImage(named: Weather.iconArr[0])
+        update(0)
     }
     
     @IBAction func dayTwoButtonTapped(_ sender: Any) {
@@ -238,12 +240,7 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(1).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(1).lowercased()
         
-        let pic = Weather.getPicture(1)
-        picString = pic
-        
-        outfitImage.image = UIImage(named: "\(pic)")
-        currentDay = 2
-        iconImage.image = UIImage(named: Weather.iconArr[1])
+        update(1)
     }
     
     @IBAction func dayThreeButtonTapped(_ sender: Any) {
@@ -258,12 +255,8 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(2).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(2).lowercased()
         
-        let pic = Weather.getPicture(2)
-        picString = pic
-        
-        outfitImage.image = UIImage(named: "\(pic)")
-        currentDay = 3
-        iconImage.image = UIImage(named: Weather.iconArr[2])    }
+        update(2)
+    }
     
     @IBAction func dayFourButtonTapped(_ sender: Any) {
         dayFourButton.isSelected = true
@@ -277,12 +270,8 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(3).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(3).lowercased()
         
-        let pic = Weather.getPicture(3)
-        picString = pic
-        
-        outfitImage.image = UIImage(named: "\(pic)")
-        currentDay = 4
-        iconImage.image = UIImage(named: Weather.iconArr[3])
+        update(3)
+
     }
     @IBAction func dayFiveButtonTapped(_ sender: Any) {
         dayFiveButton.isSelected = true
@@ -296,12 +285,7 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(4).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(4).lowercased()
         
-        let pic = Weather.getPicture(4)
-        picString = pic
-        
-        outfitImage.image = UIImage(named: "\(pic)")
-        currentDay = 5
-        iconImage.image = UIImage(named: Weather.iconArr[4])
+        update(4)
     }
     
     
@@ -365,52 +349,22 @@ class WeatherViewController: UIViewController {
         
     }
     
-    private func update(){
-        //        if(dayOne == 0 || dayTwo == 0 || dayThree == 0 || dayFour == 0 || dayFive == 0){
-        //            showError(bigErrorMsg: "invalid zipcode", smallErrorMsg: "please try again")
-        //            return
-        //        }
-        //        else {
-        //            dayOneButton.setTitle("\(dayOne!)", for: .normal)
-        //            dayTwoButton.setTitle("\(dayTwo!)", for: .normal)
-        //            dayThreeButton.setTitle("\(dayThree!)", for: .normal)
-        //            dayFourButton.setTitle("\(dayFour!)", for: .normal)
-        //            dayFiveButton.setTitle("\(dayFive!)", for: .normal)
-        //            print("the temperatures/pictures have updated!!!")
-        //
-        //            currentCityLabel.text = "showing weather for: SUNNYVALE"
-        //
-        if(currentDay == 1){
-            let pic = Weather.getPicture(0)
-            picString = pic
-            outfitImage.image = UIImage(named: "\(pic)")
-            iconImage.image = UIImage(named: Weather.iconArr[0])
-        }
-        else if(currentDay == 2){
-            let pic = Weather.getPicture(1)
-            picString = pic
-            outfitImage.image = UIImage(named: "\(pic)")
-            iconImage.image = UIImage(named: Weather.iconArr[1])
-        }
-        else if(currentDay == 3){
-            let pic = Weather.getPicture(2)
-            picString = pic
-            outfitImage.image = UIImage(named: "\(pic)")
-            iconImage.image = UIImage(named: Weather.iconArr[2])
-        }
-        else if(currentDay == 4){
-            let pic = Weather.getPicture(3)
-            picString = pic
-            outfitImage.image = UIImage(named: "\(pic)")
-            iconImage.image = UIImage(named: Weather.iconArr[3])
-        }
-        else if(currentDay == 5){
-            let pic = Weather.getPicture(4)
-            picString = pic
-            outfitImage.image = UIImage(named: "\(pic)")
-            iconImage.image = UIImage(named: Weather.iconArr[4])
-            //            }
-        }
+    func update(_ day: Int) {
+        let pic = Weather.getPicture(day)
+        picString = pic
+        outfitImage.image = UIImage(named: "\(pic)")
+        iconImage.image = UIImage(named: Weather.iconArr[day])
+        
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(picString)
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? Bool
+            if let _ = value {
+                self.likeButton.isSelected = true
+            }
+            else {
+                self.likeButton.isSelected = false
+            }
+        })
     }
     
 }

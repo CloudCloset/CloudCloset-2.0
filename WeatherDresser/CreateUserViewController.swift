@@ -14,7 +14,7 @@ class CreateUserViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var genderControl: UISegmentedControl!
-    var gender: String? = "f"
+    var gender: String = "f"
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -39,20 +39,27 @@ class CreateUserViewController: UIViewController {
     @IBAction func nextButtonTapped(_ sender: Any) {
         guard let firUser = Auth.auth().currentUser,
             let zipCode = nameTextField.text,
-            !zipCode.isEmpty else { return }
+            !zipCode.isEmpty else { let alertController = UIAlertController(title: "please enter a 4 digit pin", message:
+                "", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                return }
         
-        UserDefaults.standard.set(false, forKey: Constants.UserDefaults.zipCode)
+        UserDefaults.standard.set(zipCode, forKey: Constants.UserDefaults.zipCode)
         
         
-        UserService.create(firUser, gender: gender!) { (user) in
+        UserService.create(firUser, gender: gender) { (user) in
             guard let user = user else {
+                let alertController = UIAlertController(title: "please enter a 4 digit pin", message:
+                    "", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
                 return
             }
             
             User.setCurrent(user, writeToUserDefaults: true)
             
             let initialViewController = UIStoryboard.initialViewController(for: .main)
-            
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
         }
