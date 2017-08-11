@@ -13,6 +13,11 @@ class FavoritesViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+    @IBAction func unwindToFavorites(_ segue: UIStoryboardSegue) {
+        
+    }
+    
     var picCount: Int = 0
     var arrPics = [UIImage]()
     

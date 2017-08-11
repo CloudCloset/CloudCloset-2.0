@@ -61,6 +61,13 @@
                                                     </constraints>
                                                     <state key="normal" image="maximize"/>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiS-yS-8YS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <segue destination="pIe-a6-d0a" kind="show" id="d7j-2E-aIs"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -73,6 +80,7 @@
                                         </constraints>
                                         <size key="customSize" width="150" height="200"/>
                                         <connections>
+                                            <outlet property="overlayButton" destination="CiS-yS-8YS" id="9ue-T0-CLW"/>
                                             <outlet property="thumbNailImage" destination="AQr-QF-p9q" id="Zbi-Df-eYw"/>
                                         </connections>
                                     </collectionViewCell>
@@ -138,6 +146,107 @@
             </objects>
             <point key="canvasLocation" x="2072.8000000000002" y="-1338.08095952024"/>
         </scene>
+        <!--Expanded Faves View Controller-->
+        <scene sceneID="PVI-DQ-b78">
+            <objects>
+                <viewController id="pIe-a6-d0a" customClass="ExpandedFavesViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rfk-p7-UT9"/>
+                        <viewControllerLayoutGuide type="bottom" id="LuC-U9-VBn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z8K-1G-RLK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wC-Tf-HoS">
+                                <rect key="frame" x="39" y="32" width="32" height="72"/>
+                                <accessibility key="accessibilityConfiguration" identifier="backButton"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="50"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="1" green="0.51042813060000003" blue="0.51261007790000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DhD-W2-8VP" kind="unwind" unwindAction="unwindToFavorites:" id="Z3u-xZ-IaI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sheathed lace dress in grey" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcy-CE-J4m">
+                                <rect key="frame" x="85" y="50" width="350.5" height="36"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="30"/>
+                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cold1" translatesAutoresizingMaskIntoConstraints="NO" id="4Ki-Lf-HAD">
+                                <rect key="frame" x="52" y="124" width="271" height="361.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Ki-Lf-HAD" secondAttribute="height" multiplier="150:200" id="WaF-af-vOC"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-M6-jD6">
+                                <rect key="frame" x="52" y="492.5" width="271" height="78.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfz-na-Vzn">
+                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="78.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Wfz-na-Vzn" secondAttribute="height" multiplier="58.35:59.55" id="kMf-Q2-U1J"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="tag"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wDy-dp-s11">
+                                        <rect key="frame" x="76.5" y="0.0" width="194.5" height="78.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="60-75˚F  /  20-23˚C" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlM-s1-I99">
+                                                <rect key="frame" x="0.0" y="0.0" width="194.5" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="20"/>
+                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Forever 21" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9D-in-oJg">
+                                                <rect key="frame" x="0.0" y="30.5" width="194.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="20"/>
+                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$28.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mod-2n-onv">
+                                                <rect key="frame" x="0.0" y="54.5" width="194.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="20"/>
+                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bWJ-M6-jD6" firstAttribute="centerX" secondItem="Z8K-1G-RLK" secondAttribute="centerX" id="1YY-1E-NRa"/>
+                            <constraint firstItem="4Ki-Lf-HAD" firstAttribute="top" secondItem="5wC-Tf-HoS" secondAttribute="bottom" constant="20" id="4no-N6-Afi"/>
+                            <constraint firstItem="5wC-Tf-HoS" firstAttribute="leading" secondItem="Z8K-1G-RLK" secondAttribute="leadingMargin" constant="23" id="6RN-5F-o5t"/>
+                            <constraint firstItem="4Ki-Lf-HAD" firstAttribute="leading" secondItem="Z8K-1G-RLK" secondAttribute="leadingMargin" constant="36" id="G1l-kp-eOm"/>
+                            <constraint firstItem="4Ki-Lf-HAD" firstAttribute="centerX" secondItem="Z8K-1G-RLK" secondAttribute="centerX" id="MaG-kd-owR"/>
+                            <constraint firstItem="tcy-CE-J4m" firstAttribute="centerY" secondItem="5wC-Tf-HoS" secondAttribute="centerY" id="UKg-df-naf"/>
+                            <constraint firstItem="5wC-Tf-HoS" firstAttribute="top" secondItem="rfk-p7-UT9" secondAttribute="bottom" constant="12" id="Wqw-Vo-Fmb"/>
+                            <constraint firstItem="bWJ-M6-jD6" firstAttribute="top" secondItem="4Ki-Lf-HAD" secondAttribute="bottom" constant="7" id="e7O-Vp-VYr"/>
+                            <constraint firstItem="tcy-CE-J4m" firstAttribute="leading" secondItem="5wC-Tf-HoS" secondAttribute="trailing" constant="14" id="nen-86-kBF"/>
+                            <constraint firstItem="bWJ-M6-jD6" firstAttribute="width" secondItem="4Ki-Lf-HAD" secondAttribute="width" id="xFH-dp-cXE"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bestTemperatureLabel" destination="vlM-s1-I99" id="ZlY-jf-eZe"/>
+                        <outlet property="buyButton" destination="Wfz-na-Vzn" id="BWW-Vg-NOc"/>
+                        <outlet property="itemImage" destination="4Ki-Lf-HAD" id="P2P-4L-sbb"/>
+                        <outlet property="itemNameLabel" destination="tcy-CE-J4m" id="xYu-JF-JEc"/>
+                        <outlet property="priceLabel" destination="mod-2n-onv" id="ihx-b7-d9b"/>
+                        <outlet property="storeLabel" destination="O9D-in-oJg" id="i8h-X6-zGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uKA-mU-YqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DhD-W2-8VP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2816.8000000000002" y="-1338.08095952024"/>
+        </scene>
         <!--fav-->
         <scene sceneID="ssg-QJ-LaZ">
             <objects>
@@ -161,6 +270,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cold1" width="972" height="1137"/>
         <image name="maximize" width="16" height="16"/>
+        <image name="tag" width="16" height="16"/>
     </resources>
 </document>

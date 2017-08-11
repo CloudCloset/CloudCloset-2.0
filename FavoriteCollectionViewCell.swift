@@ -11,4 +11,5 @@ import UIKit
 class FavoriteCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var thumbNailImage: UIImageView!
+    @IBOutlet weak var overlayButton: UIButton!
 }

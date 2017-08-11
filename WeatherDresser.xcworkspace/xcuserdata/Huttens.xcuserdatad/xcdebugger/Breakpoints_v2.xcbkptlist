@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherDresser/FavoritesViewController.swift"
-            timestampString = "524101553.665263"
+            timestampString = "524173320.936911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "getPics()"
             landmarkType = "7">
          </BreakpointContent>

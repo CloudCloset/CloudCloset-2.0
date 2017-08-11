@@ -41,6 +41,8 @@
 		9E758A1B1F1181E000D2745C /* SFText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E758A131F1181E000D2745C /* SFText-Medium.otf */; };
 		9E758A1C1F1181E000D2745C /* SFText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E758A141F1181E000D2745C /* SFText-Regular.otf */; };
 		9E758A1D1F1181E000D2745C /* SFText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E758A151F1181E000D2745C /* SFText-Semibold.otf */; };
+		9EA777C41F3E3BB60024FC17 /* ExpandedFaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA777C31F3E3BB60024FC17 /* ExpandedFaveViewController.swift */; };
+		9EA777C61F3E43B70024FC17 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA777C51F3E43B70024FC17 /* Outfit.swift */; };
 		F4B6C1D73ADDCFD0DBC75167 /* Pods_WeatherDresser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0210BB8986F2BCF3E50996D /* Pods_WeatherDresser.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +85,8 @@
 		9E758A131F1181E000D2745C /* SFText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFText-Medium.otf"; path = "Fonts/SFText-Medium.otf"; sourceTree = "<group>"; };
 		9E758A141F1181E000D2745C /* SFText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFText-Regular.otf"; path = "Fonts/SFText-Regular.otf"; sourceTree = "<group>"; };
 		9E758A151F1181E000D2745C /* SFText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFText-Semibold.otf"; path = "Fonts/SFText-Semibold.otf"; sourceTree = "<group>"; };
+		9EA777C31F3E3BB60024FC17 /* ExpandedFaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedFaveViewController.swift; sourceTree = "<group>"; };
+		9EA777C51F3E43B70024FC17 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
 		E0210BB8986F2BCF3E50996D /* Pods_WeatherDresser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherDresser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +130,7 @@
 				82ABD1251F0D47110056A74F /* WeatherViewController.swift */,
 				822655411F3BD1CA007BA949 /* OptionsViewController.swift */,
 				8226554D1F3CEE5D007BA949 /* FavoritesViewController.swift */,
+				9EA777C31F3E3BB60024FC17 /* ExpandedFaveViewController.swift */,
 				822655551F3E2646007BA949 /* EditSettingsViewController.swift */,
 			);
 			name = Controllers;
@@ -137,6 +142,7 @@
 				82ABD13B1F0E99250056A74F /* Day.swift */,
 				822655291F3B94A5007BA949 /* Weather.swift */,
 				822655381F3BBB5F007BA949 /* User.swift */,
+				9EA777C51F3E43B70024FC17 /* Outfit.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA777C41F3E3BB60024FC17 /* ExpandedFaveViewController.swift in Sources */,
 				822655541F3D010D007BA949 /* FavHeaderCollectionReusableView.swift in Sources */,
 				822655341F3BB6F6007BA949 /* LoginViewController.swift in Sources */,
 				822655421F3BD1CA007BA949 /* OptionsViewController.swift in Sources */,
@@ -394,6 +401,7 @@
 				8226552A1F3B94A5007BA949 /* Weather.swift in Sources */,
 				822655451F3BFC3A007BA949 /* Constants.swift in Sources */,
 				822655561F3E2646007BA949 /* EditSettingsViewController.swift in Sources */,
+				9EA777C61F3E43B70024FC17 /* Outfit.swift in Sources */,
 				822655581F3E3160007BA949 /* Int+Digit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
