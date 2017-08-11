@@ -19,11 +19,12 @@ class ExpandedFavesViewController : UIViewController {
     @IBOutlet weak var bestTemperatureLabel: UILabel!
     @IBOutlet weak var storeLabel: UILabel!
     
-    var itemsArr: [Outfit]
+    var itemsArr: [Outfit] = []
     @IBOutlet weak var itemImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
 //        let item = itemsArr[indexPath]
 //        itemImage.image = item.image
