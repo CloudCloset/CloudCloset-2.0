@@ -53,6 +53,7 @@ class FavoritesViewController: UIViewController {
     }
     
     func getPics() {
+        arrPics = []
         var arr = [String: Bool]()
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic")
         let dispatchGroup = DispatchGroup()
