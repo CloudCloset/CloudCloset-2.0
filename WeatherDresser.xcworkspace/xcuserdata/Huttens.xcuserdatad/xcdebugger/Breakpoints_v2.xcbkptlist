@@ -25,13 +25,77 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherDresser/FavoritesViewController.swift"
-            timestampString = "524103604.494745"
+            filePath = "WeatherDresser/OptionsViewController.swift"
+            timestampString = "524171935.204023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherDresser/OptionsViewController.swift"
+            timestampString = "524171489.130657"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherDresser.OptionsViewController.viewWillAppear (Swift.Bool) -&gt; ()"
+                  moduleName = "WeatherDresser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Huttens/Desktop/Make%20School%20Projects/CloudCloset-2.0/WeatherDresser/OptionsViewController.swift"
+                  timestampString = "524171935.316801"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1474">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherDresser.OptionsViewController.(viewWillAppear (Swift.Bool) -&gt; ()).(closure #1)"
+                  moduleName = "WeatherDresser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Huttens/Desktop/Make%20School%20Projects/CloudCloset-2.0/WeatherDresser/OptionsViewController.swift"
+                  timestampString = "524171935.318503"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherDresser/OptionsViewController.swift"
+            timestampString = "524171935.204023"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

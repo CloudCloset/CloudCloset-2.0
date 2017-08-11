@@ -19,7 +19,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
-        loginButton.layer.cornerRadius = 6
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -71,11 +70,12 @@ extension LoginViewController: FUIAuthDelegate {
         UserService.show(forUID: user.uid) { (user) in
             if let user = user {
                 User.setCurrent(user, writeToUserDefaults: true)
-                
                 let storyboard = UIStoryboard(name: "Main", bundle: .main)
                 
-                let initialViewController = UIStoryboard.initialViewController(for: .main)
-                self.view.window?.rootViewController = initialViewController
+                if let initialViewController = storyboard.instantiateInitialViewController() {
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
+                }
                 
             }
             else {

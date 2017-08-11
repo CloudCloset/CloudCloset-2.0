@@ -120,10 +120,10 @@
 		822655211F3B9377007BA949 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				82FF52C91F0EFC2000DFBCF9 /* AboutViewController.swift */,
-				82ABD1251F0D47110056A74F /* WeatherViewController.swift */,
 				822655331F3BB6F6007BA949 /* LoginViewController.swift */,
 				8226553A1F3BBD51007BA949 /* CreateUserViewController.swift */,
+				82FF52C91F0EFC2000DFBCF9 /* AboutViewController.swift */,
+				82ABD1251F0D47110056A74F /* WeatherViewController.swift */,
 				822655411F3BD1CA007BA949 /* OptionsViewController.swift */,
 				8226554D1F3CEE5D007BA949 /* FavoritesViewController.swift */,
 				822655551F3E2646007BA949 /* EditSettingsViewController.swift */,

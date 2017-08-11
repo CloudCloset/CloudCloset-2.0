@@ -175,10 +175,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="NVe-uj-52p"/>
                     <connections>
-                        <outlet property="convert" destination="dF1-dV-HOX" id="vlC-2q-zxd"/>
-                        <outlet property="gender" destination="HCD-wi-S4L" id="PlB-fs-B7i"/>
-                        <outlet property="tempConvert" destination="k7y-00-JHV" id="Fgu-pg-bO8"/>
-                        <outlet property="zipcode" destination="PO7-zo-V2L" id="wt2-NW-UPK"/>
+                        <outlet property="gender" destination="HCD-wi-S4L" id="Zdo-EG-wUh"/>
+                        <outlet property="temperature" destination="dF1-dV-HOX" id="FtK-FO-1Sd"/>
+                        <outlet property="zipcode" destination="PO7-zo-V2L" id="Atc-Bt-VNE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMV-mW-uuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="edit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJ5-aG-IHR">
-                                <rect key="frame" x="150.5" y="34" width="74" height="54"/>
+                                <rect key="frame" x="151" y="34" width="74" height="54"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="45"/>
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -420,7 +419,7 @@
                     <tabBarItem key="tabBarItem" title="user" id="nP5-xr-KEO"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PZY-Wn-3Kc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PZY-Wn-3Kc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
