@@ -309,7 +309,7 @@
                     <tabBarItem key="tabBarItem" tag="1" title="weather" id="GF6-lh-xrQ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0M8-15-3g5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0M8-15-3g5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

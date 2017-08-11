@@ -14,7 +14,9 @@ class CreateUserViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var genderControl: UISegmentedControl!
+    @IBOutlet weak var tempControl: UISegmentedControl!
     var gender: String = "f"
+    var temptConvert: String = "f"
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,22 +32,37 @@ class CreateUserViewController: UIViewController {
         case 1:
             gender = "m"
         case 2:
-            gender = "e"
+            gender = "b"
         default:
-            gender = "e"
+            gender = "b"
             break
         }
+    }
+    @IBAction func tempChanged(_ sender: Any) {
+        switch tempControl.selectedSegmentIndex
+        {
+        case 0:
+            temptConvert = "f"
+        case 1:
+            temptConvert = "c"
+        
+        default:
+            temptConvert = "f"
+            break
+        }
+
     }
     @IBAction func nextButtonTapped(_ sender: Any) {
         guard let firUser = Auth.auth().currentUser,
             let zipCode = nameTextField.text,
-            !zipCode.isEmpty else { let alertController = UIAlertController(title: "please enter a 4 digit pin", message:
+            Int(zipCode)?.digitCount == 5 else { let alertController = UIAlertController(title: "please enter a 4 digit pin", message:
                 "", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                 self.present(alertController, animated: true, completion: nil)
                 return }
         
         UserDefaults.standard.set(zipCode, forKey: Constants.UserDefaults.zipCode)
+        UserDefaults.standard.set(temptConvert, forKey: Constants.UserDefaults.tempControl)
         
         
         UserService.create(firUser, gender: gender) { (user) in

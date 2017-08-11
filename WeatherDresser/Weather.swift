@@ -15,15 +15,16 @@ class Weather {
     static var weatherArr = [Int]()
     static var iconArr = [String]()
     static var dateArr = [Date]()
+    static var zipCode = UserDefaults.standard.string(forKey: Constants.UserDefaults.zipCode)
     
     private func getDatabase() {
         
     }
     
     static func reload() {
-        let zip: Int = 94087
+        weatherArr = []
         
-        let urlString = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=\(zip),us&lang=en&units=Imperial&APPID=db2d26bbe612a3f926d3804997956ccb"
+        let urlString = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=\(zipCode!),us&lang=en&units=Imperial&APPID=db2d26bbe612a3f926d3804997956ccb"
         let session = URLSession.shared
         let url = URL(string: urlString)
         
@@ -62,9 +63,19 @@ class Weather {
                         todayIcon = "Partly Cloudy"
                     }
                     
+                    let conversion = UserDefaults.standard.string(forKey: Constants.UserDefaults.tempControl)
+                    
+                    if conversion == "c" {
+                        let celsius: Int = Int((avgTemp - 32)*5/9)
+                        weatherArr.append(celsius)
+
+                    }
+                    else {
+                        weatherArr.append(avgTemp)
+                    }
+                    
                     iconArr.append(todayIcon)
                     dateArr.append(date)
-                    weatherArr.append(avgTemp)
                     
                 }
                 downloadGroup.leave()

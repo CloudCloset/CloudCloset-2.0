@@ -204,9 +204,6 @@
                                                 </connections>
                                             </segmentedControl>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="pj2-k0-bcD" firstAttribute="width" secondItem="1oz-J0-i7B" secondAttribute="width" id="qYs-qR-ySr"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ieb-6w-Ofs">
                                         <rect key="frame" x="0.0" y="222" width="275" height="62"/>
@@ -224,6 +221,9 @@
                                                     <segment title="c˚"/>
                                                 </segments>
                                                 <color key="tintColor" red="1" green="0.51372549020000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="tempChanged:" destination="1OM-1W-1J8" eventType="valueChanged" id="XDp-zG-PE6"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -251,6 +251,7 @@
                     <connections>
                         <outlet property="genderControl" destination="pj2-k0-bcD" id="U3l-Tp-73e"/>
                         <outlet property="nameTextField" destination="qoB-fG-Bgf" id="1FN-6o-72m"/>
+                        <outlet property="tempControl" destination="7Ux-qF-dfk" id="PDk-EF-9Vi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5X5-bn-GQz" userLabel="First Responder" sceneMemberID="firstResponder"/>

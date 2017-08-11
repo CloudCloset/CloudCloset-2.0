@@ -131,7 +131,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6lh-kR-9hD">
-                                <rect key="frame" x="72" y="40" width="231" height="66"/>
+                                <rect key="frame" x="72.5" y="40" width="231" height="66"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUc-GY-MzL">
                                         <rect key="frame" x="0.0" y="0.0" width="145" height="66"/>
@@ -174,15 +174,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NVe-uj-52p"/>
+                    <connections>
+                        <outlet property="convert" destination="dF1-dV-HOX" id="vlC-2q-zxd"/>
+                        <outlet property="gender" destination="HCD-wi-S4L" id="PlB-fs-B7i"/>
+                        <outlet property="tempConvert" destination="k7y-00-JHV" id="Fgu-pg-bO8"/>
+                        <outlet property="zipcode" destination="PO7-zo-V2L" id="wt2-NW-UPK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMV-mW-uuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2072.8000000000002" y="-688.60569715142435"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Settings View Controller-->
         <scene sceneID="ajA-Ay-azU">
             <objects>
-                <viewController id="evu-fi-9Z1" sceneMemberID="viewController">
+                <viewController id="evu-fi-9Z1" customClass="EditSettingsViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VcM-NJ-KIh"/>
                         <viewControllerLayoutGuide type="bottom" id="r35-zZ-sti"/>
@@ -192,7 +198,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="edit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJ5-aG-IHR">
-                                <rect key="frame" x="150" y="34" width="74" height="54"/>
+                                <rect key="frame" x="150.5" y="34" width="74" height="54"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="45"/>
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -216,7 +222,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="bGJ-RX-5pm" kind="unwind" unwindAction="unwindToOptions:" id="akh-Tv-Mzs"/>
+                                            <action selector="saveButtonTapped:" destination="evu-fi-9Z1" eventType="touchUpInside" id="YQI-5Z-SkY"/>
+                                            <segue destination="bGJ-RX-5pm" kind="unwind" identifier="saveEditSettings" unwindAction="unwindToOptions:" id="S10-2V-wzW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMt-cs-Iqt">
@@ -235,7 +242,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="bGJ-RX-5pm" kind="unwind" unwindAction="unwindToOptions:" id="0Nm-bJ-kos"/>
+                                            <segue destination="bGJ-RX-5pm" kind="unwind" identifier="cancelEditSettings" unwindAction="unwindToOptions:" id="12r-hh-oId"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -282,6 +289,9 @@
                                                     <segment title="both"/>
                                                 </segments>
                                                 <color key="tintColor" red="1" green="0.51372549020000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="genderChanged:" destination="evu-fi-9Z1" eventType="valueChanged" id="LCD-Gf-zhy"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -301,6 +311,9 @@
                                                     <segment title="c˚"/>
                                                 </segments>
                                                 <color key="tintColor" red="1" green="0.51372549020000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="tempChanged:" destination="evu-fi-9Z1" eventType="valueChanged" id="mcC-Uj-E5Q"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -319,6 +332,11 @@
                             <constraint firstItem="jbf-yi-FUU" firstAttribute="top" secondItem="VJ5-aG-IHR" secondAttribute="bottom" constant="44" id="ygz-9e-xZB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="genderControl" destination="3Nq-33-MDj" id="gKZ-nO-ar9"/>
+                        <outlet property="tempControl" destination="SDD-D1-Xec" id="47f-EB-GD7"/>
+                        <outlet property="zipcodeTextField" destination="ZJZ-Ma-uMC" id="oHW-LP-fqD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXZ-PX-6Af" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bGJ-RX-5pm" userLabel="Exit" sceneMemberID="exit"/>
@@ -338,13 +356,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="more info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irw-Mj-aDv">
-                                <rect key="frame" x="97.5" y="50" width="181" height="54"/>
+                                <rect key="frame" x="97" y="50" width="181" height="54"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="45"/>
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1en-aJ-fyq">
-                                <rect key="frame" x="23" y="41.5" width="32" height="72"/>
+                                <rect key="frame" x="23" y="41" width="32" height="72"/>
                                 <accessibility key="accessibilityConfiguration" identifier="backButton"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="50"/>
                                 <state key="normal" title="&lt;">
@@ -355,7 +373,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kyb-UU-pl7">
-                                <rect key="frame" x="20" y="163.5" width="335" height="204"/>
+                                <rect key="frame" x="20" y="163" width="335" height="204"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️ weather from openweathermap.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="DcZ-yP-rRz">
                                         <rect key="frame" x="63.5" y="0.0" width="208" height="48"/>
@@ -402,7 +420,7 @@
                     <tabBarItem key="tabBarItem" title="user" id="nP5-xr-KEO"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PZY-Wn-3Kc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PZY-Wn-3Kc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

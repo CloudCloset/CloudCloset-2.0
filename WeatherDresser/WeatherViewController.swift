@@ -52,7 +52,10 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         Weather.reload()
         
         dayOne = Weather.weatherArr[0]
@@ -95,7 +98,7 @@ class WeatherViewController: UIViewController {
         dayThreeLabel.text = Weather.getDayOfWeek(2).lowercased()
         dayFourLabel.text = Weather.getDayOfWeek(3).lowercased()
         dayFiveLabel.text = Weather.getDayOfWeek(4).lowercased()
-
+        
         var bool = false
         
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(picString)
@@ -115,14 +118,6 @@ class WeatherViewController: UIViewController {
         dispatchGroup.notify(queue: .main, execute: {
             self.likeButton.isSelected = bool
         })
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-//        Weather.reload()
-        
-
     }
     
     @IBAction func likeButtonPressed(_ sender: Any) {

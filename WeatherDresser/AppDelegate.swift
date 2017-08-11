@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Weather.reload()
+//        Weather.reload()
         FirebaseApp.configure()
         configureInitialRootViewController(for: window)
         return true
@@ -47,7 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 extension AppDelegate {
     func configureInitialRootViewController(for window: UIWindow?) {
-        Weather.reload()
         let defaults = UserDefaults.standard
         let initialViewController: UIViewController
         
@@ -58,6 +57,7 @@ extension AppDelegate {
             User.setCurrent(user)
             
             initialViewController = UIStoryboard.initialViewController(for: .main)
+            Weather.reload()
         } else {
             initialViewController = UIStoryboard.initialViewController(for: .login)
         }

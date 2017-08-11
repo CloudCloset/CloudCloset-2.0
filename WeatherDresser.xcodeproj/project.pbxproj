@@ -25,6 +25,8 @@
 		8226554E1F3CEE5D007BA949 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8226554D1F3CEE5D007BA949 /* FavoritesViewController.swift */; };
 		822655501F3CF167007BA949 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8226554F1F3CF167007BA949 /* FavoriteCollectionViewCell.swift */; };
 		822655541F3D010D007BA949 /* FavHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822655531F3D010D007BA949 /* FavHeaderCollectionReusableView.swift */; };
+		822655561F3E2646007BA949 /* EditSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822655551F3E2646007BA949 /* EditSettingsViewController.swift */; };
+		822655581F3E3160007BA949 /* Int+Digit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822655571F3E3160007BA949 /* Int+Digit.swift */; };
 		82ABD1241F0D47110056A74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD1231F0D47110056A74F /* AppDelegate.swift */; };
 		82ABD1261F0D47110056A74F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD1251F0D47110056A74F /* WeatherViewController.swift */; };
 		82ABD1291F0D47110056A74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ABD1271F0D47110056A74F /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		8226554D1F3CEE5D007BA949 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		8226554F1F3CF167007BA949 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		822655531F3D010D007BA949 /* FavHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		822655551F3E2646007BA949 /* EditSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSettingsViewController.swift; sourceTree = "<group>"; };
+		822655571F3E3160007BA949 /* Int+Digit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Digit.swift"; sourceTree = "<group>"; };
 		82ABD1201F0D47110056A74F /* WeatherDresser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDresser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ABD1231F0D47110056A74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ABD1251F0D47110056A74F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				8226553A1F3BBD51007BA949 /* CreateUserViewController.swift */,
 				822655411F3BD1CA007BA949 /* OptionsViewController.swift */,
 				8226554D1F3CEE5D007BA949 /* FavoritesViewController.swift */,
+				822655551F3E2646007BA949 /* EditSettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				822655361F3BB7F2007BA949 /* Storyboard+Utility.swift */,
+				822655571F3E3160007BA949 /* Int+Digit.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -387,6 +393,8 @@
 				822655371F3BB7F2007BA949 /* Storyboard+Utility.swift in Sources */,
 				8226552A1F3B94A5007BA949 /* Weather.swift in Sources */,
 				822655451F3BFC3A007BA949 /* Constants.swift in Sources */,
+				822655561F3E2646007BA949 /* EditSettingsViewController.swift in Sources */,
+				822655581F3E3160007BA949 /* Int+Digit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
