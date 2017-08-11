@@ -109,7 +109,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="BE8-Ef-e0a" kind="show" id="OZi-Qg-J4e"/>
+                                            <segue destination="BE8-Ef-e0a" kind="presentation" id="OZi-Qg-J4e"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEL-DB-j9c">
@@ -412,11 +412,13 @@
             </objects>
             <point key="canvasLocation" x="3126" y="-1097"/>
         </scene>
-        <!--user-->
+        <!--Navigation Controller-->
         <scene sceneID="Zjj-GL-dI5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kLk-o7-ca8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="user" id="nP5-xr-KEO"/>
+                    <tabBarItem key="tabBarItem" title="" image="iconsetting" selectedImage="iconsetting" id="nP5-xr-KEO">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PZY-Wn-3Kc">
@@ -435,5 +437,6 @@
     </scenes>
     <resources>
         <image name="edit button2" width="198" height="198"/>
+        <image name="iconsetting" width="30" height="30"/>
     </resources>
 </document>

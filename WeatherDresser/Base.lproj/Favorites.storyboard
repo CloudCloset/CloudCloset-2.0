@@ -245,11 +245,13 @@
             </objects>
             <point key="canvasLocation" x="2816.8000000000002" y="-1338.08095952024"/>
         </scene>
-        <!--fav-->
+        <!--Navigation Controller-->
         <scene sceneID="ssg-QJ-LaZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ce7-ZM-SYG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="fav" id="T4A-BH-lwo"/>
+                    <tabBarItem key="tabBarItem" title="" image="iconfaves" selectedImage="iconfaves" id="T4A-BH-lwo">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -269,6 +271,7 @@
     </scenes>
     <resources>
         <image name="Cold1" width="972" height="1137"/>
+        <image name="iconfaves" width="34" height="30"/>
         <image name="maximize" width="16" height="16"/>
         <image name="tag" width="16" height="16"/>
     </resources>

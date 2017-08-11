@@ -302,14 +302,16 @@
             </objects>
             <point key="canvasLocation" x="955" y="331"/>
         </scene>
-        <!--weather-->
+        <!--Navigation Controller-->
         <scene sceneID="DrQ-27-MRt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="c4p-3X-KT8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="weather" id="GF6-lh-xrQ"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="iconcloud" selectedImage="iconcloud" id="GF6-lh-xrQ">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0M8-15-3g5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0M8-15-3g5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -327,6 +329,7 @@
         <image name="Hot10" width="1020" height="1530"/>
         <image name="Sun Behind Rain Clouds" width="53" height="53"/>
         <image name="cloudcloset" width="249" height="37"/>
+        <image name="iconcloud" width="40" height="30"/>
         <image name="red-heart" width="16" height="16"/>
         <image name="un-heart" width="16" height="16"/>
     </resources>
