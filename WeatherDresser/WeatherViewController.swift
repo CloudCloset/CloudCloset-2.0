@@ -64,7 +64,8 @@ class WeatherViewController: UIViewController {
         dayFour = Weather.weatherArr[3]
         dayFive = Weather.weatherArr[4]
         
-        currentCityLabel.text = "showing weather for: Santa Clara"
+        //currentCityLabel.text = "showing weather for: Santa Clara"
+        currentCityLabel.text = "showing weather for: \(Weather.zipCode!)"
         //fix this hardcoded "Santa Clara"
         
         dayOneButton.setTitle("\(dayOne!)", for: .normal)

@@ -57,12 +57,14 @@ class FavoritesViewController: UIViewController {
         //})
     }
     
+    let dispatchGroup = DispatchGroup()
+    
     func getPics() {
         arrPics = []
         var arr = [String: Bool]()
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic")
-        //let dispatchGroup = DispatchGroup()
-        //dispatchGroup.enter()
+        
+        dispatchGroup.enter()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             if let item = snapshot.value as? [String : Bool] {
                 for key in item.keys {
@@ -74,7 +76,7 @@ class FavoritesViewController: UIViewController {
                 }
                 self.collectionView.reloadData()
             }
-            //dispatchGroup.leave()
+            self.dispatchGroup.leave()
         })
         //dispatchGroup.wait()
         //dispatchGroup.notify(queue: .main, execute: {
@@ -95,7 +97,10 @@ extension FavoritesViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! FavoriteCollectionViewCell
-        cell.thumbNailImage.image = arrPics[indexPath.row]
+        dispatchGroup.notify(queue: .main) {
+            cell.thumbNailImage.image = self.arrPics[indexPath.row]
+            print("dispatch group loaded")
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
