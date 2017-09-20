@@ -162,7 +162,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-M6-jD6">
-                                        <rect key="frame" x="88" y="326" width="199" height="166"/>
+                                        <rect key="frame" x="88" y="331" width="199" height="166"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mmj-MP-9wH">
                                                 <rect key="frame" x="0.0" y="0.0" width="199" height="39"/>
@@ -211,12 +211,16 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Qj4-lc-dbt" firstAttribute="width" secondItem="bWJ-M6-jD6" secondAttribute="width" id="5Tf-Ji-x6P"/>
+                                            <constraint firstItem="Mmj-MP-9wH" firstAttribute="width" secondItem="bWJ-M6-jD6" secondAttribute="width" id="IXf-bb-SeE"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4Ki-Lf-HAD" firstAttribute="centerX" secondItem="aA8-8H-yO4" secondAttribute="centerX" id="Rfg-ak-1L1"/>
                                     <constraint firstItem="4Ki-Lf-HAD" firstAttribute="top" secondItem="aA8-8H-yO4" secondAttribute="top" constant="50" id="XaG-es-ZKm"/>
-                                    <constraint firstItem="bWJ-M6-jD6" firstAttribute="top" secondItem="4Ki-Lf-HAD" secondAttribute="bottom" constant="10" id="aPb-7f-ohe"/>
+                                    <constraint firstItem="bWJ-M6-jD6" firstAttribute="top" secondItem="4Ki-Lf-HAD" secondAttribute="bottom" constant="15" id="aPb-7f-ohe"/>
                                     <constraint firstAttribute="trailing" secondItem="4Ki-Lf-HAD" secondAttribute="trailing" constant="88" id="bAh-gw-XXW"/>
                                     <constraint firstItem="bWJ-M6-jD6" firstAttribute="leading" secondItem="4Ki-Lf-HAD" secondAttribute="leading" id="dVh-xP-kCg"/>
                                     <constraint firstItem="bWJ-M6-jD6" firstAttribute="trailing" secondItem="4Ki-Lf-HAD" secondAttribute="trailing" id="jNH-AF-H9P"/>
@@ -230,7 +234,7 @@
                                     <constraint firstAttribute="height" constant="40" id="pOb-BQ-hte"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
-                                <state key="normal" title="Add to Bag">
+                                <state key="normal" title="Purchase Online">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -238,17 +242,17 @@
                                 <rect key="frame" x="32" y="35" width="327" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bgX-ka-Kh1">
-                                        <rect key="frame" x="0.0" y="18" width="277" height="36"/>
+                                        <rect key="frame" x="0.0" y="12" width="277" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camy's Boutique" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcy-CE-J4m">
-                                                <rect key="frame" x="0.0" y="0.0" width="277" height="18"/>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="277" height="24"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
                                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sheathed Lace Dress" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="289-J5-O2p">
-                                                <rect key="frame" x="0.0" y="18" width="277" height="18"/>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
+                                                <rect key="frame" x="0.0" y="24" width="277" height="24"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
                                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -291,11 +295,14 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="bestTemperatureLabel" destination="vlM-s1-I99" id="ZlY-jf-eZe"/>
-                        <outlet property="buyButton" destination="M0J-Tg-QCj" id="4R9-ge-SQQ"/>
-                        <outlet property="itemImage" destination="4Ki-Lf-HAD" id="P2P-4L-sbb"/>
-                        <outlet property="itemNameLabel" destination="tcy-CE-J4m" id="xYu-JF-JEc"/>
-                        <outlet property="priceLabel" destination="mod-2n-onv" id="ihx-b7-d9b"/>
+                        <outlet property="bestTemperatureLabel" destination="vlM-s1-I99" id="ObP-jB-Dh7"/>
+                        <outlet property="buyButton" destination="M0J-Tg-QCj" id="3Nz-MQ-wRE"/>
+                        <outlet property="itemImage" destination="4Ki-Lf-HAD" id="S13-Pq-jnh"/>
+                        <outlet property="itemNameLabel" destination="289-J5-O2p" id="SPn-p9-BZv"/>
+                        <outlet property="occasionLabel" destination="ZWK-A9-SJ7" id="Q8g-q3-73Y"/>
+                        <outlet property="percentageCodeLabel" destination="wrk-jr-OPj" id="GlX-Yu-sA5"/>
+                        <outlet property="priceLabel" destination="mod-2n-onv" id="FKz-ht-Guz"/>
+                        <outlet property="storeLabel" destination="tcy-CE-J4m" id="59b-1d-8AW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKA-mU-YqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
