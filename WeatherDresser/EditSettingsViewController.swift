@@ -62,7 +62,7 @@ class EditSettingsViewController: UIViewController {
                 UserDefaults.standard.set(temptConvert, forKey: Constants.UserDefaults.tempControl)
                 
             }else {
-                let alertController = UIAlertController(title: "please enter a 5 digit zipcode", message:
+                let alertController = UIAlertController(title: "Please enter a valid 5-digit zipcode!", message:
                     "", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                 self.present(alertController, animated: true, completion: nil)

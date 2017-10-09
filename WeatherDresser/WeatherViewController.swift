@@ -66,7 +66,6 @@ class WeatherViewController: UIViewController {
         
         //currentCityLabel.text = "showing weather for: Santa Clara"
         currentCityLabel.text = "showing weather for: \(Weather.zipCode!)"
-        //fix this hardcoded "Santa Clara"
         
         dayOneButton.setTitle("\(dayOne!)", for: .normal)
         dayOneButton.titleLabel?.minimumScaleFactor = 0.5
@@ -314,6 +313,8 @@ class WeatherViewController: UIViewController {
     //        view.endEditing(true)
     //        moveViewDown()
     //    }
+    
+    
     func moveViewUp() {
         if topMarginConstraint.constant != originalTopMargin {
             return

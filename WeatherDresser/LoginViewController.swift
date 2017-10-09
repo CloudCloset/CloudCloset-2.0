@@ -76,10 +76,11 @@ extension LoginViewController: FUIAuthDelegate {
                     self.view.window?.rootViewController = initialViewController
                     self.view.window?.makeKeyAndVisible()
                 }
-                
+                print("existing user")
             }
             else {
                 self.performSegue(withIdentifier: Constants.Segue.toCreateNewUser, sender: self)
+                print("new user")
             }
         }}
 }

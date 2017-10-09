@@ -55,7 +55,7 @@ class CreateUserViewController: UIViewController {
     @IBAction func nextButtonTapped(_ sender: Any) {
         guard let firUser = Auth.auth().currentUser,
             let zipCode = nameTextField.text,
-            Int(zipCode)?.digitCount == 5 else { let alertController = UIAlertController(title: "please enter a 4 digit pin", message:
+            Int(zipCode)?.digitCount == 5 else { let alertController = UIAlertController(title: "Please enter a 4-digit pin", message:
                 "", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                 self.present(alertController, animated: true, completion: nil)
@@ -67,7 +67,7 @@ class CreateUserViewController: UIViewController {
         
         UserService.create(firUser, gender: gender) { (user) in
             guard let user = user else {
-                let alertController = UIAlertController(title: "please enter a 4 digit pin", message:
+                let alertController = UIAlertController(title: "Please enter a 4-digit pin", message:
                     "", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                 self.present(alertController, animated: true, completion: nil)
