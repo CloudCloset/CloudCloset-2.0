@@ -26,18 +26,33 @@ class ExpandedFavesViewController : UIViewController {
     var itemsArr: [Outfit] = []
     @IBOutlet weak var itemImage: UIImageView!
     
+    @IBAction func buyButtonTapped(_ sender: Any) {
+        
+        UIApplication.shared.openURL(NSURL(string: "http://www.kqzyfj.com/click-8431052-11757792?url=http%3A%2F%2Ftracking.lengow.com%2FshortUrl%2F8769-146981-100029176BLACKCOMBO%2F&cjsku=100029176BLACKCOMBO")! as URL)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let url = URL(string: "http://www.awltovhc.com/image-8431052-11757792?imgurl=http%3A%2F%2Fimages.gdicdn.com%2Fimages%2Fproduct%2F100029176%2F100029176_290_1000x728.jpg")!
+        let data = try? Data(contentsOf: url)
         
-//        let item = itemsArr[indexPath]
-//        itemImage.image = item.image
-//        itemNameLabel.text = item.name
-//        priceLabel.text = item.price
-//        bestTemperatureLabel.text = item.temp
-//        storeLabel.text = item.store
-
-
+        if let imageData = data {
+            let image = UIImage(data: data!)
+            itemImage.image = image
+        }
+        
+        //
+        //
+        //        let item = itemsArr[indexPath]
+        //        itemImage.image = item.image
+        //        itemNameLabel.text = item.name
+        //        priceLabel.text = item.price
+        //        bestTemperatureLabel.text = item.temp
+        //        storeLabel.text = item.store
+        
+        
         
     }
     
