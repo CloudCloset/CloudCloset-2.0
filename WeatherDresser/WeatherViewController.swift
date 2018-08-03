@@ -49,6 +49,9 @@ class WeatherViewController: UIViewController {
     
     var likePicsArray = [String]()
     
+    
+    static var outfitsArray = [Clothing]()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -91,6 +94,32 @@ class WeatherViewController: UIViewController {
         monthLabel.text = Weather.getMonth(0).lowercased()
         dayLabel.text = Weather.getFullDayOfWeek(0).lowercased()
         
+//        do { ///this loads every single time i pull up the view. what about doing this before whole app loads?
+//            if let xmlUrl = Bundle.main.url(forResource: "Dynamite_Clothing-Dynamite_US_Google_Product_Feed-shopping 2", withExtension: "xml") {     //in the future access from Firebase storage
+//                
+//                let xml = try String(contentsOf: xmlUrl)
+//                let clothesParser = ClothesParser(withXML: xml)
+//                let clothes = clothesParser.parse()
+//                
+//                for item in clothes {
+//                    outfitsArray.append(item)
+//                    if item.longDesc.contains("crop") { ///AASSIGNNN DIFF TEMP VARIABLES HERE
+//                        item.temp = "hot"
+//                        
+//                        
+//                        //write to database 
+//                        // hot -->  picString & xmlID & clothingType
+//                        print("summer")
+//                    }
+//                }
+//            }
+//        }
+//        catch {
+//            print(error)
+//        }
+        
+        
+        
         update(0)
         dayOneButton.isSelected = true
         
@@ -119,6 +148,12 @@ class WeatherViewController: UIViewController {
         dispatchGroup.notify(queue: .main, execute: {
             self.likeButton.isSelected = bool
         })
+        
+        
+        
+
+        
+        
     }
     
     @IBAction func likeButtonPressed(_ sender: Any) {
@@ -153,7 +188,7 @@ class WeatherViewController: UIViewController {
                 }
             }
         })
-
+        
         //        LikeService.isLiked(picString: picString)
     }
     //    @IBAction func optionsButton(_ sender: Any) {
@@ -180,7 +215,7 @@ class WeatherViewController: UIViewController {
         else if dayFiveButton.isSelected {
             update(4)
         }
-    
+        
         spinnerActivity.hide(animated: true)
     }
     
@@ -267,7 +302,7 @@ class WeatherViewController: UIViewController {
         dayLabel.text = Weather.getFullDayOfWeek(3).lowercased()
         
         update(3)
-
+        
     }
     @IBAction func dayFiveButtonTapped(_ sender: Any) {
         dayFiveButton.isSelected = true
@@ -348,9 +383,14 @@ class WeatherViewController: UIViewController {
     }
     
     func update(_ day: Int) {
-        let pic = Weather.getPicture(day)
+//        let pic = Weather.getPicture(day)
+//        picString = pic
+//        outfitImage.image = UIImage(named: "\(pic)")
+//        iconImage.image = UIImage(named: Weather.iconArr[day])
+        
+        let pic = Weather.getPicture(day) //get random picString based on weather
         picString = pic
-        outfitImage.image = UIImage(named: "\(pic)")
+        outfitImage.image = UIImage(named: "\(pic)") ///pull image from website
         iconImage.image = UIImage(named: Weather.iconArr[day])
         
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(picString)
@@ -363,6 +403,16 @@ class WeatherViewController: UIViewController {
                 self.likeButton.isSelected = false
             }
         })
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
 }

@@ -18,6 +18,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Weather.reload()
         FirebaseApp.configure()
         configureInitialRootViewController(for: window)
+        
+        //this only runs when app starts
+        
+        
+        do { ///doing this just once when app launches
+            if let xmlUrl = Bundle.main.url(forResource: "Dynamite_Clothing-Dynamite_US_Google_Product_Feed-shopping 2", withExtension: "xml") {     //in the future access from Firebase storage
+                
+                let xml = try String(contentsOf: xmlUrl)
+                let clothesParser = ClothesParser(withXML: xml)
+                let clothes = clothesParser.parse()
+                
+                for item in clothes {
+                    WeatherViewController.outfitsArray.append(item)
+                    if item.longDesc.contains("crop") { ///AASSIGNNN DIFF TEMP VARIABLES HERE
+                        //write to database
+                        // hot -->  picString & xmlID & clothingType
+                        
+                        item.temp = "hot"
+                        print("summer")
+                    }
+                }
+            }
+        }
+        catch {
+            print(error)
+        }
+        
+        
+        
+        
+        
+        
         return true
     }
     

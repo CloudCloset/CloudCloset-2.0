@@ -20,6 +20,9 @@ class Clothing: CustomStringConvertible {
     var price = ""; //"29.95 USD" is a string!!
     
     
+    var temp = ""
+    
+    
     var longDesc: String {
         return "" + title + description + category;
     }
@@ -40,11 +43,6 @@ class ClothesParser: NSObject {
             xmlParser = XMLParser(data: data)
         }
     }
-    
-    func tessstt() {
-        print("helelo")
-    }
-    
     
     func parse() -> [Clothing] {
         

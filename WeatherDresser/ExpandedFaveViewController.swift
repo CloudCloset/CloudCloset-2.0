@@ -53,27 +53,6 @@ class ExpandedFavesViewController : UIViewController {
         //        storeLabel.text = item.store
         
         
-        
-        do {
-            if let xmlUrl = Bundle.main.url(forResource: "Dynamite_Clothing-Dynamite_US_Google_Product_Feed-shopping 2", withExtension: "xml") {
-                
-                let xml = try String(contentsOf: xmlUrl)
-                let clothesParser = ClothesParser(withXML: xml)
-                
-                
-                let clothes = clothesParser.parse()
-                
-                for item in clothes {
-                    
-                    if item.longDesc.contains("crop") {
-                        print("summer")
-                    }
-                }
-            }
-        }
-        catch {
-            print(error)
-        }
 
         
         
