@@ -13,13 +13,18 @@ class FavoritesViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBAction func overlayButton(_ sender: Any) {
+    }
     
     @IBAction func unwindToFavorites(_ segue: UIStoryboardSegue) {
         
     }
     
+    
+    
     var picCount: Int = 0
-    var arrPics = [UIImage]()
+    static var arrPics = [Clothing]()
+    static var ind = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,14 +58,14 @@ class FavoritesViewController: UIViewController {
             //dispatchGroup.leave()
         })
         //dispatchGroup.notify(queue: .main, execute: {
-
+        
         //})
     }
     
     let dispatchGroup = DispatchGroup()
     
     func getPics() {
-        arrPics = []
+        FavoritesViewController.arrPics = []
         var arr = [String: Bool]()
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic")
         
@@ -74,30 +79,15 @@ class FavoritesViewController: UIViewController {
                     
                     for item in WeatherViewController.outfitsArrayAll {
                         if item.id == str.key {
-                            let url = URL(string: item.imageLink)
-                            let data = try? Data(contentsOf: url!) //make sure image in this url does exist, otherwise unwrap in a if let check / try-catch
-                            let img = UIImage(data: data!)
-                            self.arrPics.append(img!)
-                            
+                            FavoritesViewController.arrPics.append(item)
                         }
                     }
-                    
-                        //                    let img = UIImage(named: str.key)!
-                        //                    self.arrPics.append(img)
                     
                 }
                 self.collectionView.reloadData()
             }
             self.dispatchGroup.leave()
         })
-        //dispatchGroup.wait()
-        //dispatchGroup.notify(queue: .main, execute: {
-//            for str in arr {
-//                let img = UIImage(named: str.key)!
-//                self.arrPics.append(img)
-//            }
-//            self.collectionView.reloadData()
-        //})
     }
 }
 
@@ -110,7 +100,14 @@ extension FavoritesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! FavoriteCollectionViewCell
         dispatchGroup.notify(queue: .main) {
-            cell.thumbNailImage.image = self.arrPics[indexPath.row]
+            
+            let item = FavoritesViewController.arrPics[indexPath.row]
+            let url = URL(string: item.imageLink)
+            let data = try? Data(contentsOf: url!) //make sure image in this url does exist, otherwise unwrap in a if let check / try-catch
+            cell.thumbNailImage.image = UIImage(data: data!)
+            FavoritesViewController.ind = indexPath.row
+
+            
             print("dispatch group loaded")
         }
         return cell
@@ -124,6 +121,7 @@ extension FavoritesViewController: UICollectionViewDataSource {
         
         return headerView
     }
+
     
 }
 
