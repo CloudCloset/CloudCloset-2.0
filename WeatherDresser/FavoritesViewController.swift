@@ -71,8 +71,20 @@ class FavoritesViewController: UIViewController {
                     arr.updateValue(true, forKey: key)
                 }
                 for str in arr {
-                    let img = UIImage(named: str.key)!
-                    self.arrPics.append(img)
+                    
+                    for item in WeatherViewController.outfitsArrayAll {
+                        if item.id == str.key {
+                            let url = URL(string: item.imageLink)
+                            let data = try? Data(contentsOf: url!) //make sure image in this url does exist, otherwise unwrap in a if let check / try-catch
+                            let img = UIImage(data: data!)
+                            self.arrPics.append(img!)
+                            
+                        }
+                    }
+                    
+                        //                    let img = UIImage(named: str.key)!
+                        //                    self.arrPics.append(img)
+                    
                 }
                 self.collectionView.reloadData()
             }
