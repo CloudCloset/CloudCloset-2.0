@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        Weather.reload()
+        //        Weather.reload()
         FirebaseApp.configure()
         configureInitialRootViewController(for: window)
         
@@ -29,23 +29,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let clothesParser = ClothesParser(withXML: xml)
                 let clothes = clothesParser.parse()
                 
+                
+                let hotWords:[String] = ["crop", "sun", "hot", "summer"]
+                let medWords:[String] = ["layer", "spring", "warm"]
+                let coldWords:[String] = ["jeans", "jacket", "blazer", "winter", "long sleeve"]
+
+                
                 for item in clothes {
-                    if item.longDesc.contains("crop") { ///AASSIGNNN DIFF TEMP VARIABLES HERE
+                    if hotWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
                         // hot -->  picString & xmlID & clothingType
-        
+                    
                         item.temp = "hot"
                         WeatherViewController.HOToutfitsArray.append(item)
-
+                        
                         print("summer")
                     }
-                    else if item.longDesc.contains("temps") { ///AASSIGNNN DIFF TEMP VARIABLES HERE
                         
-                        item.temp = "cold"
-                        WeatherViewController.COLDoutfitsArray.append(item)
-
-                        print("winter")
-                    }
-                    else if item.longDesc.contains("Halter") { ///AASSIGNNN DIFF TEMP VARIABLES HERE
+                    else if medWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
                         // hot -->  picString & xmlID & clothingType
                         
                         item.temp = "med"
@@ -53,8 +53,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                         print("med")
                     }
+                        
+                        
+                        
+                    else if coldWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
+                        
+                        item.temp = "cold"
+                        WeatherViewController.COLDoutfitsArray.append(item)
+                        
+                        print("winter")
+                    }
+                    
                     WeatherViewController.outfitsArrayAll.append(item)
-
+                    
                 }
             }
         }

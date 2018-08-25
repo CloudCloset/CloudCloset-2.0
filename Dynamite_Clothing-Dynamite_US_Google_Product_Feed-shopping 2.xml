@@ -121,5 +121,85 @@
         </shipping>
     </entry>
     
-    
+    <entry>
+        <program_name>Dynamite Clothing</program_name>
+        <program_url>http://www.dynamiteclothing.com</program_url>
+        <catalog_name>Dynamite (US) Google Product Feed</catalog_name>
+        <last_updated>2018-08-02T02:28:21.513-07:00</last_updated>
+        <id>0449270</id>
+        <title>Dynamite  Cropped Tank With Smocked Detail CAMEL/GREY STRIPES</title>
+        <description>Less is more. This cropped tank features smocked back detailing and a flattering fit, perfect to show yourself off. Make a statement with this cropped gem by styling with your fave denim or skirt and a hot pair of heels.</description>
+        <link>http://www.dpbolvw.net/click-8431052-13320837?url=https%3A%2F%2Fwww.dynamiteclothing.com%2Fus%2Fcropped-tank-with-smocked-detail%2Fp%2F100040611%3Fcolour%3D0CV%26LGWCODE%3D0449270%3B144447%3B8769</link>
+        <impression_url>http://www.awltovhc.com/image-8431052-13320837</impression_url>
+        <image_link>https://images.gdicdn.com/images/product/100040611/100040611_0CV_810x916.jpg</image_link>
+        <mobile_link>https://m.dynamiteclothing.com/us/cropped-tank-with-smocked-detail/p/100040611?colour=0CV</mobile_link>
+        <additional_image_link>https://images.gdicdn.com/images/product/100040611/100040611_0CV_alt1_810x916.jpg</additional_image_link>
+        <additional_image_link>https://images.gdicdn.com/images/product/100040611/100040611_0CV_alt2_810x916.jpg</additional_image_link>
+        <availability>in stock</availability>
+        <price>29.95 USD</price>
+        <sale_price>18.00 USD</sale_price>
+        <google_product_category>212</google_product_category>
+        <google_product_category_name>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</google_product_category_name>
+        <product_type>SALE &gt; NEWLY ADDED</product_type>
+        <brand>Dynamite</brand>
+        <mpn>0449270</mpn>
+        <identifier_exists>yes</identifier_exists>
+        <condition>new</condition>
+        <adult>no</adult>
+        <is_bundle>no</is_bundle>
+        <age_group>adult</age_group>
+        <color>CAMEL/GREY STRIPES</color>
+        <gender>female</gender>
+        <size>S</size>
+        <size_type>regular</size_type>
+        <size_system>EU</size_system>
+        <item_group_id>100040611</item_group_id>
+        <custom_label_4>ENGLISH</custom_label_4>
+        <shipping_label>3-7 business days</shipping_label>
+        <shipping><country>US</country>
+            <price>9.00 USD</price>
+        </shipping>
+    </entry>
+
+<entry>
+    <program_name>Dynamite Clothing</program_name>
+    <program_url>http://www.dynamiteclothing.com</program_url>
+    <catalog_name>Dynamite (US) Google Product Feed</catalog_name>
+    <last_updated>2018-08-02T02:28:21.568-07:00</last_updated>
+    <id>0430522</id>
+    <title>Dynamite  Off-The-Shoulder Top With Tie STRIPE</title>
+    <description>A little tie goes a long way. This off-the-shoulder top with stylish tie detail is the perfect top for layering over jeans, skirts, and more. Flaunt it around at the office or pair with a bold lip for after-hours with the girls.</description>
+    <link>http://www.kqzyfj.com/click-8431052-13320837?url=https%3A%2F%2Fwww.dynamiteclothing.com%2Fus%2Fofftheshoulder-top-with-tie%2Fp%2F100035684%3Fcolour%3D591%26LGWCODE%3D0430522%3B144447%3B8769</link>
+    <impression_url>http://www.awltovhc.com/image-8431052-13320837</impression_url>
+    <image_link>https://images.gdicdn.com/images/product/100035684/100035684_591_810x916.jpg</image_link>
+    <mobile_link>https://m.dynamiteclothing.com/us/offtheshoulder-top-with-tie/p/100035684?colour=591</mobile_link>
+    <additional_image_link>https://images.gdicdn.com/images/product/100035684/100035684_591_alt1_810x916.jpg</additional_image_link>
+    <additional_image_link>https://images.gdicdn.com/images/product/100035684/100035684_591_alt2_810x916.jpg</additional_image_link>
+    <additional_image_link>https://images.gdicdn.com/images/product/100035684/100035684_591_alt3_810x916.jpg</additional_image_link>
+    <availability>in stock</availability>
+    <price>39.95 USD</price>
+    <sale_price>22.00 USD</sale_price>
+    <google_product_category>212</google_product_category>
+    <google_product_category_name>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</google_product_category_name>
+    <product_type>CLOTHING &gt; TOPS &gt; Shirts &amp; Blouses</product_type>
+    <brand>Dynamite</brand>
+    <mpn>0430522</mpn>
+    <identifier_exists>yes</identifier_exists>
+    <condition>new</condition>
+    <adult>no</adult>
+    <is_bundle>no</is_bundle>
+    <age_group>adult</age_group>
+    <color>STRIPE</color>
+    <gender>female</gender>
+    <size>L</size>
+    <size_type>regular</size_type>
+    <size_system>EU</size_system>
+    <item_group_id>100035684</item_group_id>
+    <custom_label_4>ENGLISH</custom_label_4>
+    <shipping_label>3-7 business days</shipping_label>
+    <shipping><country>US</country>
+        <price>9.00 USD</price>
+    </shipping>
+</entry>
+
 </feed>

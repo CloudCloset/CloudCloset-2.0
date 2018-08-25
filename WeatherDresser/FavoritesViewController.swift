@@ -12,10 +12,7 @@ import FirebaseDatabase
 class FavoritesViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    @IBAction func overlayButton(_ sender: Any) {
-    }
-    
+ 
     @IBAction func unwindToFavorites(_ segue: UIStoryboardSegue) {
         
     }
@@ -97,16 +94,20 @@ extension FavoritesViewController: UICollectionViewDataSource {
         return self.picCount
     }
     
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        FavoritesViewController.ind = indexPath.item
+
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! FavoriteCollectionViewCell
         dispatchGroup.notify(queue: .main) {
             
-            let item = FavoritesViewController.arrPics[indexPath.row]
+            let item = FavoritesViewController.arrPics[indexPath.item]
             let url = URL(string: item.imageLink)
             let data = try? Data(contentsOf: url!) //make sure image in this url does exist, otherwise unwrap in a if let check / try-catch
             cell.thumbNailImage.image = UIImage(data: data!)
-            FavoritesViewController.ind = indexPath.row
-
             
             print("dispatch group loaded")
         }
@@ -121,6 +122,8 @@ extension FavoritesViewController: UICollectionViewDataSource {
         
         return headerView
     }
+    
+    
 
     
 }

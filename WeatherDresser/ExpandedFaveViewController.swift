@@ -18,7 +18,6 @@ class ExpandedFavesViewController : UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var bestTemperatureLabel: UILabel!
     @IBOutlet weak var storeLabel: UILabel!
-    @IBOutlet weak var percentageCodeLabel: UILabel!
     
     @IBOutlet weak var occasionLabel: UILabel!
 
@@ -33,9 +32,8 @@ class ExpandedFavesViewController : UIViewController {
     var ind: Int = 0
     var item: Clothing? = nil
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         ind = FavoritesViewController.ind
         item = FavoritesViewController.arrPics[ind]
@@ -43,11 +41,19 @@ class ExpandedFavesViewController : UIViewController {
         itemNameLabel.text = item?.title
         priceLabel.text = item?.price
         bestTemperatureLabel.text = item?.temp
-        storeLabel.text = "Garage"
-
+        storeLabel.text = "Dynamite Clothing"
+        
         let url = URL(string: (item?.imageLink)!)
         let data = try? Data(contentsOf: url!) //make sure image in this url does exist, otherwise unwrap in a if let check / try-catch
         itemImage.image = UIImage(data: data!)
+    }
+    
+    override func viewDidLoad() {
+        
+        
+
+        
+        super.viewDidLoad()
 
         
         

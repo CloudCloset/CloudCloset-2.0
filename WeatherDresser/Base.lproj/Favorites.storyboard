@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T2j-bh-2HO">
-                                <rect key="frame" x="0.0" y="96.5" width="375" height="570.5"/>
+                                <rect key="frame" x="0.0" y="98" width="375" height="569"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                 <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
@@ -53,14 +53,6 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AQr-QF-p9q">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiS-yS-8YS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <connections>
-                                                        <action selector="overlayButton:" destination="aSN-bj-67c" eventType="touchUpInside" id="gLN-uK-9Vb"/>
-                                                        <segue destination="pIe-a6-d0a" kind="presentation" id="MGW-Hv-2cS"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIt-0S-k83">
                                                     <rect key="frame" x="112" y="18" width="20" height="20"/>
                                                     <constraints>
@@ -81,8 +73,8 @@
                                         </constraints>
                                         <size key="customSize" width="150" height="200"/>
                                         <connections>
-                                            <outlet property="overlayButton" destination="CiS-yS-8YS" id="9ue-T0-CLW"/>
                                             <outlet property="thumbNailImage" destination="AQr-QF-p9q" id="Zbi-Df-eYw"/>
+                                            <segue destination="pIe-a6-d0a" kind="presentation" id="SPf-Q6-Y0q"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -115,7 +107,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEC-Bk-d87">
-                                <rect key="frame" x="101.5" y="34" width="172" height="52.5"/>
+                                <rect key="frame" x="104" y="34" width="167" height="54"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="45"/>
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -163,7 +155,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-M6-jD6">
-                                        <rect key="frame" x="88" y="331" width="199" height="166"/>
+                                        <rect key="frame" x="88" y="331" width="199" height="117.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mmj-MP-9wH">
                                                 <rect key="frame" x="0.0" y="0.0" width="199" height="39"/>
@@ -205,12 +197,6 @@
                                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10% off with code CLOUDCLOSET" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-jr-OPj">
-                                                <rect key="frame" x="0.0" y="127.5" width="199" height="38.5"/>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="Qj4-lc-dbt" firstAttribute="width" secondItem="bWJ-M6-jD6" secondAttribute="width" id="5Tf-Ji-x6P"/>
@@ -240,7 +226,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -309,7 +295,6 @@
                         <outlet property="itemImage" destination="4Ki-Lf-HAD" id="S13-Pq-jnh"/>
                         <outlet property="itemNameLabel" destination="289-J5-O2p" id="SPn-p9-BZv"/>
                         <outlet property="occasionLabel" destination="ZWK-A9-SJ7" id="Q8g-q3-73Y"/>
-                        <outlet property="percentageCodeLabel" destination="wrk-jr-OPj" id="GlX-Yu-sA5"/>
                         <outlet property="priceLabel" destination="mod-2n-onv" id="FKz-ht-Guz"/>
                         <outlet property="storeLabel" destination="tcy-CE-J4m" id="59b-1d-8AW"/>
                     </connections>
