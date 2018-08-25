@@ -86,21 +86,24 @@ class Weather {
     }
     
     static func getPicture(_ day: Int) -> Clothing {
-        
-        let randInt: Int = Int(arc4random_uniform(10) + 1)
+        let coldCount = WeatherViewController.COLDoutfitsArray.count
+        let medCount = WeatherViewController.MEDoutfitsArray.count
+        let hotCount = WeatherViewController.HOToutfitsArray.count
+
         let temp = weatherArr[day] //fahrenheit only rn
         
         
         if(temp < 50){
-            let item = WeatherViewController.COLDoutfitsArray[0] ///MAKE SURE RANDINT DOESNT GO OUT OF BOUNDS
-            //let item = WeatherViewController.COLDoutfitsArray[randInt]
+            let randInt: Int = Int(arc4random_uniform(UInt32(coldCount)))
+            let item = WeatherViewController.COLDoutfitsArray[randInt]
             return item
             
         }
         else if(temp < 60 && temp >= 50){
-            let item = WeatherViewController.MEDoutfitsArray[0] ///MAKE SURE RANDINT DOESNT GO OUT OF BOUNDS
-            //let item = WeatherViewController.MEDoutfitsArray[randInt]
-            return item        }
+            let randInt: Int = Int(arc4random_uniform(UInt32(medCount)))
+            let item = WeatherViewController.MEDoutfitsArray[randInt]
+            return item
+        }
 //        else if(temp < 70 && temp >= 60){
 //            return "MedHot\(randInt)"
 //        }
@@ -109,9 +112,10 @@ class Weather {
 //            
 //        }
         else{
-            let item = WeatherViewController.HOToutfitsArray[0] ///MAKE SURE RANDINT DOESNT GO OUT OF BOUNDS
-            //let item = WeatherViewController.HOToutfitsArray[randInt]
-            return item        }
+            let randInt: Int = Int(arc4random_uniform(UInt32(hotCount)))
+            let item = WeatherViewController.HOToutfitsArray[randInt]
+            return item
+        }
     }
     
     static func getUnixString(_ day: Int) -> String {
