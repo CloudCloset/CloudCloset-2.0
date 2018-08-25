@@ -68,7 +68,7 @@ class Weather {
                     if conversion == "c" {
                         let celsius: Int = Int((avgTemp - 32)*5/9)
                         weatherArr.append(celsius)
-
+                        
                     }
                     else {
                         weatherArr.append(avgTemp)
@@ -85,26 +85,33 @@ class Weather {
         downloadGroup.wait()
     }
     
-    static func getPicture(_ day: Int) -> String {
+    static func getPicture(_ day: Int) -> Clothing {
+        
         let randInt: Int = Int(arc4random_uniform(10) + 1)
-        let temp = weatherArr[day]
+        let temp = weatherArr[day] //fahrenheit only rn
+        
         
         if(temp < 50){
-            return "Cold\(randInt)"
-        }
-        else if(temp < 60 && temp >= 50){
-            return "MedCold\(randInt)"
-        }
-        else if(temp < 70 && temp >= 60){
-            return "MedHot\(randInt)"
-        }
-        else if(temp >= 80){
-            return "Hot\(randInt)"
+            let item = WeatherViewController.COLDoutfitsArray[0] ///MAKE SURE RANDINT DOESNT GO OUT OF BOUNDS
+            //let item = WeatherViewController.COLDoutfitsArray[randInt]
+            return item
             
         }
+        else if(temp < 60 && temp >= 50){
+            let item = WeatherViewController.MEDoutfitsArray[0] ///MAKE SURE RANDINT DOESNT GO OUT OF BOUNDS
+            //let item = WeatherViewController.MEDoutfitsArray[randInt]
+            return item        }
+//        else if(temp < 70 && temp >= 60){
+//            return "MedHot\(randInt)"
+//        }
+//        else if(temp >= 80){
+//            return "Hot\(randInt)"
+//            
+//        }
         else{
-            return "MedHot\(randInt)"
-        }
+            let item = WeatherViewController.HOToutfitsArray[0] ///MAKE SURE RANDINT DOESNT GO OUT OF BOUNDS
+            //let item = WeatherViewController.HOToutfitsArray[randInt]
+            return item        }
     }
     
     static func getUnixString(_ day: Int) -> String {
@@ -141,6 +148,6 @@ class Weather {
         return dateArr[2]
     }
     
-
-
+    
+    
 }

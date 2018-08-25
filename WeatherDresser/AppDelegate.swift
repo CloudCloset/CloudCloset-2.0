@@ -30,14 +30,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let clothes = clothesParser.parse()
                 
                 for item in clothes {
-                    WeatherViewController.outfitsArray.append(item)
                     if item.longDesc.contains("crop") { ///AASSIGNNN DIFF TEMP VARIABLES HERE
-                        //write to database
                         // hot -->  picString & xmlID & clothingType
-                        
+        
                         item.temp = "hot"
+                        WeatherViewController.HOToutfitsArray.append(item)
+
                         print("summer")
                     }
+                    else if item.longDesc.contains("temps") { ///AASSIGNNN DIFF TEMP VARIABLES HERE
+                        
+                        item.temp = "cold"
+                        WeatherViewController.COLDoutfitsArray.append(item)
+
+                        print("winter")
+                    }
+                    else if item.longDesc.contains("Halter") { ///AASSIGNNN DIFF TEMP VARIABLES HERE
+                        // hot -->  picString & xmlID & clothingType
+                        
+                        item.temp = "med"
+                        WeatherViewController.MEDoutfitsArray.append(item)
+                        
+                        print("med")
+                    }
+                    WeatherViewController.outfitsArrayAll.append(item)
+
                 }
             }
         }

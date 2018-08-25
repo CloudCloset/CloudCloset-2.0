@@ -39,4 +39,87 @@
             <price>9.00 USD</price>
         </shipping>
     </entry>
+    
+    <entry>
+        <program_name>Dynamite Clothing</program_name>
+        <program_url>http://www.dynamiteclothing.com</program_url>
+        <catalog_name>Dynamite (US) Google Product Feed</catalog_name>
+        <last_updated>2018-08-02T02:28:21.498-07:00</last_updated>
+        <id>0433905</id>
+        <title>Dynamite  Belted Linen Shorts KHAKI</title>
+        <description>Sun&#39;s out, legs out. When temps rise, turn to these effortlessly trendy linen shorts. They feature a belted waistline and casual front pockets that match up perfectly with a hot bodysuit and bold accessories.</description>
+        <link>http://www.dpbolvw.net/click-8431052-13320837?url=https%3A%2F%2Fwww.dynamiteclothing.com%2Fus%2Fbelted-linen-shorts%2Fp%2F100035284%3Fcolour%3D720%26LGWCODE%3D0433905%3B144447%3B8769</link>
+        <impression_url>http://www.awltovhc.com/image-8431052-13320837</impression_url>
+        <image_link>https://images.gdicdn.com/images/product/100035284/100035284_720_810x916.jpg</image_link>
+        <mobile_link>https://m.dynamiteclothing.com/us/belted-linen-shorts/p/100035284?colour=720</mobile_link>
+        <additional_image_link>https://images.gdicdn.com/images/product/100035284/100035284_720_alt1_810x916.jpg</additional_image_link>
+        <additional_image_link>https://images.gdicdn.com/images/product/100035284/100035284_720_alt2_810x916.jpg</additional_image_link>
+        <availability>in stock</availability>
+        <price>34.95 USD</price>
+        <sale_price>20.00 USD</sale_price>
+        <google_product_category>169</google_product_category>
+        <google_product_category_name>Apparel &amp; Accessories &gt; Clothing Accessories &gt; Belts</google_product_category_name>
+        <product_type>CLOTHING &gt; ONLINE EXCLUSIVES</product_type>
+        <brand>Dynamite</brand>
+        <mpn>0433905</mpn>
+        <identifier_exists>yes</identifier_exists>
+        <condition>new</condition>
+        <adult>no</adult>
+        <is_bundle>no</is_bundle>
+        <age_group>adult</age_group>
+        <color>KHAKI</color>
+        <gender>female</gender>
+        <size>XS</size>
+        <size_type>regular</size_type>
+        <size_system>EU</size_system>
+        <item_group_id>100035284</item_group_id>
+        <custom_label_4>ENGLISH</custom_label_4>
+        <shipping_label>3-7 business days</shipping_label>
+        <shipping><country>US</country>
+            <price>9.00 USD</price>
+        </shipping>
+    </entry>
+    
+    
+    <entry>
+        <program_name>Dynamite Clothing</program_name>
+        <program_url>http://www.dynamiteclothing.com</program_url>
+        <catalog_name>Dynamite (US) Google Product Feed</catalog_name>
+        <last_updated>2018-08-02T02:28:21.503-07:00</last_updated>
+        <id>0449288</id>
+        <title>Dynamite  Pleated Halter Top NAVY/ POLKA DOTS</title>
+        <description>The perfect summer essential. Halter every look with this flawless piece that features pleated detailing and a trendy neckline. Pair this new item with high rise denim, statement heels and your fave jewellery. Bring on the sun!</description>
+        <link>http://www.jdoqocy.com/click-8431052-13320837?url=https%3A%2F%2Fwww.dynamiteclothing.com%2Fus%2Fpleated-halter-top%2Fp%2F100040616%3Fcolour%3D201%26LGWCODE%3D0449288%3B144447%3B8769</link>
+        <impression_url>http://www.awltovhc.com/image-8431052-13320837</impression_url>
+        <image_link>https://images.gdicdn.com/images/product/100040616/100040616_201_810x916.jpg</image_link>
+        <mobile_link>https://m.dynamiteclothing.com/us/pleated-halter-top/p/100040616?colour=201</mobile_link>
+        <additional_image_link>https://images.gdicdn.com/images/product/100040616/100040616_201_alt1_810x916.jpg</additional_image_link>
+        <additional_image_link>https://images.gdicdn.com/images/product/100040616/100040616_201_alt2_810x916.jpg</additional_image_link>
+        <availability>in stock</availability>
+        <price>29.95 USD</price>
+        <sale_price>29.95 USD</sale_price>
+        <google_product_category>212</google_product_category>
+        <google_product_category_name>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</google_product_category_name>
+        <product_type>CLOTHING &gt; TOPS &gt; Camis &amp; Tank Tops</product_type>
+        <brand>Dynamite</brand>
+        <mpn>0449288</mpn>
+        <identifier_exists>yes</identifier_exists>
+        <condition>new</condition>
+        <adult>no</adult>
+        <is_bundle>no</is_bundle>
+        <age_group>adult</age_group>
+        <color>NAVY/ POLKA DOTS</color>
+        <gender>female</gender>
+        <size>S</size>
+        <size_type>regular</size_type>
+        <size_system>EU</size_system>
+        <item_group_id>100040616</item_group_id>
+        <custom_label_4>ENGLISH</custom_label_4>
+        <shipping_label>3-7 business days</shipping_label>
+        <shipping><country>US</country>
+            <price>9.00 USD</price>
+        </shipping>
+    </entry>
+    
+    
 </feed>

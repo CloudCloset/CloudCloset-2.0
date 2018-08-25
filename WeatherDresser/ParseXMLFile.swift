@@ -17,6 +17,8 @@ class Clothing: CustomStringConvertible {
     var description = ""
     var category = ""
     var link = ""
+    var id = ""
+    var imageLink = ""
     var price = ""; //"29.95 USD" is a string!!
     
     
@@ -71,6 +73,9 @@ extension ClothesParser: XMLParserDelegate {
         if elementName == "title" {
             currentItem?.title = xmlText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         }
+        if elementName == "id" {
+            currentItem?.id = xmlText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+        }
         if elementName == "description" {
             currentItem?.description = xmlText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         }
@@ -79,6 +84,9 @@ extension ClothesParser: XMLParserDelegate {
         }
         if elementName == "link" {
             currentItem?.link = xmlText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+        }
+        if elementName == "image_link" {
+            currentItem?.imageLink = xmlText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         }
         if elementName == "sale_price" {
             currentItem?.price = xmlText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
