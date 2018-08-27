@@ -32,19 +32,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T2j-bh-2HO">
-                                <rect key="frame" x="0.0" y="98" width="375" height="569"/>
+                                <rect key="frame" x="0.0" y="119" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                 <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nLe-Dk-6Oq">
                                     <size key="itemSize" width="124" height="100"/>
-                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="bZO-99-Bos" customClass="FavoriteCollectionViewCell" customModule="WeatherDresser" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="50" width="150" height="200"/>
+                                        <rect key="frame" x="10" y="0.0" width="150" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
@@ -67,7 +67,7 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="wIt-0S-k83" secondAttribute="trailing" constant="10" id="Aie-Kb-gU6"/>
                                             <constraint firstAttribute="bottom" secondItem="AQr-QF-p9q" secondAttribute="bottom" id="Iti-un-GJe"/>
                                             <constraint firstAttribute="trailing" secondItem="AQr-QF-p9q" secondAttribute="trailing" id="Nx4-AP-ors"/>
-                                            <constraint firstItem="AQr-QF-p9q" firstAttribute="top" secondItem="bZO-99-Bos" secondAttribute="top" id="Xxc-71-rjo"/>
+                                            <constraint firstItem="AQr-QF-p9q" firstAttribute="top" secondItem="bZO-99-Bos" secondAttribute="top" id="W1E-vz-YoA"/>
                                             <constraint firstItem="wIt-0S-k83" firstAttribute="top" secondItem="bZO-99-Bos" secondAttribute="topMargin" constant="10" id="lHn-ey-ZSq"/>
                                             <constraint firstItem="AQr-QF-p9q" firstAttribute="leading" secondItem="bZO-99-Bos" secondAttribute="leading" id="qen-EE-yhW"/>
                                         </constraints>
@@ -78,29 +78,6 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="favHeaderView" id="HOM-xT-fFT" customClass="FavHeaderCollectionReusableView" customModule="WeatherDresser" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c32-HJ-N7R">
-                                            <rect key="frame" x="40" y="10" width="295" height="30"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 favorite outfits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owA-53-AKc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
-                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="c32-HJ-N7R" secondAttribute="bottom" constant="10" id="4Ll-pw-fHB"/>
-                                        <constraint firstItem="c32-HJ-N7R" firstAttribute="leading" secondItem="HOM-xT-fFT" secondAttribute="leading" constant="40" id="6a3-gv-uVe"/>
-                                        <constraint firstItem="c32-HJ-N7R" firstAttribute="top" secondItem="HOM-xT-fFT" secondAttribute="top" constant="10" id="6yG-9d-hcN"/>
-                                        <constraint firstAttribute="trailing" secondItem="c32-HJ-N7R" secondAttribute="trailing" constant="40" id="m75-ts-PIt"/>
-                                    </constraints>
-                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="aSN-bj-67c" id="P8t-Gx-lrc"/>
                                     <outlet property="delegate" destination="aSN-bj-67c" id="rlh-Mh-UGz"/>
@@ -112,10 +89,18 @@
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 outfit saved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-ED-V4P">
+                                <rect key="frame" x="143.5" y="91" width="88.5" height="20"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="T2j-bh-2HO" firstAttribute="top" secondItem="zEC-Bk-d87" secondAttribute="bottom" constant="10" id="1uC-pD-W2w"/>
+                            <constraint firstItem="T2j-bh-2HO" firstAttribute="top" secondItem="HeE-ED-V4P" secondAttribute="bottom" constant="8" id="61a-Yy-EaJ"/>
+                            <constraint firstItem="HeE-ED-V4P" firstAttribute="top" secondItem="zEC-Bk-d87" secondAttribute="bottom" constant="3" id="AaT-re-J0S"/>
+                            <constraint firstItem="HeE-ED-V4P" firstAttribute="centerX" secondItem="M7V-Kz-5Ky" secondAttribute="centerX" id="KzQ-Uv-sUh"/>
                             <constraint firstItem="T2j-bh-2HO" firstAttribute="leading" secondItem="M7V-Kz-5Ky" secondAttribute="leading" id="WoR-hP-j85"/>
                             <constraint firstAttribute="trailing" secondItem="T2j-bh-2HO" secondAttribute="trailing" id="cOW-Y7-iMq"/>
                             <constraint firstItem="zEC-Bk-d87" firstAttribute="top" secondItem="M7V-Kz-5Ky" secondAttribute="top" constant="34" id="htC-qY-rYf"/>
@@ -127,6 +112,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="T2j-bh-2HO" id="gCc-uK-L1P"/>
+                        <outlet property="outfitCountLabel" destination="HeE-ED-V4P" id="OaM-3X-ugz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6p-Cr-giu" userLabel="First Responder" sceneMemberID="firstResponder"/>

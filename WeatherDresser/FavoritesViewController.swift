@@ -12,7 +12,8 @@ import FirebaseDatabase
 class FavoritesViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
- 
+    
+    @IBOutlet weak var outfitCountLabel: UILabel!
     @IBAction func unwindToFavorites(_ segue: UIStoryboardSegue) {
         
     }
@@ -27,6 +28,7 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         getPics()
         reloadNumPics()
+        
         
     }
     
@@ -90,14 +92,19 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //reloadNumPics()
+        
+        
+        if picCount != 1 {
+            outfitCountLabel.text = "\(picCount) outfits saved"
+        }
+        
         return self.picCount
     }
     
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         FavoritesViewController.ind = indexPath.item
-
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -109,7 +116,6 @@ extension FavoritesViewController: UICollectionViewDataSource {
             let data = try? Data(contentsOf: url!) //make sure image in this url does exist, otherwise unwrap in a if let check / try-catch
             cell.thumbNailImage.image = UIImage(data: data!)
             
-            print("dispatch group loaded")
         }
         return cell
     }
@@ -124,22 +130,25 @@ extension FavoritesViewController: UICollectionViewDataSource {
     }
     
     
-
+    
     
 }
 
 extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemSize = CGSize(width: 190, height: 300)
+        //let itemSize = CGSize(width: 190, height: 300)
+        let wdth = collectionView.contentSize.width / 3
+        let itemSize = CGSize(width: wdth - 15, height: 1.6*wdth)
+
         
         return itemSize
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1.5
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 1.5
+        return 5
     }
 }
