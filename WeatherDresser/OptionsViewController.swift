@@ -9,12 +9,36 @@
 import Foundation
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
+
 
 class OptionsViewController: UIViewController {
 
     @IBOutlet weak var zipcode: UILabel!
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var gender: UILabel!
+    
+    @IBAction func logOutTapped(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .default) { _ in
+            do {
+                try Auth.auth().signOut()
+            } catch let error as NSError {
+                assertionFailure("Error signing out: \(error.localizedDescription)")
+            }
+        }
+        
+        
+        alertController.addAction(signOutAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,21 +66,60 @@ class OptionsViewController: UIViewController {
                 self.gender.text = "both"
             }
         })
+
         
-//        if genderValue == "f" {
-//            gender.text = "female"
-//        }
-//        else if genderValue == "m" {
-//            gender.text = "male"
-//        }
-//        else {
-//            gender.text = "both"
-//        }
+        
+        
         temperature.text = UserDefaults.standard.string(forKey: Constants.UserDefaults.tempControl)
+        
+        
+        
+        if let txt = zipcode.text{
+            if(txt.characters.count == 5 ){
+                let zip = zipcode.text!
+                Day.setZip(zipCode: zip)
+
+                zipcode.text = "\(zip)"
+                
+                if(Day.getCity().contains("no such city")){
+                    showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
+                    return
+                }
+                else{
+                    Weather.zipCode = zipcode.text
+                    Weather.reload()
+                }
+            }
+            else{
+                showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
+                return
+                
+            }
+        }
+        else{
+            showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
+            return
+        }
+        
+        view.endEditing(true)
+        
+        
+        
     }
     
     @IBAction func unwindToOptions(_ segue: UIStoryboardSegue) {
 
     }
+    
+    private func showError(bigErrorMsg: String, smallErrorMsg: String){
+        let alertController = UIAlertController(title: "\(bigErrorMsg)", message:
+            "\(smallErrorMsg)", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
     
 }

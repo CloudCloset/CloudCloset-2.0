@@ -138,7 +138,7 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //let itemSize = CGSize(width: 190, height: 300)
         let wdth = collectionView.contentSize.width / 3
-        let itemSize = CGSize(width: wdth - 15, height: 1.6*wdth)
+        let itemSize = CGSize(width: wdth - 12, height: 1.6*wdth)
 
         
         return itemSize
@@ -149,6 +149,6 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return 10
     }
 }

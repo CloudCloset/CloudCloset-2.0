@@ -40,12 +40,12 @@ class EditSettingsViewController: UIViewController {
         switch tempControl.selectedSegmentIndex
         {
         case 0:
-            temptConvert = "f"
+            temptConvert = "f˚"
         case 1:
-            temptConvert = "c"
+            temptConvert = "c˚"
             
         default:
-            temptConvert = "f"
+            temptConvert = "f˚"
             break
         }
         
@@ -53,9 +53,9 @@ class EditSettingsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "saveEditSettings" {
-            let zipCode = Int(zipcodeTextField.text!)
+            let zipCode = zipcodeTextField.text
             
-            if zipCode?.digitCount == 5 {
+            if zipCode?.characters.count == 5 {
                 Database.database().reference().child("users").child(User.current.uid).updateChildValues(["gender" : "\(gender)"])
                 
                 UserDefaults.standard.set(zipCode, forKey: Constants.UserDefaults.zipCode)
