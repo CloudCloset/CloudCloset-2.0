@@ -73,24 +73,24 @@ class WeatherViewController: UIViewController {
         currentCityLabel.text = "showing weather for: \(Day.cityName)"
         
         dayOneButton.setTitle("\(dayOne!)", for: .normal)
-        dayOneButton.titleLabel?.minimumScaleFactor = 0.5
-        dayOneButton.titleLabel?.adjustsFontSizeToFitWidth = true
+//        dayOneButton.titleLabel?.minimumScaleFactor = 0.5
+//        dayOneButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
         dayTwoButton.setTitle("\(dayTwo!)", for: .normal)
-        dayTwoButton.titleLabel?.minimumScaleFactor = 0.5
-        dayTwoButton.titleLabel?.adjustsFontSizeToFitWidth = true
+//        dayTwoButton.titleLabel?.minimumScaleFactor = 0.5
+//        dayTwoButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
         dayThreeButton.setTitle("\(dayThree!)", for: .normal)
-        dayThreeButton.titleLabel?.minimumScaleFactor = 0.5
-        dayThreeButton.titleLabel?.adjustsFontSizeToFitWidth = true
+//        dayThreeButton.titleLabel?.minimumScaleFactor = 0.5
+//        dayThreeButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
         dayFourButton.setTitle("\(dayFour!)", for: .normal)
-        dayFourButton.titleLabel?.minimumScaleFactor = 0.5
-        dayFourButton.titleLabel?.adjustsFontSizeToFitWidth = true
+//        dayFourButton.titleLabel?.minimumScaleFactor = 0.5
+//        dayFourButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
         dayFiveButton.setTitle("\(dayFive!)", for: .normal)
-        dayFiveButton.titleLabel?.minimumScaleFactor = 0.5
-        dayFiveButton.titleLabel?.adjustsFontSizeToFitWidth = true
+//        dayFiveButton.titleLabel?.minimumScaleFactor = 0.5
+//        dayFiveButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
         dateLabel.text = Weather.getDate(0)
         monthLabel.text = Weather.getMonth(0).lowercased()

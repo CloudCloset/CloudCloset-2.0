@@ -88,11 +88,11 @@
                         <constraints>
                             <constraint firstItem="fkI-TF-iK9" firstAttribute="top" secondItem="WHD-Dy-zC1" secondAttribute="bottom" id="200-wr-Tra"/>
                             <constraint firstItem="YaN-oQ-iV2" firstAttribute="centerX" secondItem="lNG-av-m9N" secondAttribute="centerX" id="4zc-uY-HHB"/>
+                            <constraint firstItem="YaN-oQ-iV2" firstAttribute="top" secondItem="fkI-TF-iK9" secondAttribute="bottom" constant="25" id="By0-OF-gzX"/>
                             <constraint firstItem="WHD-Dy-zC1" firstAttribute="centerX" secondItem="lNG-av-m9N" secondAttribute="centerX" id="FlT-l7-Wdx"/>
                             <constraint firstItem="fkI-TF-iK9" firstAttribute="leading" secondItem="lNG-av-m9N" secondAttribute="leading" constant="63" id="Fqi-TK-csW"/>
                             <constraint firstAttribute="trailing" secondItem="YaN-oQ-iV2" secondAttribute="trailing" constant="46" id="Wvw-db-Not"/>
                             <constraint firstItem="fkI-TF-iK9" firstAttribute="top" secondItem="E2M-6q-lLS" secondAttribute="bottom" constant="238" id="d4a-Df-h9J"/>
-                            <constraint firstItem="Qof-9j-0ed" firstAttribute="top" secondItem="YaN-oQ-iV2" secondAttribute="bottom" constant="169" id="jXj-ua-bSz"/>
                             <constraint firstAttribute="trailing" secondItem="fkI-TF-iK9" secondAttribute="trailing" constant="63" id="xzF-iR-X2D"/>
                             <constraint firstItem="YaN-oQ-iV2" firstAttribute="leading" secondItem="lNG-av-m9N" secondAttribute="leading" constant="46" id="y1Q-zK-aFW"/>
                         </constraints>
@@ -142,7 +142,7 @@
                                     <constraint firstAttribute="width" secondItem="Fbb-bu-kfF" secondAttribute="height" multiplier="249:37" id="mHz-4r-x8q"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is for initial setup only; you can always change this later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-x5-xD8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is for initial setup only; you can always change this later. outfit style &amp; temperature are coming soon." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-x5-xD8">
                                 <rect key="frame" x="30" y="128" width="315" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="upt-Ge-zGu"/>
@@ -157,7 +157,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-28-wUK">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="82"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zip code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omY-OG-o4X">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U.S. zip code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omY-OG-o4X">
                                                 <rect key="frame" x="0.0" y="0.0" width="275" height="24"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
                                                 <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -188,14 +188,14 @@
                                                 <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pj2-k0-bcD">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pj2-k0-bcD">
                                                 <rect key="frame" x="0.0" y="34" width="275" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="yf8-dX-9mT"/>
                                                 </constraints>
                                                 <segments>
-                                                    <segment title="female"/>
-                                                    <segment title="male"/>
+                                                    <segment title="feminine"/>
+                                                    <segment title="masculine"/>
                                                     <segment title="both"/>
                                                 </segments>
                                                 <color key="tintColor" red="1" green="0.51372549020000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -214,7 +214,7 @@
                                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Ux-qF-dfk">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Ux-qF-dfk">
                                                 <rect key="frame" x="0.0" y="34" width="275" height="29"/>
                                                 <segments>
                                                     <segment title="f˚"/>
@@ -246,6 +246,7 @@
                             <constraint firstItem="MAe-x5-xD8" firstAttribute="centerX" secondItem="I7L-HW-dSV" secondAttribute="centerX" id="nLE-m9-F04"/>
                             <constraint firstItem="X8m-Q6-eY7" firstAttribute="top" secondItem="Oxx-iZ-qJ4" secondAttribute="bottom" constant="69" id="nLH-OJ-dj3"/>
                             <constraint firstAttribute="trailing" secondItem="0GW-zr-aF8" secondAttribute="trailing" constant="50" id="qS2-EP-10n"/>
+                            <constraint firstItem="Oxx-iZ-qJ4" firstAttribute="top" secondItem="0GW-zr-aF8" secondAttribute="bottom" constant="61" id="y8Q-2u-7x2"/>
                         </constraints>
                     </view>
                     <connections>
