@@ -166,13 +166,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1S6-2e-77B">
                                                         <rect key="frame" x="0.0" y="49" width="275" height="127"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVN-yO-Dmf">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVN-yO-Dmf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqn-W1-flF">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqn-W1-flF">
                                                                 <rect key="frame" x="0.0" y="19.5" width="275" height="107.5"/>
                                                                 <string key="text">The perfect summer essential. Halter every look with this flawless piece that features pleated detailing and a trendy neckline. Pair this new item with high rise denim, statement heels and your fave jewellery. Bring on the sun!</string>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
@@ -184,13 +184,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="55S-Db-Fgi">
                                                         <rect key="frame" x="0.0" y="186" width="275" height="39"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLO-84-nbh">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLO-84-nbh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$28.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mod-2n-onv">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$28.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mod-2n-onv">
                                                                 <rect key="frame" x="0.0" y="19.5" width="275" height="19.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -201,13 +201,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-lc-dbt">
                                                         <rect key="frame" x="0.0" y="235" width="275" height="39"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzJ-op-NWB">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzJ-op-NWB">
                                                                 <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tops &amp; Tees" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-A9-SJ7">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tops &amp; Tees" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-A9-SJ7">
                                                                 <rect key="frame" x="0.0" y="19.5" width="275" height="19.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -221,6 +221,18 @@
                                                     <constraint firstItem="Mmj-MP-9wH" firstAttribute="width" secondItem="bWJ-M6-jD6" secondAttribute="width" id="IXf-bb-SeE"/>
                                                 </constraints>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcG-hb-vqI">
+                                                <rect key="frame" x="257" y="265" width="30" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="5Qx-Rw-i0p"/>
+                                                    <constraint firstAttribute="width" constant="30" id="lc7-hz-IKK"/>
+                                                </constraints>
+                                                <state key="normal" image="un-heart"/>
+                                                <state key="selected" image="red-heart"/>
+                                                <connections>
+                                                    <action selector="likeButtonTapped:" destination="pIe-a6-d0a" eventType="touchUpInside" id="eZo-So-wn3"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -230,7 +242,9 @@
                                             <constraint firstAttribute="trailing" secondItem="4Ki-Lf-HAD" secondAttribute="trailing" constant="88" id="VEi-6K-nF3"/>
                                             <constraint firstItem="bWJ-M6-jD6" firstAttribute="leading" secondItem="DmX-fE-AXi" secondAttribute="leading" constant="50" id="WmE-j8-66U"/>
                                             <constraint firstItem="4Ki-Lf-HAD" firstAttribute="top" secondItem="DmX-fE-AXi" secondAttribute="top" constant="30" id="ZAy-AL-P14"/>
+                                            <constraint firstItem="OcG-hb-vqI" firstAttribute="top" secondItem="DmX-fE-AXi" secondAttribute="top" constant="265" id="cdx-Wb-3yB"/>
                                             <constraint firstItem="bWJ-M6-jD6" firstAttribute="top" secondItem="4Ki-Lf-HAD" secondAttribute="bottom" constant="30" id="iIS-iD-XZh"/>
+                                            <constraint firstAttribute="trailing" secondItem="OcG-hb-vqI" secondAttribute="trailing" constant="88" id="yxy-DZ-yoE"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -324,6 +338,7 @@
                         <outlet property="descLabel" destination="Mqn-W1-flF" id="MTs-UR-fDz"/>
                         <outlet property="itemImage" destination="4Ki-Lf-HAD" id="S13-Pq-jnh"/>
                         <outlet property="itemNameLabel" destination="289-J5-O2p" id="SPn-p9-BZv"/>
+                        <outlet property="likeButton" destination="OcG-hb-vqI" id="qsI-YH-uLn"/>
                         <outlet property="priceLabel" destination="mod-2n-onv" id="FKz-ht-Guz"/>
                         <outlet property="storeLabel" destination="tcy-CE-J4m" id="59b-1d-8AW"/>
                     </connections>
@@ -361,5 +376,7 @@
         <image name="Cold1" width="972" height="1137"/>
         <image name="iconfaves" width="34" height="30"/>
         <image name="maximize" width="16" height="16"/>
+        <image name="red-heart" width="16" height="16"/>
+        <image name="un-heart" width="16" height="16"/>
     </resources>
 </document>

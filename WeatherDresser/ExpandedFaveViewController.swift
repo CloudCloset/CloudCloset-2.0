@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class ExpandedFavesViewController : UIViewController {
     
@@ -21,6 +22,42 @@ class ExpandedFavesViewController : UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
+    @IBOutlet weak var likeButton: UIButton!
+    @IBAction func likeButtonTapped(_ sender: Any) {
+        
+        var bool = false
+        
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(item.id)
+        print(ref)
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? Bool
+            if let value = value {
+                bool = true
+            }
+            else {
+                bool = false
+            }
+            dispatchGroup.leave()
+        })
+        dispatchGroup.notify(queue: .main, execute: {
+            if bool == true {
+                LikeService.delete(for: self.item.id, success: { (nil) in
+                    self.likeButton.isSelected = false
+                    return
+                })
+            }
+            else {
+                LikeService.create(for: self.item.id) { (true) in
+                    self.likeButton.isSelected = true
+                    return
+                }
+            }
+        })
+        
+
+    }
 
 
 
@@ -67,6 +104,33 @@ class ExpandedFavesViewController : UIViewController {
         let url = URL(string: item.imageLink)
         let data = try? Data(contentsOf: url!)
         itemImage.image = UIImage(data: data!)
+        
+        
+        
+        
+        
+        
+        
+        var bool = false
+        
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(item.id)
+        print(ref)
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? Bool
+            if let value = value {
+                bool = true
+            }
+            else {
+                bool = false
+            }
+            dispatchGroup.leave()
+        })
+        dispatchGroup.notify(queue: .main, execute: {
+            self.likeButton.isSelected = bool
+        })
+
     }
     
     override func viewDidLoad() {

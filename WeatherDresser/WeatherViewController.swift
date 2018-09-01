@@ -47,7 +47,7 @@ class WeatherViewController: UIViewController {
     
     var picString: String!
     
-    var likePicsArray = [String]()
+    //var likePicsArray = [String]()
     
     
     static var outfitsArrayAll = [Clothing]()
