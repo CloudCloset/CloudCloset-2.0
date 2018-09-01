@@ -14,12 +14,14 @@ import UIKit
 class Clothing: CustomStringConvertible {
     
     var title = ""
+    
+
     var description = ""
     var category = ""
     var link = ""
     var id = ""
     var imageLink = ""
-    var price = ""; //"29.95 USD" is a string!!
+    var price = ""; //"29x.95 USD" is a string!!
     
     
     var temp = ""
@@ -28,6 +30,12 @@ class Clothing: CustomStringConvertible {
     var longDesc: String {
         return "" + title + description + category;
     }
+    
+    init(title:String = "", description:String = "", link:String = "", id:String = "", imageLink:String = "", price:String = "", temp:String = "", longDesc:String = "") {
+        
+    
+    }
+
 }
 
 
@@ -79,7 +87,7 @@ extension ClothesParser: XMLParserDelegate {
         if elementName == "description" {
             currentItem?.description = xmlText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         }
-        if elementName == "category" {
+        if elementName == "product_type" {
             currentItem?.category = xmlText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         }
         if elementName == "link" {
