@@ -147,8 +147,6 @@ class Day {
         let yourDate = formatter.date(from: myString)
         formatter.dateFormat = "dd-MMM-EEE-yyyy"
         let myStringafd = formatter.string(from: yourDate!)
-        
-        print(myStringafd)
         return myStringafd
     }
     
@@ -188,8 +186,6 @@ class Day {
         let myStringafd = formatter.string(from: yourDate!)
         
         let dateArr = myStringafd.components(separatedBy: "-")
-  
-        print(dateArr[2])
         
         return dateArr[2]
     }

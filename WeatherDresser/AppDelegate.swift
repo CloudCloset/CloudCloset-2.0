@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         item.temp = "Moderate"
                         WeatherViewController.MEDoutfitsArray.append(item)
                         
-                        print("med")
+                        print("moderate")
                     }
                         
                     else if hotWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
@@ -51,14 +51,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         item.temp = "Hot"
                         WeatherViewController.HOToutfitsArray.append(item)
                         
-                        print("summer")
+                        print("hot")
                     }
                     else if coldWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
                         
                         item.temp = "Cold"
                         WeatherViewController.COLDoutfitsArray.append(item)
                         
-                        print("winter")
+                        print("cold")
                     }
 
                         
