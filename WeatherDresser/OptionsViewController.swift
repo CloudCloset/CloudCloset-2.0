@@ -82,10 +82,10 @@ class OptionsViewController: UIViewController {
             genderValue = snapshot.value as! String
             
             if genderValue == "f" {
-                self.gender.text = "female"
+                self.gender.text = "feminine"
             }
             else if genderValue == "m" {
-                self.gender.text = "male"
+                self.gender.text = "masculine"
             }
             else {
                 self.gender.text = "both"

@@ -93,13 +93,13 @@ class Weather {
         let temp = weatherArr[day] //fahrenheit only rn
         
         
-        if(temp < 50){
+        if(temp < 60){
             let randInt: Int = Int(arc4random_uniform(UInt32(coldCount)))
             let item = WeatherViewController.COLDoutfitsArray[randInt]
             return item
             
         }
-        else if(temp < 60 && temp >= 50){
+        else if(temp < 75 && temp >= 60){
             let randInt: Int = Int(arc4random_uniform(UInt32(medCount)))
             let item = WeatherViewController.MEDoutfitsArray[randInt]
             return item

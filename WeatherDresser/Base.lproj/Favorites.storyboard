@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T2j-bh-2HO">
-                                <rect key="frame" x="0.0" y="116.5" width="375" height="550.5"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                 <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
@@ -84,13 +84,13 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEC-Bk-d87">
-                                <rect key="frame" x="101.5" y="34" width="172" height="52.5"/>
+                                <rect key="frame" x="104" y="34" width="167" height="54"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="45"/>
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 outfit saved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-ED-V4P">
-                                <rect key="frame" x="139.5" y="89.5" width="97" height="19"/>
+                                <rect key="frame" x="144" y="91" width="88.5" height="19"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                 <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -122,7 +122,7 @@
         <!--Expanded Faves View Controller-->
         <scene sceneID="PVI-DQ-b78">
             <objects>
-                <viewController id="pIe-a6-d0a" customClass="ExpandedFavesViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="pIe-a6-d0a" customClass="ExpandedFavesViewController" customModule="WeatherDresser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rfk-p7-UT9"/>
                         <viewControllerLayoutGuide type="bottom" id="LuC-U9-VBn"/>
@@ -131,102 +131,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-8H-yO4">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-8H-yO4">
+                                <rect key="frame" x="0.0" y="107" width="375" height="560"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cold1" translatesAutoresizingMaskIntoConstraints="NO" id="4Ki-Lf-HAD">
-                                        <rect key="frame" x="88" y="30" width="199" height="266"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="266" id="s7d-dh-7cL"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-M6-jD6">
-                                        <rect key="frame" x="50" y="311" width="275" height="274"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmX-fE-AXi">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mmj-MP-9wH">
-                                                <rect key="frame" x="0.0" y="0.0" width="275" height="39"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cold1" translatesAutoresizingMaskIntoConstraints="NO" id="4Ki-Lf-HAD">
+                                                <rect key="frame" x="88" y="30" width="199" height="266"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="266" id="s7d-dh-7cL"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-M6-jD6">
+                                                <rect key="frame" x="50" y="326" width="275" height="274"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNP-la-Lq9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="60-75˚F  /  20-23˚C" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlM-s1-I99">
-                                                        <rect key="frame" x="0.0" y="19.5" width="275" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mmj-MP-9wH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Weather to Wear It" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNP-la-Lq9">
+                                                                <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="60-75˚F  /  20-23˚C" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlM-s1-I99">
+                                                                <rect key="frame" x="0.0" y="19.5" width="275" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1S6-2e-77B">
+                                                        <rect key="frame" x="0.0" y="49" width="275" height="127"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVN-yO-Dmf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqn-W1-flF">
+                                                                <rect key="frame" x="0.0" y="19.5" width="275" height="107.5"/>
+                                                                <string key="text">The perfect summer essential. Halter every look with this flawless piece that features pleated detailing and a trendy neckline. Pair this new item with high rise denim, statement heels and your fave jewellery. Bring on the sun!</string>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="55S-Db-Fgi">
+                                                        <rect key="frame" x="0.0" y="186" width="275" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLO-84-nbh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$28.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mod-2n-onv">
+                                                                <rect key="frame" x="0.0" y="19.5" width="275" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-lc-dbt">
+                                                        <rect key="frame" x="0.0" y="235" width="275" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzJ-op-NWB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tops &amp; Tees" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-A9-SJ7">
+                                                                <rect key="frame" x="0.0" y="19.5" width="275" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                                <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1S6-2e-77B">
-                                                <rect key="frame" x="0.0" y="49" width="275" height="127"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVN-yO-Dmf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqn-W1-flF">
-                                                        <rect key="frame" x="0.0" y="19.5" width="275" height="107.5"/>
-                                                        <string key="text">The perfect summer essential. Halter every look with this flawless piece that features pleated detailing and a trendy neckline. Pair this new item with high rise denim, statement heels and your fave jewellery. Bring on the sun!</string>
-                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="55S-Db-Fgi">
-                                                <rect key="frame" x="0.0" y="186" width="275" height="39"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLO-84-nbh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$28.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mod-2n-onv">
-                                                        <rect key="frame" x="0.0" y="19.5" width="275" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-lc-dbt">
-                                                <rect key="frame" x="0.0" y="235" width="275" height="39"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzJ-op-NWB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tops &amp; Tees" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-A9-SJ7">
-                                                        <rect key="frame" x="0.0" y="19.5" width="275" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Qj4-lc-dbt" firstAttribute="width" secondItem="bWJ-M6-jD6" secondAttribute="width" id="5Tf-Ji-x6P"/>
+                                                    <constraint firstItem="Mmj-MP-9wH" firstAttribute="width" secondItem="bWJ-M6-jD6" secondAttribute="width" id="IXf-bb-SeE"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Qj4-lc-dbt" firstAttribute="width" secondItem="bWJ-M6-jD6" secondAttribute="width" id="5Tf-Ji-x6P"/>
-                                            <constraint firstItem="Mmj-MP-9wH" firstAttribute="width" secondItem="bWJ-M6-jD6" secondAttribute="width" id="IXf-bb-SeE"/>
+                                            <constraint firstItem="4Ki-Lf-HAD" firstAttribute="leading" secondItem="DmX-fE-AXi" secondAttribute="leading" constant="88" id="TPp-PL-VBw"/>
+                                            <constraint firstAttribute="height" constant="800" id="Tat-VF-cLc"/>
+                                            <constraint firstAttribute="trailing" secondItem="bWJ-M6-jD6" secondAttribute="trailing" constant="50" id="UgB-hh-5yx"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Ki-Lf-HAD" secondAttribute="trailing" constant="88" id="VEi-6K-nF3"/>
+                                            <constraint firstItem="bWJ-M6-jD6" firstAttribute="leading" secondItem="DmX-fE-AXi" secondAttribute="leading" constant="50" id="WmE-j8-66U"/>
+                                            <constraint firstItem="4Ki-Lf-HAD" firstAttribute="top" secondItem="DmX-fE-AXi" secondAttribute="top" constant="30" id="ZAy-AL-P14"/>
+                                            <constraint firstItem="bWJ-M6-jD6" firstAttribute="top" secondItem="4Ki-Lf-HAD" secondAttribute="bottom" constant="30" id="iIS-iD-XZh"/>
                                         </constraints>
-                                    </stackView>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="4Ki-Lf-HAD" firstAttribute="centerX" secondItem="aA8-8H-yO4" secondAttribute="centerX" id="Rfg-ak-1L1"/>
-                                    <constraint firstItem="bWJ-M6-jD6" firstAttribute="top" secondItem="4Ki-Lf-HAD" secondAttribute="bottom" constant="15" id="aPb-7f-ohe"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Ki-Lf-HAD" secondAttribute="trailing" constant="88" id="bAh-gw-XXW"/>
-                                    <constraint firstItem="bWJ-M6-jD6" firstAttribute="leading" secondItem="aA8-8H-yO4" secondAttribute="leading" constant="50" id="ghL-dj-9vs"/>
-                                    <constraint firstAttribute="trailing" secondItem="bWJ-M6-jD6" secondAttribute="trailing" constant="50" id="hqX-B7-JYR"/>
-                                    <constraint firstItem="4Ki-Lf-HAD" firstAttribute="top" secondItem="aA8-8H-yO4" secondAttribute="top" constant="30" id="lsj-8v-40E"/>
-                                    <constraint firstItem="4Ki-Lf-HAD" firstAttribute="leading" secondItem="aA8-8H-yO4" secondAttribute="leading" constant="88" id="qRp-8j-dbN"/>
+                                    <constraint firstItem="DmX-fE-AXi" firstAttribute="top" secondItem="aA8-8H-yO4" secondAttribute="top" id="OwV-j9-h7E"/>
+                                    <constraint firstItem="DmX-fE-AXi" firstAttribute="leading" secondItem="aA8-8H-yO4" secondAttribute="leading" id="SRh-G4-6hT"/>
+                                    <constraint firstAttribute="trailing" secondItem="DmX-fE-AXi" secondAttribute="trailing" id="efy-yA-abG"/>
+                                    <constraint firstAttribute="bottom" secondItem="DmX-fE-AXi" secondAttribute="bottom" id="u7H-7P-hpK"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0J-Tg-QCj">
@@ -292,6 +304,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="M0J-Tg-QCj" secondAttribute="trailing" constant="50" id="ATN-gU-92d"/>
                             <constraint firstItem="LuC-U9-VBn" firstAttribute="top" secondItem="aA8-8H-yO4" secondAttribute="bottom" id="C4i-rN-vYj"/>
+                            <constraint firstItem="DmX-fE-AXi" firstAttribute="width" secondItem="Z8K-1G-RLK" secondAttribute="width" id="D5J-Q6-Ps1"/>
                             <constraint firstItem="M0J-Tg-QCj" firstAttribute="leading" secondItem="Z8K-1G-RLK" secondAttribute="leadingMargin" constant="50" id="Jia-x6-Otg"/>
                             <constraint firstItem="iC3-fb-5UA" firstAttribute="top" secondItem="rfk-p7-UT9" secondAttribute="bottom" constant="15" id="Vi2-RL-Vnn"/>
                             <constraint firstItem="iC3-fb-5UA" firstAttribute="leading" secondItem="Z8K-1G-RLK" secondAttribute="leadingMargin" constant="16" id="aRS-rh-EVH"/>
@@ -330,7 +343,7 @@
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yZ2-d3-Ni0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="yZ2-d3-Ni0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

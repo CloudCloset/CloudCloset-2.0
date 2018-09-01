@@ -30,39 +30,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let clothes = clothesParser.parse()
                 
                 
-                let hotWords:[String] = ["crop", "sun", "hot", "summer"]
-                let medWords:[String] = ["layer", "spring", "warm"]
-                let coldWords:[String] = ["jeans", "jacket", "blazer", "winter", "long sleeve"]
-
+                let hotWords:[String] = ["crop", "sun", "hot", "summer", "sexy", "short", "wow", "beach", "sandal"]
+                let medWords:[String] = ["layer", "spring", "warm", "light", "autumn", "fall", "3/4", "flower", "dress", "day"]
+                let coldWords:[String] = ["jeans", "jacket", "blazer", "winter", "long", "rain", "wind", "cold", "snow", "night", "evening", "cozy", "sweater"]
+                
                 
                 for item in clothes {
-                    if hotWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
-                        // hot -->  picString & xmlID & clothingType
                     
-                        item.temp = "hot"
-                        WeatherViewController.HOToutfitsArray.append(item)
-                        
-                        print("summer")
-                    }
-                        
-                    else if medWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
+                    if medWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
                         // hot -->  picString & xmlID & clothingType
                         
-                        item.temp = "med"
+                        item.temp = "Moderate"
                         WeatherViewController.MEDoutfitsArray.append(item)
                         
                         print("med")
                     }
                         
+                    else if hotWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
                         
+                        item.temp = "Hot"
+                        WeatherViewController.HOToutfitsArray.append(item)
                         
+                        print("summer")
+                    }
                     else if coldWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
                         
-                        item.temp = "cold"
+                        item.temp = "Cold"
                         WeatherViewController.COLDoutfitsArray.append(item)
                         
                         print("winter")
                     }
+
+                        
+                        
+                    else {
+                        
+                        item.temp = "Moderate"
+                        WeatherViewController.MEDoutfitsArray.append(item)
+                    }
+                    
+                    
+                    
                     
                     WeatherViewController.outfitsArrayAll.append(item)
                     
