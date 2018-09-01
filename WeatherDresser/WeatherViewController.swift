@@ -73,24 +73,10 @@ class WeatherViewController: UIViewController {
         currentCityLabel.text = "showing weather for: \(Day.cityName)"
         
         dayOneButton.setTitle("\(dayOne!)", for: .normal)
-//        dayOneButton.titleLabel?.minimumScaleFactor = 0.5
-//        dayOneButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        
         dayTwoButton.setTitle("\(dayTwo!)", for: .normal)
-//        dayTwoButton.titleLabel?.minimumScaleFactor = 0.5
-//        dayTwoButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        
         dayThreeButton.setTitle("\(dayThree!)", for: .normal)
-//        dayThreeButton.titleLabel?.minimumScaleFactor = 0.5
-//        dayThreeButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        
         dayFourButton.setTitle("\(dayFour!)", for: .normal)
-//        dayFourButton.titleLabel?.minimumScaleFactor = 0.5
-//        dayFourButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        
         dayFiveButton.setTitle("\(dayFive!)", for: .normal)
-//        dayFiveButton.titleLabel?.minimumScaleFactor = 0.5
-//        dayFiveButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
         dateLabel.text = Weather.getDate(0)
         monthLabel.text = Weather.getMonth(0).lowercased()
@@ -109,7 +95,6 @@ class WeatherViewController: UIViewController {
         var bool = false
         
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(picString)
-        print(ref)
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -138,7 +123,6 @@ class WeatherViewController: UIViewController {
         var bool = false
         
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(picString)
-        print(ref)
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -168,9 +152,6 @@ class WeatherViewController: UIViewController {
         
         //        LikeService.isLiked(picString: picString)
     }
-    //    @IBAction func optionsButton(_ sender: Any) {
-    //        performSegue(withIdentifier: "showOptions", sender: nil)
-    //    }
     
     @IBAction func chooseAgainButton(_ sender: Any) {
         
@@ -217,7 +198,6 @@ class WeatherViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func dayOneButtonTapped(_ sender: Any) {
@@ -295,37 +275,7 @@ class WeatherViewController: UIViewController {
         
         update(4)
     }
-    
-    
-    //    @IBAction func goButtonTapped(_ sender: Any) {
-    //        if let txt = locationTextField.text{
-    //            if(txt.characters.count == 5 ){
-    //                let zip: Int = Int(locationTextField.text!)!
-    //                Day.setZip(zipCode: zip)
-    //                locationTextField.text = "\(zip)"
-    //                if(Day.getCity().contains("no such city")){
-    //                showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
-    //                    return
-    //                }
-    //                else{
-    //                    update()
-    //                }
-    //            }
-    //            else{
-    //                showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
-    //                return
-    //
-    //            }
-    //        }
-    //        else{
-    //            showError(bigErrorMsg: "You're in the middle of nowhere", smallErrorMsg: "Literally. Invalid zipcode; try again!")
-    //            return
-    //        }
-    //
-    //        view.endEditing(true)
-    //        moveViewDown()
-    //    }
-    
+
     
     func moveViewUp() {
         if topMarginConstraint.constant != originalTopMargin {
@@ -360,12 +310,7 @@ class WeatherViewController: UIViewController {
     }
     
     func update(_ day: Int) {
-        //        let pic = Weather.getPicture(day)
-        //        picString = pic
-        //        outfitImage.image = UIImage(named: "\(pic)")
-        //        iconImage.image = UIImage(named: Weather.iconArr[day])
-        
-        
+
         let item = Weather.getPicture(day) //get random clothing item based on weather
         picString = item.id
         
@@ -386,14 +331,6 @@ class WeatherViewController: UIViewController {
                 self.likeButton.isSelected = false
             }
         })
-        
-        
-        
-        
-        
-        
-        
-        
         
         
     }

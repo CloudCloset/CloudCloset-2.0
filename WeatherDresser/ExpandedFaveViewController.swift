@@ -28,7 +28,6 @@ class ExpandedFavesViewController : UIViewController {
         var bool = false
         
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(item.id)
-        print(ref)
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -114,7 +113,6 @@ class ExpandedFavesViewController : UIViewController {
         var bool = false
         
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic").child(item.id)
-        print(ref)
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
         ref.observeSingleEvent(of: .value, with: { (snapshot) in

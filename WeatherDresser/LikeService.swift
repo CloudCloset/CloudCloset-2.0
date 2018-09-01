@@ -51,7 +51,6 @@ struct LikeService {
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
                 return
             }
-            print(snapshot)
             
             likesRef.queryEqual(toValue: nil, childKey: picString).observeSingleEvent(of: .value, with: { (snapshot) in
                 if let _  = snapshot.value as? Bool {

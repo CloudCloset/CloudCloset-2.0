@@ -21,7 +21,7 @@ class Clothing: CustomStringConvertible {
     var link = ""
     var id = ""
     var imageLink = ""
-    var price = ""; //"29x.95 USD" is a string!!
+    var price = ""; //"29.95 USD" is a string!!
     
     
     var temp = ""
@@ -121,27 +121,6 @@ extension ClothesParser: XMLParserDelegate {
     }
     
 }
-
-//do {
-//    if let xmlUrl = Bundle.main.url(forResource: "Dynamite_Clothing-Dynamite_US_Google_Product_Feed-shopping 2", withExtension: "xml") {
-//        
-//        let xml = try String(contentsOf: xmlUrl)
-//        let clothesParser = ClothesParser(withXML: xml)
-//        
-//        
-//        let clothes = clothesParser.parse()
-//        
-//        for item in clothes {
-//            
-//            if item.longDesc.contains("crop") {
-//                print("summer")
-//            }
-//        }
-//    }
-//}
-//catch {
-//    print(error)
-//}
 
 
 

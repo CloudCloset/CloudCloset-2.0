@@ -45,20 +45,15 @@ class FavoritesViewController: UIViewController {
     
     func reloadNumPics() {
         let ref = Database.database().reference().child("users").child(User.current.uid).child("likePic")
-        
-        //let dispatchGroup = DispatchGroup()
-        //dispatchGroup.enter()
+
         var count = 0
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             count = Int(snapshot.childrenCount)
             self.picCount = count
             self.collectionView.reloadData()
-            //dispatchGroup.leave()
         })
-        //dispatchGroup.notify(queue: .main, execute: {
         
-        //})
     }
     
     let dispatchGroup = DispatchGroup()
