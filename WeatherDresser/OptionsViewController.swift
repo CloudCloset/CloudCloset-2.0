@@ -18,6 +18,9 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var gender: UILabel!
     
+    var authHandle: AuthStateDidChangeListenerHandle?
+
+    
     @IBAction func logOutTapped(_ sender: Any) {
         
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -42,7 +45,29 @@ class OptionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        authHandle = Auth.auth().addStateDidChangeListener() { [unowned self] (auth, user) in
+            guard user == nil else { return }
+            
+            let loginViewController = UIStoryboard.initialViewController(for: .login)
+            self.view.window?.rootViewController = loginViewController
+            self.view.window?.makeKeyAndVisible()
+        }
+        
+        
     }
+    
+    
+    deinit {
+        if let authHandle = authHandle {
+            Auth.auth().removeStateDidChangeListener(authHandle)
+        }
+    }
+    
+    
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
