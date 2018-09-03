@@ -144,10 +144,10 @@
 		822655221F3B937E007BA949 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9EA777C51F3E43B70024FC17 /* Outfit.swift */,
 				82ABD13B1F0E99250056A74F /* Day.swift */,
 				822655291F3B94A5007BA949 /* Weather.swift */,
 				822655381F3BBB5F007BA949 /* User.swift */,
-				9EA777C51F3E43B70024FC17 /* Outfit.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";

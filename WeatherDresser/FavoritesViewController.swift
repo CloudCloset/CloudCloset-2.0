@@ -28,6 +28,7 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         getPics()
         reloadNumPics()
+        print("hello")
         
         
     }
@@ -36,6 +37,8 @@ class FavoritesViewController: UIViewController {
         super.viewWillAppear(true)
         getPics()
         reloadNumPics()
+        print("hi")
+
         
     }
     
@@ -91,6 +94,9 @@ extension FavoritesViewController: UICollectionViewDataSource {
         
         if picCount != 1 {
             outfitCountLabel.text = "\(picCount) outfits saved"
+        }
+        else {
+            outfitCountLabel.text = "1 outfit saved"
         }
         
         return self.picCount
