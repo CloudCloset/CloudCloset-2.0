@@ -39,8 +39,8 @@ class Weather {
                     let today = temperatureDict[index] as! NSDictionary
                     let unixValue = today["dt"] as! Double
                     let todaysTemp = today["temp"] as! NSDictionary
-                    let maxTemp = todaysTemp["max"] as! NSInteger
-                    let minTemp = todaysTemp["min"] as! NSInteger
+                    let maxTemp = todaysTemp["max"] as! Double
+                    let minTemp = todaysTemp["min"] as! Double
                     let avgTemp = (maxTemp + minTemp)/2
                     let date = NSDate(timeIntervalSince1970: unixValue) as Date
                     
@@ -71,7 +71,7 @@ class Weather {
                         
                     }
                     else {
-                        weatherArr.append(avgTemp)
+                        weatherArr.append(Int(avgTemp))
                     }
                     
                     iconArr.append(todayIcon)

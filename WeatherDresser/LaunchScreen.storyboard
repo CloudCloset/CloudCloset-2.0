@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,20 @@
                     <view key="view" contentMode="scaleToFill" id="ajI-HU-r9Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artboard 2" translatesAutoresizingMaskIntoConstraints="NO" id="06G-Jy-KDE">
+                                <rect key="frame" x="87.5" y="246" width="200" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4u2-Mm-eZy"/>
+                                    <constraint firstAttribute="height" constant="175" id="sMz-LU-8bL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="06G-Jy-KDE" firstAttribute="centerX" secondItem="ajI-HU-r9Y" secondAttribute="centerX" id="IzS-kG-dZP"/>
+                            <constraint firstItem="06G-Jy-KDE" firstAttribute="centerY" secondItem="ajI-HU-r9Y" secondAttribute="centerY" id="baU-K6-QC6"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Njz-W3-k7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -28,4 +41,7 @@
             <point key="canvasLocation" x="290" y="70"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Artboard 2" width="887" height="571"/>
+    </resources>
 </document>

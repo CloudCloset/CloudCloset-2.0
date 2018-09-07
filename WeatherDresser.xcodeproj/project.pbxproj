@@ -295,7 +295,7 @@
 				TargetAttributes = {
 					82ABD11F1F0D47110056A74F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 45VCQ885ZT;
+						DevelopmentTeam = 23M69Q523Q;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -542,11 +542,11 @@
 			baseConfigurationReference = 4F060DECBCB671C6624048F8 /* Pods-WeatherDresser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 45VCQ885ZT;
+				DEVELOPMENT_TEAM = 23M69Q523Q;
 				INFOPLIST_FILE = WeatherDresser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lilyli.CloudCloset;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lily.CloudCloset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -557,11 +557,11 @@
 			baseConfigurationReference = 855F0DF52FAAFA9533CA73B3 /* Pods-WeatherDresser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 45VCQ885ZT;
+				DEVELOPMENT_TEAM = 23M69Q523Q;
 				INFOPLIST_FILE = WeatherDresser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lilyli.CloudCloset;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lily.CloudCloset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
