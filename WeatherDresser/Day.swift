@@ -85,20 +85,16 @@ class Day {
             if let data = data {
                 let json = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                 
-                print(json["message"] as? NSString)
                 
                 if let mssg = json["message"] as? NSString{
                     if (mssg.contains("invalid zipcode") || mssg.contains("city not found")){
-                        print("crash now")
                         city = "no such city"
-                        print("no such city: \(city!)")
                     }
                 }
                 else{
                     let dict = json["city"] as! NSDictionary
                     city = dict["name"] as! NSString as String
                     Day.cityName = city!
-                    print(city!)
                 }
                 
                 downloadGroup.leave()
@@ -140,7 +136,6 @@ class Day {
         downloadGroup.wait()
         
         let date = NSDate(timeIntervalSince1970: unixValue!) as Date
-        print(date)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let myString = formatter.string(from: date)
@@ -177,7 +172,6 @@ class Day {
         downloadGroup.wait()
         
         let date = NSDate(timeIntervalSince1970: unixValue!) as Date
-        print(date)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let myString = formatter.string(from: date)

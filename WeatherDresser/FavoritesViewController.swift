@@ -28,7 +28,6 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         getPics()
         reloadNumPics()
-        print("hello")
         
         
     }
@@ -37,7 +36,6 @@ class FavoritesViewController: UIViewController {
         super.viewWillAppear(true)
         getPics()
         reloadNumPics()
-        print("hi")
 
         
     }

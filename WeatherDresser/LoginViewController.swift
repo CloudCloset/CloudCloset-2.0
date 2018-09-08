@@ -41,9 +41,7 @@ class LoginViewController: UIViewController {
         
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
-        
-        print("the login button was pressed")
-    }
+            }
 }
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
@@ -56,7 +54,6 @@ extension LoginViewController: FUIAuthDelegate {
             }
             else if error.localizedDescription.contains("couldn’t be completed") {
                 
-                print("login cancelled")
                 
             }
             else {
@@ -64,7 +61,6 @@ extension LoginViewController: FUIAuthDelegate {
                 let cancel = UIAlertAction(title: "Try again", style: .cancel, handler: nil)
                 alertController.addAction(cancel)
                 present(alertController, animated: true)
-                print("Error signing in: \(error.localizedDescription)")
                 
             }
             return
@@ -80,11 +76,9 @@ extension LoginViewController: FUIAuthDelegate {
                     self.view.window?.rootViewController = initialViewController
                     self.view.window?.makeKeyAndVisible()
                 }
-                print("existing user")
             }
             else {
                 self.performSegue(withIdentifier: Constants.Segue.toCreateNewUser, sender: self)
-                print("new user")
             }
         }}
 }
