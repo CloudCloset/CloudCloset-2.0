@@ -22,6 +22,11 @@ class Weather {
     }
     
     static func reload() {
+        
+        if(zipCode == nil){
+            zipCode = "94087"
+        }
+        
         weatherArr = []
         
         let urlString = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=\(zipCode!),us&lang=en&units=Imperial&APPID=db2d26bbe612a3f926d3804997956ccb"
