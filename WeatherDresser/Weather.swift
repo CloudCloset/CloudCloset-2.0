@@ -129,7 +129,7 @@ class Weather {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let myString = formatter.string(from: date)
         let yourDate = formatter.date(from: myString)
-        formatter.dateFormat = "dd-MMM-EEEE-yyyy"
+        formatter.dateFormat = "dd-MMM-E-yyyy"
         let myStringafd = formatter.string(from: yourDate!)
         return myStringafd
     }
