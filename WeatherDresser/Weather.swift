@@ -129,13 +129,30 @@ class Weather {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let myString = formatter.string(from: date)
         let yourDate = formatter.date(from: myString)
-        formatter.dateFormat = "dd-MMM-E-yyyy"
+        formatter.dateFormat = "dd-MMM-EEEE-yyyy"
         let myStringafd = formatter.string(from: yourDate!)
         return myStringafd
     }
     
     static func getFullDayOfWeek(_ int: Int) -> String {
         let str = getUnixString(int)
+        var dateArr = str.components(separatedBy: "-")
+        return dateArr[2]
+    }
+    
+    static func getUnixStringShort(_ day: Int) -> String {
+        let date = dateArr[day]
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let myString = formatter.string(from: date)
+        let yourDate = formatter.date(from: myString)
+        formatter.dateFormat = "dd-MMM-E-yyyy"
+        let myStringafd = formatter.string(from: yourDate!)
+        return myStringafd
+    }
+    
+    static func getDayOfWeek(_ int: Int)-> String{
+        let str = getUnixStringShort(int)
         var dateArr = str.components(separatedBy: "-")
         return dateArr[2]
     }
@@ -151,12 +168,7 @@ class Weather {
         var dateArr = str.components(separatedBy: "-")
         return dateArr[1]
     }
-    static func getDayOfWeek(_ int: Int)-> String{
-        let str = getUnixString(int)
-        var dateArr = str.components(separatedBy: "-")
-        return dateArr[2]
-    }
-    
+
     
     
 }
