@@ -25,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do { ///doing this just once when app launches
             if let xmlUrl = Bundle.main.url(forResource: "Dynamite_Clothing-Dynamite_US_Google_Product_Feed-shopping 2", withExtension: "xml") {     //in the future access from Firebase storage
                 
+                //TO DO:
+                //XML TO JSON, CHECK FIREBASE DATABASE STORAGE LIMITS, JSON TO FIREBASE JUST ONCE BACKEND
+                //XML TO JSON TO FIREBASE IN CLOUD. NOT WHEN APP LAUNCHES
+                
+                
                 let xml = try String(contentsOf: xmlUrl)
                 let clothesParser = ClothesParser(withXML: xml)
                 let clothes = clothesParser.parse()
@@ -44,20 +49,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         WeatherViewController.MEDoutfitsArray.append(item)
                         
                     }
-                        
-                    else if hotWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
-                        
-                        item.temp = "Hot"
-                        WeatherViewController.HOToutfitsArray.append(item)
-                        
-                    }
+  
                     else if coldWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
                         
                         item.temp = "Cold"
                         WeatherViewController.COLDoutfitsArray.append(item)
                         
                     }
-
+                    else if hotWords.contains(where: item.longDesc.contains) { ///AASSIGNNN DIFF TEMP VARIABLES HERE
+                        
+                        item.temp = "Hot"
+                        WeatherViewController.HOToutfitsArray.append(item)
+                        
+                    }
                         
                         
                     else {
@@ -108,6 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+
     
 }
 extension AppDelegate {

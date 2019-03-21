@@ -76,7 +76,9 @@ class Weather {
                         
                     }
                     else {
-                        weatherArr.append(Int(avgTemp))
+                        //weatherArr.append(Int(avgTemp)) //avgTemp
+                        weatherArr.append(Int(maxTemp)) //highTemp
+
                     }
                     
                     iconArr.append(todayIcon)
